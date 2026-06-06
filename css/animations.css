@@ -1,0 +1,124 @@
+/* =========================================================================
+   AETHERIS ANIMATIONS — @keyframes Library
+   ========================================================================= */
+
+/* ---- Float (cards, elements) ---- */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+/* ---- Float Slow (ambient drifting objects) ---- */
+@keyframes float-slow {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(6px, -8px) scale(1.02); }
+  66%  { transform: translate(-4px, 4px) scale(0.98); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+/* ---- Spin (logo ring, loaders) ---- */
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ---- Shine (gradient text shimmer) ---- */
+@keyframes shine {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ---- Pulse Ring (notification dots, pulsing badges) ---- */
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 var(--glow-primary);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(139, 92, 246, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
+  }
+}
+
+/* ---- Draw Chart (SVG stroke reveal) ---- */
+@keyframes draw-chart {
+  to { stroke-dashoffset: 0; }
+}
+
+/* ---- Fade In Line (terminal lines stagger in) ---- */
+@keyframes fadeInLine {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- Fade In Tab (portfolio tab panels) ---- */
+@keyframes fadeInTab {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- Comet (shooting star / diagonal streak) ---- */
+@keyframes comet {
+  0% {
+    transform: translate(-100%, -100%) rotate(45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(200vw, 200vh) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* ---- Shimmer Border (rotating gradient border glow on hover) ---- */
+@keyframes shimmer-border {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ---- Glow Breathe (ambient card pulsing shadow) ---- */
+@keyframes glow-breathe {
+  0%, 100% {
+    box-shadow:
+      0 0 15px rgba(139, 92, 246, 0.06),
+      0 0 40px rgba(6, 182, 212, 0.04);
+  }
+  50% {
+    box-shadow:
+      0 0 25px rgba(139, 92, 246, 0.12),
+      0 0 60px rgba(6, 182, 212, 0.08);
+  }
+}
+
+/* ---- Text Flicker (terminal text subtle flicker) ---- */
+@keyframes text-flicker {
+  0%, 100% { opacity: 1; }
+  33%      { opacity: 0.96; }
+  66%      { opacity: 0.98; }
+  80%      { opacity: 0.95; }
+}
+
+/* ---- Preloader Bar (progress fill over 2 seconds) ---- */
+@keyframes preloader-bar {
+  0%   { width: 0%; }
+  100% { width: 100%; }
+}
