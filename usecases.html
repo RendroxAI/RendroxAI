@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aetheris AI - Detailed Automation Case Studies. Explore in-depth workflows, performance graphs, and ROI metrics from our delivered enterprise automation projects.">
+  <title>Aetheris AI | Case Studies & Project Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-logo">
+        <div class="logo-icon" style="width:48px;height:48px;">
+          <div class="logo-ring"></div>
+          <div class="logo-core"></div>
+        </div>
+      </div>
+      <div class="preloader-text">AETHERIS // LOADING CASE DATA...</div>
+      <div class="preloader-bar-track">
+        <div class="preloader-bar-fill"></div>
+      </div>
+      <div class="preloader-percent">0%</div>
+    </div>
+  </div>
+
+  <!-- Background Effects -->
+  <div class="ambient-container">
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
+    <div class="ambient-glow-3"></div>
+  </div>
+  <canvas id="particle-canvas"></canvas>
+  <div class="grid-overlay"></div>
+  <div class="mouse-glow"></div>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <div class="logo-ring"></div>
+          <div class="logo-core"></div>
+        </div>
+        <span>AETHERIS</span>
+      </a>
+      
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#portfolio">Portfolio</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode">
+          <div class="theme-toggle-circle"></div>
+          <svg class="theme-icon icon-sun" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="theme-icon icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <a href="index.html#contact" class="btn btn-primary" style="padding:0.5rem 1.2rem;font-size:0.85rem;">Get a Quote</a>
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero Banner -->
+  <section class="section-padding container" style="padding-top: 10rem;">
+    <div class="section-header reveal">
+      <span class="section-subtitle">Delivered Portfolio</span>
+      <h1 class="section-title" style="font-size: 3.25rem;">Automation Case Studies</h1>
+      <p class="section-desc">Deep-dive into the engineering, architecture, and measurable impact of three enterprise automation projects delivered by Aetheris AI.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CASE STUDY 1: ACCOUNTS RECEIVABLE CLEARING BOT
+       ============================================================ -->
+  <section class="section-padding container" id="case-ar">
+    <div class="case-study-full reveal">
+      <div class="case-study-hero-banner glass-panel">
+        <div class="case-study-number">01</div>
+        <div class="case-study-hero-content">
+          <span class="case-tag">Financial Operations Automation</span>
+          <h2>Modern Trade AR Cleardown Bot</h2>
+          <p>An autonomous accounts-receivable clearing system that ingests multi-format payment advices, reconciles every figure against the enterprise ledger, and posts verified transactions — fully unattended.</p>
+        </div>
+      </div>
+
+      <!-- Challenge / Solution Grid -->
+      <div class="case-detail-grid">
+        <div class="case-detail-card glass-panel reveal">
+          <h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            The Challenge
+          </h3>
+          <ul>
+            <li>Major retail partners send payment advices in vastly different PDF and Excel formats.</li>
+            <li>Finance teams spent 4+ hours daily manually matching invoices, calculating TDS deductions, price variances, and posting to the ERP ledger.</li>
+            <li>Month-end volume spikes caused overtime backlogs. Quality depended entirely on who was processing.</li>
+            <li>Missed deductions and wrong adjustments quietly eroded margins, creating customer disputes.</li>
+          </ul>
+        </div>
+        <div class="case-detail-card glass-panel reveal" style="transition-delay: 0.1s;">
+          <h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            Our Solution
+          </h3>
+          <ul>
+            <li>Deployed a modular bot with 30+ orchestrated sub-automations running on an enterprise RPA platform.</li>
+            <li>Built dedicated layout extractors for 6+ vendor formats, folding every layout into a single unified data schema.</li>
+            <li>Automated reconciliation engine that computes TDS, rate differences, short payments, and round-offs before posting.</li>
+            <li>All unmatched items are quarantined to an exception queue — never mis-posted. Full audit trail on every transaction.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Workflow Steps -->
+      <div class="workflow-steps reveal">
+        <h3 class="workflow-title">End-to-End Workflow</h3>
+        <div class="workflow-timeline">
+          <div class="workflow-step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h4>Email Ingestion</h4>
+              <p>Reads customer mails from a dedicated mailbox, saves attachments, routes to processing queues.</p>
+            </div>
+          </div>
+          <div class="workflow-step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h4>Advice Parsing</h4>
+              <p>Customer-specific extractors parse each PDF/Excel format into a normalized invoice-line data model.</p>
+            </div>
+          </div>
+          <div class="workflow-step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h4>Ledger Reconciliation</h4>
+              <p>Cross-checks advice against open items and the finance credit statement, line by line.</p>
+            </div>
+          </div>
+          <div class="workflow-step">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h4>Difference Calculation</h4>
+              <p>Computes TDS, rate differences, short payments, excess, and paisa-level round-offs.</p>
+            </div>
+          </div>
+          <div class="workflow-step">
+            <div class="step-num">05</div>
+            <div class="step-content">
+              <h4>ERP Posting & Report</h4>
+              <p>Posts the cleared receipt document and emails a rich summary with document numbers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SVG Animated Charts -->
+      <div class="case-charts-grid reveal">
+        <div class="chart-card glass-panel">
+          <h4>Processing Time Comparison</h4>
+          <p class="chart-subtitle">Manual vs. Automated (per advice batch)</p>
+          <div class="bar-chart-container">
+            <div class="bar-group">
+              <div class="bar-label">Manual Process</div>
+              <div class="bar-track">
+                <div class="bar-fill bar-manual" style="--bar-width: 92%;" data-value="4.2 hrs"></div>
+              </div>
+            </div>
+            <div class="bar-group">
+              <div class="bar-label">Aetheris Bot</div>
+              <div class="bar-track">
+                <div class="bar-fill bar-automated" style="--bar-width: 6%;" data-value="3 min"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-card glass-panel" style="transition-delay: 0.1s;">
+          <h4>Monthly Operational Impact</h4>
+          <p class="chart-subtitle">Hours saved and error elimination</p>
+          <div class="donut-chart-container">
+            <svg class="donut-chart" viewBox="0 0 160 160">
+              <circle cx="80" cy="80" r="60" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="16"></circle>
+              <circle class="donut-fill" cx="80" cy="80" r="60" fill="none" stroke="var(--color-primary)" stroke-width="16" stroke-dasharray="377" stroke-dashoffset="377" stroke-linecap="round" transform="rotate(-90 80 80)"></circle>
+            </svg>
+            <div class="donut-center-text">
+              <span class="donut-value">100%</span>
+              <span class="donut-label">Unattended</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-card glass-panel" style="transition-delay: 0.2s;">
+          <h4>Key Performance Metrics</h4>
+          <p class="chart-subtitle">Measured outcomes after deployment</p>
+          <div class="kpi-list">
+            <div class="kpi-item">
+              <span class="kpi-value stat-glow-purple">450+</span>
+              <span class="kpi-label">Hours saved per month</span>
+            </div>
+            <div class="kpi-item">
+              <span class="kpi-value stat-glow-cyan">$120k</span>
+              <span class="kpi-label">Estimated annual savings</span>
+            </div>
+            <div class="kpi-item">
+              <span class="kpi-value" style="color:var(--color-success);">6+</span>
+              <span class="kpi-label">Vendor formats supported</span>
+            </div>
+            <div class="kpi-item">
+              <span class="kpi-value" style="color:var(--color-accent);">0</span>
+              <span class="kpi-label">Silent posting errors</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr style="border:none;border-top:1px solid var(--color-border);margin:0;"></div>
+
+  <!-- ============================================================
+       CASE STUDY 2: E-COMMERCE ERP INTEGRATION
+       ============================================================ -->
+  <section class="section-padding container" id="case-sales">
+    <div class="case-study-full reveal">
+      <div class="case-study-hero-banner glass-panel">
+        <div class="case-study-number">02</div>
+        <div class="case-study-hero-content">
+          <span class="case-tag">Sales & Integration</span>
+          <h2>E-Commerce to ERP Sales Order Bot</h2>
+          <p>An intelligent order-to-cash robot that converts high-volume storefront checkouts into fully configured ERP sales orders — with stock checks, bundle pricing, and payment reconciliation built in.</p>
+        </div>
+      </div>
+
+      <div class="case-detail-grid">
+        <div class="case-detail-card glass-panel reveal">
+          <h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            The Challenge
+          </h3>
+          <ul>
+            <li>Thousands of e-commerce orders per day needed manual re-keying into the ERP, creating a major bottleneck during sales peaks.</li>
+            <li>Errors in material codes, pricing, plant assignments, and shipping addresses led to delivery failures and costly refunds.</li>
+            <li>Bundles and kits required complex price distribution across child items and multi-location stock checks.</li>
+            <li>Payments, refunds, and goods receipts had to stay financially synchronized across both platforms.</li>
+          </ul>
+        </div>
+        <div class="case-detail-card glass-panel reveal" style="transition-delay: 0.1s;">
+          <h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            Our Solution
+          </h3>
+          <ul>
+            <li>Built three cooperating robotic projects: a main creation robot, a decisions engine for fulfilment rules, and a change robot for amendments.</li>
+            <li>API-driven architecture using 25+ custom integration endpoints — no slow UI screen-scraping.</li>
+            <li>Bundle intelligence that explodes kit products, distributes parent prices across children, and assigns storage locations per item.</li>
+            <li>Closed-loop order-to-cash: collects payments, issues refunds, posts goods receipts automatically.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="workflow-steps reveal">
+        <h3 class="workflow-title">End-to-End Workflow</h3>
+        <div class="workflow-timeline">
+          <div class="workflow-step">
+            <div class="step-num">01</div>
+            <div class="step-content"><h4>Configuration & Delta Check</h4><p>Loads settings and reads the tracker table — only orders changed since last run.</p></div>
+          </div>
+          <div class="workflow-step">
+            <div class="step-num">02</div>
+            <div class="step-content"><h4>Order Export & Mapping</h4><p>Pulls new orders from the staging database and converts JSON to a full ERP sales order payload.</p></div>
+          </div>
+          <div class="workflow-step">
+            <div class="step-num">03</div>
+            <div class="step-content"><h4>Stock & Location Logic</h4><p>Decision table + live stock check across multiple storage locations determines fulfilment.</p></div>
+          </div>
+          <div class="workflow-step">
+            <div class="step-num">04</div>
+            <div class="step-content"><h4>Sales Order Creation</h4><p>Posts the order via API with a duplicate-existence guard ensuring idempotency.</p></div>
+          </div>
+          <div class="workflow-step">
+            <div class="step-num">05</div>
+            <div class="step-content"><h4>Bundle Pricing & Payment</h4><p>Distributes price to child items, applies discounts, and reconciles payments and refunds.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-charts-grid reveal">
+        <div class="chart-card glass-panel">
+          <h4>Order Processing Throughput</h4>
+          <p class="chart-subtitle">Peak capacity per batch execution</p>
+          <div class="bar-chart-container">
+            <div class="bar-group">
+              <div class="bar-label">Manual Team (8h)</div>
+              <div class="bar-track">
+                <div class="bar-fill bar-manual" style="--bar-width: 12%;" data-value="~200 orders"></div>
+              </div>
+            </div>
+            <div class="bar-group">
+              <div class="bar-label">Aetheris Bot (1 run)</div>
+              <div class="bar-track">
+                <div class="bar-fill bar-automated" style="--bar-width: 95%;" data-value="152k+ orders"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-card glass-panel" style="transition-delay: 0.1s;">
+          <h4>Architecture Capability</h4>
+          <p class="chart-subtitle">Integration endpoint coverage</p>
+          <div class="donut-chart-container">
+            <svg class="donut-chart" viewBox="0 0 160 160">
+              <circle cx="80" cy="80" r="60" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="16"></circle>
+              <circle class="donut-fill" cx="80" cy="80" r="60" fill="none" stroke="var(--color-secondary)" stroke-width="16" stroke-dasharray="377" stroke-dashoffset="377" stroke-linecap="round" transform="rotate(-90 80 80)"></circle>
+            </svg>
+            <div class="donut-center-text">
+              <span class="donut-value">25+</span>
+              <span class="donut-label">API Endpoints</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-card glass-panel" style="transition-delay: 0.2s;">
+          <h4>Key Performance Metrics</h4>
+          <p class="chart-subtitle">Measured outcomes after deployment</p>
+          <div class="kpi-list">
+            <div class="kpi-item">
+              <span class="kpi-value stat-glow-purple">152k+</span>
+              <span class="kpi-label">Orders processed per run</span>
+            </div>
+            <div class="kpi-item">
+              <span class="kpi-value stat-glow-cyan">Near-RT</span>
+              <span class="kpi-label">Order sync speed</span>
+            </div>
+            <div class="kpi-item">
+              <span class="kpi-value" style="color:var(--color-success);">$85k</span>
+              <span class="kpi-label">Reduction in error costs</span>
+            </div>
+            <div class="kpi-item">
+              <span class="kpi-value" style="color:var(--color-accent);">100%</span>
+              <span class="kpi-label">Audit traceability</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr style="border:none;border-top:1px solid var(--color-border);margin:0;"></div>
+
+  <!-- ============================================================
+       CASE STUDY 3: LOGISTICS & BACKORDER DISPATCH
+       ============================================================ -->
+  <section class="section-padding container" id="case-logistics">
+    <div class="case-study-full reveal">
+      <div class="case-study-hero-banner glass-panel">
+        <div class="case-study-number">03</div>
+        <div class="case-study-hero-content">
+          <span class="case-tag">Supply Chain & Compliance</span>
+          <h2>Logistics & Backorder Dispatch Bot</h2>
+          <p>An integrated automation suite handling multi-channel order extraction, return processing, backorder release, and license-to-operate verification across distributed supply chain systems.</p>
+        </div>
+      </div>
+
+      <div class="case-detail-grid">
+        <div class="case-detail-card glass-panel reveal">
+          <h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            The Challenge
+          </h3>
+          <ul>
+            <li>Managing order packing, shipping labels, and dispatch logistics across multiple marketplace channels required switching between 5+ legacy systems.</li>
+            <li>Return orders required manual validation against invoice history spanning a 7-year window, causing severe processing delays.</li>
+            <li>Backorder release involved checking real-time stock availability for each material and creating fresh sales orders and delivery documents.</li>
+            <li>License-to-operate data maintenance required manual verification of shipping addresses and customer master records.</li>
+          </ul>
+        </div>
+        <div class="case-detail-card glass-panel reveal" style="transition-delay: 0.1s;">
+          <h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            Our Solution
+          </h3>
+          <ul>
+            <li>Built 8+ specialized sub-bots: order extraction, return processing, invoice recalculation, backorder release, sales order creation, delivery generation, license maintenance, and blocked order clearance.</li>
+            <li>Automated the complete marketplace order lifecycle: API token retrieval, pending order fetch, status update, label download, and Excel consolidation.</li>
+            <li>Return processing bot validates against historical invoices (7-year window), categorizes items as matched/unmatched/beyond-policy, and generates tab-delimited clearing files.</li>
+            <li>Backorder bot checks real-time material availability, creates fresh sales orders, transfers quantities, and generates delivery documents automatically.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="workflow-steps reveal">
+        <h3 class="workflow-title">End-to-End Workflow</h3>
+        <div class="workflow-timeline">
+          <div class="workflow-step">
+            <div class="step-num">01</div>
+            <div class="step-content"><h4>Order Extraction</h4><p>Authenticates with marketplace APIs, retrieves pending orders, updates status to packed, and downloads shipping labels.</p></div>
+          </div>
+          <div class="workflow-step">
+            <div class="step-num">02</div>
+            <div class="step-content"><h4>Return Processing</h4><p>Reads email attachments, validates mandatory fields, matches against 7-year invoice history, and categorizes return items.</p></div>
+          </div>
+          <div class="workflow-step">
+            <div class="step-num">03</div>
+            <div class="step-content"><h4>Backorder Release</h4><p>Downloads blocked order lists, checks material availability, and creates new sales orders for available stock.</p></div>
+          </div>
+          <div class="workflow-step">
+            <div class="step-num">04</div>
+            <div class="step-content"><h4>Delivery & Compliance</h4><p>Generates outbound delivery documents and validates customer license-to-operate records.</p></div>
+          </div>
+          <div class="workflow-step">
+            <div class="step-num">05</div>
+            <div class="step-content"><h4>Reporting & Notification</h4><p>Compiles job summary reports with success/exception counts and emails results to operations teams.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-charts-grid reveal">
+        <div class="chart-card glass-panel">
+          <h4>Admin Time Reduction</h4>
+          <p class="chart-subtitle">Before and after automation</p>
+          <div class="bar-chart-container">
+            <div class="bar-group">
+              <div class="bar-label">Manual Admin</div>
+              <div class="bar-track">
+                <div class="bar-fill bar-manual" style="--bar-width: 88%;" data-value="200+ hrs/mo"></div>
+              </div>
+            </div>
+            <div class="bar-group">
+              <div class="bar-label">Automated</div>
+              <div class="bar-track">
+                <div class="bar-fill bar-automated" style="--bar-width: 8%;" data-value="~16 hrs/mo"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-card glass-panel" style="transition-delay: 0.1s;">
+          <h4>System Reliability</h4>
+          <p class="chart-subtitle">Uptime across all sub-bots</p>
+          <div class="donut-chart-container">
+            <svg class="donut-chart" viewBox="0 0 160 160">
+              <circle cx="80" cy="80" r="60" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="16"></circle>
+              <circle class="donut-fill" cx="80" cy="80" r="60" fill="none" stroke="var(--color-success)" stroke-width="16" stroke-dasharray="377" stroke-dashoffset="377" stroke-linecap="round" transform="rotate(-90 80 80)"></circle>
+            </svg>
+            <div class="donut-center-text">
+              <span class="donut-value">99.9%</span>
+              <span class="donut-label">Uptime</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-card glass-panel" style="transition-delay: 0.2s;">
+          <h4>Key Performance Metrics</h4>
+          <p class="chart-subtitle">Measured outcomes after deployment</p>
+          <div class="kpi-list">
+            <div class="kpi-item">
+              <span class="kpi-value stat-glow-purple">92%</span>
+              <span class="kpi-label">Admin time reduction</span>
+            </div>
+            <div class="kpi-item">
+              <span class="kpi-value stat-glow-cyan">8+</span>
+              <span class="kpi-label">Sub-bots orchestrated</span>
+            </div>
+            <div class="kpi-item">
+              <span class="kpi-value" style="color:var(--color-success);">200+</span>
+              <span class="kpi-label">Hours redirected / month</span>
+            </div>
+            <div class="kpi-item">
+              <span class="kpi-value" style="color:var(--color-accent);">1.2s</span>
+              <span class="kpi-label">Average API response</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="section-padding container" style="text-align:center;">
+    <div class="glass-panel reveal" style="padding:4rem 2rem;max-width:800px;margin:0 auto;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:350px;height:350px;background:radial-gradient(var(--color-primary) 0%, transparent 65%);opacity:0.06;filter:blur(50px);pointer-events:none;"></div>
+      <h2 style="font-size:2.5rem;margin-bottom:1rem;">Ready to Automate?</h2>
+      <p style="color:var(--color-text-sub);max-width:500px;margin:0 auto 2rem auto;">Let us analyze your workflows and map a custom automation blueprint — free of charge.</p>
+      <a href="index.html#contact" class="btn btn-primary">Request a Free Assessment</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-icon"><div class="logo-ring"></div><div class="logo-core"></div></div>
+          <span>AETHERIS</span>
+        </a>
+        <p>Custom cognitive automation orchestrators designing the decentralized future of autonomous enterprise process grids.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Case Studies</h5>
+        <ul>
+          <li><a href="#case-ar">AR Clearing Bot</a></li>
+          <li><a href="#case-sales">Sales Order Bot</a></li>
+          <li><a href="#case-logistics">Logistics Dispatch</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#roi">ROI Calculator</a></li>
+          <li><a href="index.html#console">Terminal</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="index.html#contact">Contact Us</a></li>
+          <li><a href="#">integrations@aetheris.ai</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; 2026 Aetheris AI Labs. All rights secured.</span>
+      <div class="footer-socials">
+        <a href="#" aria-label="Github"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+        <a href="#" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/particles.js"></script>
+  <script src="js/swarm.js"></script>
+  <script src="js/roi.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

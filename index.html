@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aetheris AI | Custom Enterprise AI & Intelligent Automation Services. We build autonomous digital workforces, ERP integrations, and Accounts Receivable cleardown solutions.">
+  <title>Aetheris AI | Enterprise Automation Portfolio</title>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-logo">
+        <div class="logo-icon" style="width: 48px; height: 48px;">
+          <div class="logo-ring"></div>
+          <div class="logo-core"></div>
+        </div>
+      </div>
+      <div class="preloader-text">AETHERIS // INITIALIZING...</div>
+      <div class="preloader-bar-track">
+        <div class="preloader-bar-fill"></div>
+      </div>
+      <div class="preloader-percent">0%</div>
+    </div>
+  </div>
+
+  <!-- Background Canvas & Overlays -->
+  <div class="ambient-container">
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
+    <div class="ambient-glow-3"></div>
+  </div>
+  <canvas id="particle-canvas"></canvas>
+  <div class="grid-overlay"></div>
+  <div class="mouse-glow"></div>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <div class="logo-ring"></div>
+          <div class="logo-core"></div>
+        </div>
+        <span>AETHERIS</span>
+      </a>
+      
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Case Studies</a></li>
+        <li><a href="#roi">ROI Savings</a></li>
+        <li><a href="#console">Terminal</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode">
+          <div class="theme-toggle-circle"></div>
+          <svg class="theme-icon icon-sun" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="theme-icon icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">Request Quote</a>
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero container">
+    <div class="hero-grid">
+      <div class="hero-content reveal">
+        <div class="badge-wrapper">
+          <div class="hero-badge">
+            <span class="badge-pulse"></span>
+            Enterprise RPA & AI Solutions
+          </div>
+        </div>
+        <h1>We Engineer <span class="text-gradient-secondary">Autonomous</span> Digital Workforces.</h1>
+        <p>Aetheris builds custom AI-driven agents, secure ERP pipelines, and unattended automation flows that eliminate manual errors, slash response delays, and scale back-office operations.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">
+            Request Services
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#portfolio" class="btn btn-secondary">Delivered Projects</a>
+        </div>
+      </div>
+
+      <!-- Dashboard Mockup -->
+      <div class="hero-visual reveal" style="transition-delay: 0.2s;">
+        <div class="dashboard-wrapper">
+          <div class="dashboard-mockup glass-panel">
+            <div class="mockup-header">
+              <div class="mockup-dots">
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+              </div>
+              <div class="mockup-title">aetheris-portfolio --telemetry</div>
+              <div style="width: 42px;"></div>
+            </div>
+            
+            <div class="mockup-body">
+              <!-- Stats Row -->
+              <div class="dashboard-stat-row">
+                <div class="dash-stat">
+                  <div class="dash-stat-label">TOTAL HOURS SAVED</div>
+                  <div class="dash-stat-value stat-glow-cyan">18.5k hrs</div>
+                </div>
+                <div class="dash-stat">
+                  <div class="dash-stat-label">SYSTEM UPTIME</div>
+                  <div class="dash-stat-value stat-glow-purple">99.99%</div>
+                </div>
+                <div class="dash-stat">
+                  <div class="dash-stat-label">ERROR RATE</div>
+                  <div class="dash-stat-value">0.00%</div>
+                </div>
+              </div>
+
+              <!-- Animated Chart -->
+              <div class="dashboard-chart-area">
+                <!-- Vertical grid lines -->
+                <div class="chart-grid-line vertical" style="left: 20%;"></div>
+                <div class="chart-grid-line vertical" style="left: 40%;"></div>
+                <div class="chart-grid-line vertical" style="left: 60%;"></div>
+                <div class="chart-grid-line vertical" style="left: 80%;"></div>
+                <!-- Horizontal grid lines -->
+                <div class="chart-grid-line horizontal" style="top: 25%;"></div>
+                <div class="chart-grid-line horizontal" style="top: 50%;"></div>
+                <div class="chart-grid-line horizontal" style="top: 75%;"></div>
+                
+                <svg class="chart-svg-container" viewBox="0 0 400 150">
+                  <defs>
+                    <linearGradient id="chart-glow" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.4" />
+                      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M 0 100 Q 50 40 100 80 T 200 40 T 300 120 T 400 60 L 400 150 L 0 150 Z" fill="url(#chart-glow)"></path>
+                  <path d="M 0 100 Q 50 40 100 80 T 200 40 T 300 120 T 400 60" fill="none" stroke="#06b6d4" stroke-width="2.5"></path>
+                </svg>
+              </div>
+
+              <!-- Mini Console Logs -->
+              <div class="dashboard-logs">
+                <div class="dashboard-logs-scroll">
+                  <div class="log-item">
+                    <span class="log-time">[STATUS]</span>
+                    <span>Monitoring active robot grids... 3 pipelines online.</span>
+                  </div>
+                  <div class="log-item">
+                    <span class="log-time">[AR_BOT]</span>
+                    <span>Cleardown process triggered: MT942 files matched successfully.</span>
+                  </div>
+                  <div class="log-item">
+                    <span class="log-time">[LOGISTICS]</span>
+                    <span>Multi-channel shipment queues verified. Backorders released.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Floating UI Badges -->
+          <div class="floating-card floating-card-1">
+            <span class="card-accent-label">PROCESS RATE</span>
+            <div class="card-main-val stat-glow-purple">
+              10x
+              <span style="font-size: 0.65rem; font-weight: normal; color: var(--color-text-sub);">faster</span>
+            </div>
+          </div>
+
+          <div class="floating-card floating-card-2">
+            <span class="card-accent-label">COMPLIANCE</span>
+            <div class="card-main-val stat-glow-cyan">
+              Full
+              <span style="font-size: 0.65rem; font-weight: normal; color: var(--color-text-sub);">Audit</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services/Capabilities Section -->
+  <section class="section-padding container" id="services">
+    <div class="section-header reveal">
+      <span class="section-subtitle">What We Do</span>
+      <h2 class="section-title">Automation Capabilities</h2>
+      <p class="section-desc">We design, deploy, and support tailored back-office integrations connecting disparate corporate workflows into self-managing digital grids.</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- Service 1 -->
+      <div class="service-card glass-panel reveal">
+        <div class="service-glow-overlay"></div>
+        <div class="card-inner">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+          </div>
+          <h3>Intelligent AR Clearing</h3>
+          <p>Autonomous matching of customer payment advices against sales ledgers. Reconciles TDS deductions, price variances, and cash differences instantly.</p>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card glass-panel reveal" style="transition-delay: 0.1s;">
+        <div class="service-glow-overlay"></div>
+        <div class="card-inner">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          </div>
+          <h3>Storefront ERP Integration</h3>
+          <p>Seamlessly routes digital orders directly to master database ledgers. Verifies warehouse stock levels, distributes bundle prices, and manages refunds.</p>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card glass-panel reveal" style="transition-delay: 0.2s;">
+        <div class="service-glow-overlay"></div>
+        <div class="card-inner">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2" ry="2"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+          </div>
+          <h3>Supply Chain Dispatch</h3>
+          <p>Automates order extraction, customer license verification, delivery creation, and backorder lists processing via custom backend scripts.</p>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card glass-panel reveal" style="transition-delay: 0.3s;">
+        <div class="service-glow-overlay"></div>
+        <div class="card-inner">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </div>
+          <h3>Document Parsing & OCR</h3>
+          <p>Converts incoming document attachments (PDF, CSV, XLS, TXT) into structured transaction schemas using custom OCR extractors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Portfolio/Case Studies Section -->
+  <section class="section-padding container" id="portfolio">
+    <div class="section-header reveal">
+      <span class="section-subtitle">Delivered Work</span>
+      <h2 class="section-title">Intelligent Automations in Action</h2>
+      <p class="section-desc">Review concrete case studies of automation networks deployed for enterprise clients. Clean, secure, and built to scale.</p>
+    </div>
+
+    <div class="portfolio-tabs-container reveal">
+      <!-- Tab Triggers -->
+      <div class="tab-headers">
+        <button class="tab-trigger active" data-tab="ar-case">Accounts Receivable Clearing</button>
+        <button class="tab-trigger" data-tab="sales-case">E-Commerce ERP Integration</button>
+        <button class="tab-trigger" data-tab="logistics-case">Logistics & License Dispatch</button>
+      </div>
+
+      <!-- Tab Panels -->
+      <div class="portfolio-panels">
+        <!-- Panel 1: AR CLEARING -->
+        <div class="portfolio-content-panel active" id="ar-case">
+          <div class="case-image-mockup">
+            <div class="code-dec">
+              <span style="color: var(--color-success);">[SUCCESS]</span> Advice file loaded.<br>
+              >> Reconciling ledger: FBL5N customer lookup...<br>
+              >> Advice total: $982,859.00<br>
+              >> Ledger total: $983,822.00<br>
+              >> TDS deduction: $900.00 matched.<br>
+              >> Rate variation: $60.00 calculated.<br>
+              >> Round-off adjustments applied.<br>
+              <span style="color: var(--color-success);">>> SAP Document posted via F-28.</span>
+            </div>
+          </div>
+          <div class="case-info-block">
+            <span class="case-tag">Financial Operations</span>
+            <h3>Modern Trade AR Cleardown Bot</h3>
+            <p><strong>The Challenge:</strong> Major retail distributors send high volumes of complex payment advices, each in different layout configurations. Finance teams spent hours manually looking up accounts, calculating tax deductions, and keying data into ERP systems.</p>
+            <p><strong>The Solution:</strong> Deployed a modular system that reads emails, parses layouts into a unified data structure, runs a reconciliation algorithm to calculate TDS and differences, and logs straight into the ERP ledger (T-code F-28) to post clearing reports.</p>
+            
+            <div class="case-metrics-grid">
+              <div class="metric-pill">
+                <div class="metric-pill-val">100%</div>
+                <div class="metric-pill-label">Unattended Process</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">450+</div>
+                <div class="metric-pill-label">Hours Saved / Month</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">$120k</div>
+                <div class="metric-pill-label">Est. Annual Savings</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">Zero</div>
+                <div class="metric-pill-label">Silent Post Errors</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2: E-COMMERCE SYNC -->
+        <div class="portfolio-content-panel" id="sales-case">
+          <div class="case-image-mockup">
+            <div class="code-dec">
+              <span style="color: var(--color-secondary);">[STAGING]</span> Ingesting digital cart transaction...<br>
+              >> Idempotence guard: No prior matches.<br>
+              >> Querying warehouse storage: Stock available.<br>
+              >> Price distributions: Exploding product bundles...<br>
+              >> Parent Price: $249.00 distributed to children.<br>
+              >> Sub-order details compiled.<br>
+              <span style="color: var(--color-success);">>> Sales Order posted via API CPI gateway.</span>
+            </div>
+          </div>
+          <div class="case-info-block">
+            <span class="case-tag">Sales & Integration</span>
+            <h3>E-Commerce to ERP Sales Order Bot</h3>
+            <p><strong>The Challenge:</strong> High-volume consumer storefronts generated thousands of checkout transactions that required manual entry into master ERP systems. Manual re-keying led to price discrepancy errors, double orders, and inventory allocation delays.</p>
+            <p><strong>The Solution:</strong> Deployed an API-driven creation and amendment system. Reads transactional inputs, runs stock checks, applies bundle price distributions, posts to the ERP system via an integration layer, and reconciles payments and refunds back to the storefront.</p>
+            
+            <div class="case-metrics-grid">
+              <div class="metric-pill">
+                <div class="metric-pill-val">152k+</div>
+                <div class="metric-pill-label">Orders Processed / Run</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">Near-RT</div>
+                <div class="metric-pill-label">Order Sync Speed</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">$85k</div>
+                <div class="metric-pill-label">Reduction in Errors</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">100%</div>
+                <div class="metric-pill-label">Audit Traceability</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 3: LOGISTICS SUPPLY CHAIN -->
+        <div class="portfolio-content-panel" id="logistics-case">
+          <div class="case-image-mockup">
+            <div class="code-dec">
+              <span style="color: var(--color-primary);">[LOGISTICS]</span> Scanning dispatch registries...<br>
+              >> Fetching pending labels... PDF loaded.<br>
+              >> Status set to PACKED.<br>
+              >> Checking T-code XD03: Licensing verified.<br>
+              >> Running BAPI backorder release (ZSSBO)...<br>
+              >> Stock availability check: 14 units released.<br>
+              <span style="color: var(--color-success);">>> BAPI Delivery document created.</span>
+            </div>
+          </div>
+          <div class="case-info-block">
+            <span class="case-tag">Supply Chain & Compliance</span>
+            <h3>Logistics & Backorder Dispatch Bot</h3>
+            <p><strong>The Challenge:</strong> Managing order packing labels, customer licensing files, and backorder release mappings required multiple legacy systems and spreadsheets, causing shipping blockages and delayed orders.</p>
+            <p><strong>The Solution:</strong> Created an automated script that extracts marketplace attachments, updates order statuses, logins to ERP databases, queries customer profiles for licensing validation, and releases backorders into delivery documents.</p>
+            
+            <div class="case-metrics-grid">
+              <div class="metric-pill">
+                <div class="metric-pill-val">92%</div>
+                <div class="metric-pill-label">Reduction in Admin Time</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">99.9%</div>
+                <div class="metric-pill-label">System Uptime</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">200+</div>
+                <div class="metric-pill-label">Hours Redirected / Mo</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">1.2s</div>
+                <div class="metric-pill-label">BAPI response speed</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: center; margin-top: 3rem;">
+        <a href="usecases.html" class="btn btn-secondary reveal" style="gap: 10px;">
+          View Detailed Case Studies
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive ROI Savings Calculator Section -->
+  <section class="section-padding container" id="roi">
+    <div class="section-header reveal">
+      <span class="section-subtitle">Savings Estimator</span>
+      <h2 class="section-title">Calculate Your Cost & Time Savings</h2>
+      <p class="section-desc">Drag the sliders below to estimate the annual hours and operational costs redirected when deploying Aetheris bots.</p>
+    </div>
+
+    <div class="roi-calculator-card glass-panel reveal">
+      <div class="roi-grid">
+        <!-- Sliders -->
+        <div class="roi-controls">
+          <div class="slider-group">
+            <div class="slider-label-row">
+              <span class="slider-name">Monthly Manual Tasks (Invoices/Orders)</span>
+              <span class="slider-val-readout" id="roi-volume-val">1,000</span>
+            </div>
+            <input type="range" class="roi-slider" id="roi-volume" min="100" max="10000" step="100" value="1500">
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-label-row">
+              <span class="slider-name">Manual Time Spent Per Task</span>
+              <span class="slider-val-readout" id="roi-time-val">20 mins</span>
+            </div>
+            <input type="range" class="roi-slider" id="roi-time" min="2" max="60" step="1" value="15">
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-label-row">
+              <span class="slider-name">Average Labor Rate (Hourly)</span>
+              <span class="slider-val-readout" id="roi-rate-val">$40</span>
+            </div>
+            <input type="range" class="roi-slider" id="roi-rate" min="15" max="150" step="5" value="45">
+          </div>
+        </div>
+
+        <!-- Math Outputs -->
+        <div class="roi-outputs">
+          <div class="roi-output-item">
+            <span class="roi-output-label">Annual Analyst Hours Redirected</span>
+            <div class="roi-output-value" id="roi-hours-saved">4,500</div>
+          </div>
+          
+          <div style="border-top: 1px solid rgba(255,255,255,0.06); margin: 0.5rem 0;"></div>
+
+          <div class="roi-output-item">
+            <span class="roi-output-label">Estimated Annual Cost Savings</span>
+            <div class="roi-output-value" id="roi-cash-saved" style="color: var(--color-secondary);">--</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Swarm Visualizer -->
+  <section class="section-padding container swarm-visualizer" id="visualizer">
+    <div class="section-header reveal">
+      <span class="section-subtitle">Real-Time Routing</span>
+      <h2 class="section-title">Swarm Node Synchronization</h2>
+      <p class="section-desc">Watch live agent node interactions as they route tasks, pool vector stores, and coordinate consensus loops.</p>
+    </div>
+
+    <div class="visualizer-card glass-panel reveal">
+      <div class="visualizer-canvas-container" id="swarm-canvas-container">
+        <canvas id="swarm-canvas"></canvas>
+        <div class="canvas-overlay-ui">
+          <span>SYSTEM_STATUS: NOMINAL</span>
+          <span>ORCHESTRATOR_LOAD: 23%</span>
+        </div>
+        <div class="canvas-legend">
+          <div class="legend-item"><span class="legend-dot broker"></span> Broker Node</div>
+          <div class="legend-item"><span class="legend-dot agent"></span> Autonomous Agent</div>
+        </div>
+      </div>
+
+      <div class="swarm-content">
+        <h3>Hyper-Dimensional Task Routing</h3>
+        <p>Aetheris organizes worker nodes dynamically based on computational capability and prompt affinity. When a swarm receives a complex problem, the orchestrator brokers split the task, spin up specialized agents, and map their vector links in real-time.</p>
+        
+        <div class="swarm-stats">
+          <div class="swarm-stat-item">
+            <span>Orchestration Strategy</span>
+            <span>Orbital Ring Grid</span>
+          </div>
+          <div class="swarm-stat-item">
+            <span>Dynamic Sub-Swarms</span>
+            <span>3 Active Clusters</span>
+          </div>
+          <div class="swarm-stat-item">
+            <span>Node Latency Alignment</span>
+            <span>&lt; 0.1ms Vector Sync</span>
+          </div>
+          <div class="swarm-stat-item">
+            <span>Data Pipeline Stability</span>
+            <span>99.9997% Secure</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Terminal Sandbox Section -->
+  <section class="section-padding container console-section" id="console">
+    <div class="section-header reveal">
+      <span class="section-subtitle">Developer Terminal</span>
+      <h2 class="section-title">Simulate a Bot Execution</h2>
+      <p class="section-desc">Run simulated command macros below to trace how Aetheris bots validate data, connect to databases, and post ledger files.</p>
+    </div>
+
+    <div class="console-grid">
+      <div class="console-info reveal">
+        <h3>Operational Sandbox CLI</h3>
+        <p>Aetheris engines write live audit logs for every document parsed and ledger transaction clear. Run any simulator macro on the right to examine runtime processes.</p>
+        
+        <div class="query-suggestions">
+          <button class="suggestion-btn" data-cmd="help">
+            <span>Get CLI Help Commands</span>
+            <span>cmd: help</span>
+          </button>
+          <button class="suggestion-btn" data-cmd="run ar-bot">
+            <span>Run Accounts Receivable Bot</span>
+            <span>cmd: run ar-bot</span>
+          </button>
+          <button class="suggestion-btn" data-cmd="run sales-bot">
+            <span>Run E-Commerce Sync Bot</span>
+            <span>cmd: run sales-bot</span>
+          </button>
+          <button class="suggestion-btn" data-cmd="run supply-bot">
+            <span>Run Logistics & Supply Bot</span>
+            <span>cmd: run supply-bot</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Hardware Console screen -->
+      <div class="reveal" style="transition-delay: 0.2s;">
+        <div class="terminal-window glass-panel">
+          <div class="terminal-header">
+            <div class="mockup-dots">
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+            </div>
+            <div class="terminal-indicator">CORE_NODE_SYNC</div>
+            <div style="width: 42px;"></div>
+          </div>
+          
+          <div class="terminal-body" id="terminal-body">
+            <!-- Simulated Lines added by app.js -->
+          </div>
+
+          <form class="terminal-input-form" id="terminal-form">
+            <span>guest@aetheris:~#</span>
+            <input type="text" id="terminal-input" placeholder="Type command here..." autocomplete="off" spellcheck="false">
+            <button type="submit">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accordion FAQ Section -->
+  <section class="section-padding container" id="faq">
+    <div class="section-header reveal">
+      <span class="section-subtitle">FAQ</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-desc">Find quick answers concerning implementation times, legacy integrations, and data handling protocols.</p>
+    </div>
+
+    <div class="faq-grid reveal">
+      <!-- FAQ 1 -->
+      <div class="faq-item">
+        <div class="faq-header">
+          <span class="faq-question">How long does onboarding a new invoice layout or store configuration take?</span>
+          <div class="faq-icon"></div>
+        </div>
+        <div class="faq-body">
+          <p class="faq-answer">Since our extraction framework separates data mappings from core scripts, onboarding a new vendor document layout or database store settings takes under 5 working days, requiring no redevelopment or downtime for the main bot registry.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-item">
+        <div class="faq-header">
+          <span class="faq-question">How does Aetheris handle anomalies or unmatched transaction items?</span>
+          <div class="faq-icon"></div>
+        </div>
+        <div class="faq-body">
+          <p class="faq-answer">Every document line is processed in isolated validation blocks. Any item that does not clear defined matching rules is quarantined in an exception folder. The system generates an immediate warning report to your operations team, preventing mis-postings or silent errors.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-item">
+        <div class="faq-header">
+          <span class="faq-question">Is this compatible with legacy on-premise databases and ERP systems?</span>
+          <div class="faq-icon"></div>
+        </div>
+        <div class="faq-body">
+          <p class="faq-answer">Yes. We utilize a combination of secure API connections (CPI interfaces) and desktop RPA orchestrators. This hybrid model allows us to bridge modern cloud tools with old on-premise mainframes, terminal clients, or windows desktop programs.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="faq-item">
+        <div class="faq-header">
+          <span class="faq-question">Where is customer data stored during file parsing operations?</span>
+          <div class="faq-icon"></div>
+        </div>
+        <div class="faq-body">
+          <p class="faq-answer">Data privacy is vital. All transaction information is read, parsed, and posted in-memory locally. No customer transaction values or files are stored in our databases, maintaining full compliance with corporate security audits.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Form Section -->
+  <section class="section-padding container" id="contact">
+    <div class="section-header reveal">
+      <span class="section-subtitle">Get In Touch</span>
+      <h2 class="section-title">Request a Consultation</h2>
+      <p class="section-desc">Let us help you build a custom digital workforce. Fill out the lead form below and a solutions designer will reach out.</p>
+    </div>
+
+    <div class="contact-section-grid">
+      <!-- Contact Info Metadata -->
+      <div class="contact-meta reveal">
+        <h3 class="contact-card-title">Connect With Our Team</h3>
+        <p style="color: var(--color-text-sub); margin-bottom: 1rem;">Have a manual back-office workflow that needs automation? Tell us about your operational stack and we will map a free POC framework for your team.</p>
+        
+        <div class="contact-methods">
+          <div class="contact-method-item">
+            <div class="contact-method-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div class="contact-method-info">
+              <h4>Direct Email Support</h4>
+              <p>integrations@aetheris.ai</p>
+            </div>
+          </div>
+
+          <div class="contact-method-item">
+            <div class="contact-method-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+            <div class="contact-method-info">
+              <h4>Guaranteed Callback Response</h4>
+              <p>Under 4 Hours (Business Days)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lead Capture Form Card -->
+      <div class="contact-form-card glass-panel reveal" id="contact-form-card" style="transition-delay: 0.1s;">
+        <form class="contact-form" id="lead-contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="lead-name">Your Name</label>
+              <input type="text" id="lead-name" class="form-input" placeholder="e.g. Alex Carter" required>
+            </div>
+            <div class="form-group">
+              <label for="lead-email">Corporate Email</label>
+              <input type="email" id="lead-email" class="form-input" placeholder="e.g. alex@company.com" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="lead-company">Company Name</label>
+              <input type="text" id="lead-company" class="form-input" placeholder="e.g. Global Logistics Corp" required>
+            </div>
+            <div class="form-group">
+              <label for="lead-service">Required Service</label>
+              <select id="lead-service" class="form-select" required>
+                <option value="" disabled selected>Select an option...</option>
+                <option value="ar-clearing">Accounts Receivable Automation</option>
+                <option value="erp-integration">E-Commerce ERP Integration</option>
+                <option value="logistics-dispatch">Logistics & Supply Chain Sync</option>
+                <option value="custom-rpa">Custom AI Agent Swarms</option>
+                <option value="consulting">General Process Consulting</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="lead-message">Process Description & Requirements</label>
+            <textarea id="lead-message" class="form-textarea" placeholder="Tell us about the manual steps, systems involved, and approximate monthly volume..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem; align-self: flex-start;">
+            Submit Requirements Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <div class="logo-icon">
+            <div class="logo-ring"></div>
+            <div class="logo-core"></div>
+          </div>
+          <span>AETHERIS</span>
+        </a>
+        <p>Custom cognitive automation orchestrators designing the decentralized future of autonomous enterprise process grids.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Automation Services</h5>
+        <ul>
+          <li><a href="#services">AR Reconcilers</a></li>
+          <li><a href="#services">ERP Storefront Integrations</a></li>
+          <li><a href="#services">Logistics Dispatch</a></li>
+          <li><a href="#services">Document Extractors</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Case Studies</h5>
+        <ul>
+          <li><a href="#portfolio">AR Clearing</a></li>
+          <li><a href="#portfolio">Sales Sync</a></li>
+          <li><a href="#portfolio">Supply Dispatch</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="#roi">ROI Savings Calculator</a></li>
+          <li><a href="#console">Terminal Sandbox</a></li>
+          <li><a href="#faq">Frequently Asked Questions</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>&copy; 2026 Aetheris AI Labs. All rights secured.</span>
+      <div class="footer-socials">
+        <a href="#" aria-label="Github">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+        </a>
+        <a href="#" aria-label="Discord">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core JavaScript -->
+  <script src="js/particles.js"></script>
+  <script src="js/swarm.js"></script>
+  <script src="js/roi.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
