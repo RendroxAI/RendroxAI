@@ -18,4 +18,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initFAQAccordion();
   initContactForm();
   initChatbot();
+  initCategoryNav();
 });

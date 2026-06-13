@@ -364,11 +364,43 @@
     </div>
 
     <div class="portfolio-tabs-container reveal">
-      <!-- Tab Triggers -->
-      <div class="tab-headers">
-        <button class="tab-trigger active" data-tab="ar-case">Accounts Receivable Clearing</button>
-        <button class="tab-trigger" data-tab="sales-case">E-Commerce ERP Integration</button>
-        <button class="tab-trigger" data-tab="logistics-case">Logistics & License Dispatch</button>
+
+      <!-- Category Tabs -->
+      <div class="category-tabs-row" id="category-tabs">
+        <button class="category-tab-btn active" data-category="enterprise">Enterprise Automation</button>
+        <button class="category-tab-btn" data-category="testing">Automation Testing</button>
+        <button class="category-tab-btn" data-category="aiml">AI/ML & LLM</button>
+        <button class="category-tab-btn" data-category="fullstack">Fullstack Development</button>
+      </div>
+
+      <!-- Enterprise Automation Projects -->
+      <div class="project-tabs-row" data-category="enterprise">
+        <div class="project-tab-connector"></div>
+        <button class="project-tab-btn active" data-tab="ar-case">Accounts Receivable Clearing</button>
+        <button class="project-tab-btn" data-tab="sales-case">E-Commerce ERP Integration</button>
+        <button class="project-tab-btn" data-tab="logistics-case">Logistics & License Dispatch</button>
+      </div>
+
+      <!-- Automation Testing Projects (Cloud Firewall) -->
+      <div class="project-tabs-row hidden" data-category="testing">
+        <div class="project-tab-connector"></div>
+        <button class="project-tab-btn active" data-tab="webui-testing">WebUI Automation</button>
+        <button class="project-tab-btn" data-tab="api-testing">API Automation</button>
+        <button class="project-tab-btn" data-tab="e2e-testing">End to End Automation</button>
+      </div>
+
+      <!-- AI/ML & LLM Projects -->
+      <div class="project-tabs-row hidden" data-category="aiml">
+        <div class="project-tab-connector"></div>
+        <button class="project-tab-btn active" data-tab="chatbot-project">Chatbot</button>
+        <button class="project-tab-btn" data-tab="ml-models">ML Models</button>
+      </div>
+
+      <!-- Fullstack Development Projects -->
+      <div class="project-tabs-row hidden" data-category="fullstack">
+        <div class="project-tab-connector"></div>
+        <button class="project-tab-btn active" data-tab="ecommerce-website">Ecommerce Website</button>
+        <button class="project-tab-btn" data-tab="clone-website">Clone Website</button>
       </div>
 
       <!-- Tab Panels -->
@@ -501,6 +533,286 @@
               <div class="metric-pill">
                 <div class="metric-pill-val">1.2s</div>
                 <div class="metric-pill-label">BAPI response speed</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 4: WebUI Automation -->
+        <div class="portfolio-content-panel" id="webui-testing">
+          <div class="case-image-mockup">
+            <div class="code-dec">
+              <span style="color: var(--color-success);">[TEST]</span> WebUI Automation Framework...<br>
+              >> Selenium WebDriver + Playwright initialized.<br>
+              >> Page Object Model (POM) loaded for Cloud Firewall UI.<br>
+              >> Running DLP policy validation tests...<br>
+              >> SSL Inspection UI checks passed.<br>
+              >> Bandwidth Control (BWC) form validation complete.<br>
+              <span style="color: var(--color-success);">>> All WebUI test cases passed.</span>
+            </div>
+          </div>
+          <div class="case-info-block">
+            <span class="case-tag">Cloud Firewall Testing</span>
+            <h3>WebUI Automation — Cloud Firewall</h3>
+            <p><strong>The Challenge:</strong> Cloud Firewall modules like DLP, BWC, Firewall Policy, and Geo-Restriction required manual UI validation across multiple security features, leading to slow regression cycles and inconsistent test coverage.</p>
+            <p><strong>The Solution:</strong> Built scalable UI automation frameworks using Python, Selenium WebDriver, Playwright, and Pytest with Page Object Model (POM) and BDD best practices. Automated testing of SSL Inspection, IPS, Application Control, DLP, BWC, and Geo-Restriction across the Cloud Firewall UI.</p>
+
+            <div class="case-metrics-grid">
+              <div class="metric-pill">
+                <div class="metric-pill-val">Selenium</div>
+                <div class="metric-pill-label">WebDriver Framework</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">Playwright</div>
+                <div class="metric-pill-label">Modern Browser Automation</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">POM</div>
+                <div class="metric-pill-label">Page Object Model</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">Pytest</div>
+                <div class="metric-pill-label">Test Framework</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 5: API Automation -->
+        <div class="portfolio-content-panel" id="api-testing">
+          <div class="case-image-mockup">
+            <div class="code-dec">
+              <span style="color: var(--color-secondary);">[API]</span> REST API Testing Suite...<br>
+              >> Requests library initialized.<br>
+              >> CRUD operations validated for Cloud Firewall endpoints.<br>
+              >> Negative testing: Invalid payloads, auth failures.<br>
+              >> Integration testing: End-to-end API flow verification.<br>
+              >> Response validation: Status codes, schemas, data integrity.<br>
+              <span style="color: var(--color-success);">>> All API test suites passed.</span>
+            </div>
+          </div>
+          <div class="case-info-block">
+            <span class="case-tag">API Testing</span>
+            <h3>API Automation — Cloud Firewall</h3>
+            <p><strong>The Challenge:</strong> Cloud Firewall services required comprehensive API testing covering CRUD operations, input validation, response verification, negative testing, and end-to-end integration testing for security features like SSL Inspection, IPS, and DLP.</p>
+            <p><strong>The Solution:</strong> Developed reusable API clients, fixtures, and validation libraries using Python, Requests, and REST Assured concepts. Performed comprehensive API testing covering CRUD operations, input validation, response verification, negative testing, and end-to-end integration testing for cloud security services.</p>
+
+            <div class="case-metrics-grid">
+              <div class="metric-pill">
+                <div class="metric-pill-val">REST</div>
+                <div class="metric-pill-label">API Testing</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">CRUD</div>
+                <div class="metric-pill-label">Operations Testing</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">Negative</div>
+                <div class="metric-pill-label">Edge Case Testing</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">E2E</div>
+                <div class="metric-pill-label">Integration Testing</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 6: End to End Automation -->
+        <div class="portfolio-content-panel" id="e2e-testing">
+          <div class="case-image-mockup">
+            <div class="code-dec">
+              <span style="color: var(--color-primary);">[E2E]</span> End-to-End Test Pipeline...<br>
+              >> CI/CD integration: Jenkins + GitHub Actions.<br>
+              >> Kubernetes-based test environments configured.<br>
+              >> Full regression suite: UI + API + Security modules.<br>
+              >> DLP, BWC, Firewall Policy, BTF validation complete.<br>
+              >> Test reporting and defect lifecycle management.<br>
+              <span style="color: var(--color-success);">>> E2E pipeline executed successfully.</span>
+            </div>
+          </div>
+          <div class="case-info-block">
+            <span class="case-tag">End-to-End Testing</span>
+            <h3>End to End Automation — Cloud Firewall</h3>
+            <p><strong>The Challenge:</strong> Cloud Firewall modules required end-to-end testing across UI and API layers, with CI/CD integration for continuous testing and faster, more reliable releases across security features like DLP, BWC, Firewall Policy, and Breaks Traffic Flow (BTF).</p>
+            <p><strong>The Solution:</strong> Integrated automated test suites into CI/CD pipelines using Jenkins, GitHub Actions, Git, and Kubernetes-based environments. Built and executed test scenarios for core security features including SSL Inspection, IPS, Application Control, Geo-Restriction, DLP, and BWC, ensuring accurate policy enforcement and traffic integrity.</p>
+
+            <div class="case-metrics-grid">
+              <div class="metric-pill">
+                <div class="metric-pill-val">Jenkins</div>
+                <div class="metric-pill-label">CI/CD Pipeline</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">K8s</div>
+                <div class="metric-pill-label">Kubernetes Environments</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">Agile</div>
+                <div class="metric-pill-label">Scrum Methodology</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">AI</div>
+                <div class="metric-pill-label">Claude AI + Copilot</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 7: AI Chatbot -->
+        <div class="portfolio-content-panel" id="chatbot-project">
+          <div class="case-image-mockup">
+            <div class="code-dec">
+              <span style="color: var(--color-secondary);">[AI]</span> RAG Pipeline initialized...<br>
+              >> Vector DB indexing: ChromaDB connected.<br>
+              >> LangChain + LangGraph orchestration loaded.<br>
+              >> Embedding model: OpenAI text-embedding-3-small.<br>
+              >> Retrieval-Augmented Generation active.<br>
+              >> ChatGPT-style conversational interface ready.<br>
+              <span style="color: var(--color-success);">>> AI Chatbot deployed successfully.</span>
+            </div>
+          </div>
+          <div class="case-info-block">
+            <span class="case-tag">AI Chatbot & LLM</span>
+            <h3>AI Chatbot — ChatGPT-like Assistant</h3>
+            <p><strong>The Challenge:</strong> Businesses need intelligent, context-aware conversational agents that can answer questions, retrieve domain-specific knowledge, and provide 24/7 customer support — similar to ChatGPT but tailored to enterprise needs.</p>
+            <p><strong>The Solution:</strong> Built a custom AI chatbot using RAG (Retrieval-Augmented Generation), LangChain, LangGraph, and Vector Databases (ChromaDB/Pinecone). The system indexes documents into vector embeddings, retrieves relevant context, and generates accurate responses using OpenAI GPT models with enterprise-grade accuracy.</p>
+
+            <div class="case-metrics-grid">
+              <div class="metric-pill">
+                <div class="metric-pill-val">RAG</div>
+                <div class="metric-pill-label">Retrieval-Augmented Generation</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">LangChain</div>
+                <div class="metric-pill-label">LLM Orchestration</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">LangGraph</div>
+                <div class="metric-pill-label">Agentic Workflows</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">Vector DB</div>
+                <div class="metric-pill-label">Semantic Search & Memory</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 8: ML Models -->
+        <div class="portfolio-content-panel" id="ml-models">
+          <div class="case-image-mockup">
+            <div class="code-dec">
+              <span style="color: var(--color-primary);">[ML]</span> Deep Learning models loaded...<br>
+              >> Face Detection: OpenCV + Haar Cascades ready.<br>
+              >> Voice Recognition: Whisper API connected.<br>
+              >> Jarvis Assistant: NLP pipeline initialized.<br>
+              >> TensorFlow/PyTorch models optimized.<br>
+              >> Real-time inference: < 50ms latency.<br>
+              <span style="color: var(--color-success);">>> All ML models deployed successfully.</span>
+            </div>
+          </div>
+          <div class="case-info-block">
+            <span class="case-tag">Machine Learning & Deep Learning</span>
+            <h3>ML Models — Computer Vision & Voice AI</h3>
+            <p><strong>The Challenge:</strong> Enterprises need custom AI models for face detection, voice recognition, and intelligent voice assistants like Jarvis — requiring expertise in Deep Learning, Computer Vision, NLP, and real-time inference pipelines.</p>
+            <p><strong>The Solution:</strong> Developed multiple ML and DL models using TensorFlow, PyTorch, OpenCV, and OpenAI APIs. Built face detection systems with Haar Cascades and CNNs, voice recognition pipelines with Whisper API, and a Jarvis-style voice assistant with NLP, speech-to-text, and text-to-speech capabilities.</p>
+
+            <div class="case-metrics-grid">
+              <div class="metric-pill">
+                <div class="metric-pill-val">OpenCV</div>
+                <div class="metric-pill-label">Face Detection & CV</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">Whisper</div>
+                <div class="metric-pill-label">Voice Recognition API</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">TensorFlow</div>
+                <div class="metric-pill-label">Deep Learning Models</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">Jarvis</div>
+                <div class="metric-pill-label">Voice Assistant NLP</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 9: Ecommerce Website -->
+        <div class="portfolio-content-panel" id="ecommerce-website">
+          <div class="case-image-mockup">
+            <div class="code-dec">
+              <span style="color: var(--color-success);">[MERN]</span> Full Stack Web Application...<br>
+              >> MongoDB: Database schema initialized.<br>
+              >> Express.js: REST API routes configured.<br>
+              >> React.js: Frontend components rendered.<br>
+              >> Node.js: Server-side logic deployed.<br>
+              >> Responsive design: Mobile-first approach.<br>
+              <span style="color: var(--color-success);">>> Ecommerce website deployed successfully.</span>
+            </div>
+          </div>
+          <div class="case-info-block">
+            <span class="case-tag">Full Stack Development</span>
+            <h3>Ecommerce Website — MERN Stack</h3>
+            <p><strong>The Challenge:</strong> Businesses need modern, responsive web applications for food delivery, news portals, and ecommerce platforms — built with scalable architecture, real-time features, and mobile-first design using the MERN stack.</p>
+            <p><strong>The Solution:</strong> Built multiple full-stack web applications using the MERN Stack (MongoDB, Express.js, React.js, Node.js). Developed a Food Delivery App with real-time order tracking, a News Portal with dynamic content management, and responsive ecommerce platforms with secure payment integration.</p>
+
+            <div class="case-metrics-grid">
+              <div class="metric-pill">
+                <div class="metric-pill-val">MERN</div>
+                <div class="metric-pill-label">MongoDB + Express + React + Node</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">MEAN</div>
+                <div class="metric-pill-label">MongoDB + Express + Angular + Node</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">Responsive</div>
+                <div class="metric-pill-label">Mobile-First Design</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">REST API</div>
+                <div class="metric-pill-label">Backend Architecture</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 10: Clone Website -->
+        <div class="portfolio-content-panel" id="clone-website">
+          <div class="case-image-mockup">
+            <div class="code-dec">
+              <span style="color: var(--color-secondary);">[CLONE]</span> Website Cloning Project...<br>
+              >> MI Store clone: React.js frontend built.<br>
+              >> Responsive layout: CSS Grid + Flexbox.<br>
+              >> Product catalog: Dynamic data rendering.<br>
+              >> Navigation: React Router integration.<br>
+              >> Performance: Optimized bundle size.<br>
+              <span style="color: var(--color-success);">>> MI Store clone deployed successfully.</span>
+            </div>
+          </div>
+          <div class="case-info-block">
+            <span class="case-tag">Full Stack Development</span>
+            <h3>Clone Website — MI Store</h3>
+            <p><strong>The Challenge:</strong> Building pixel-perfect clones of popular websites like MI Store requires deep understanding of modern web technologies, responsive design patterns, and component-based architecture using MERN and MEAN stacks.</p>
+            <p><strong>The Solution:</strong> Cloned the MI Store website using React.js with responsive design, dynamic product catalog, and modern UI/UX patterns. Built using MERN stack (MongoDB, Express.js, React.js, Node.js) and MEAN stack (MongoDB, Express.js, Angular, Node.js) technologies with proper state management, API integration, and mobile-first responsive design.</p>
+
+            <div class="case-metrics-grid">
+              <div class="metric-pill">
+                <div class="metric-pill-val">React</div>
+                <div class="metric-pill-label">Component-Based UI</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">MERN</div>
+                <div class="metric-pill-label">Full Stack Architecture</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">MEAN</div>
+                <div class="metric-pill-label">Angular Integration</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">Responsive</div>
+                <div class="metric-pill-label">Mobile-First Design</div>
               </div>
             </div>
           </div>

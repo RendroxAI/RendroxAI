@@ -1215,6 +1215,328 @@ footer {
 
 
 /* =========================================================================
+   CATEGORY NAVIGATION — Use Cases Page
+   ========================================================================= */
+.category-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.category-nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 30% 0%,
+    rgba(139, 92, 246, 0.06) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+}
+
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.category-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-sub);
+  background: var(--color-input-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.category-tab svg {
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+}
+
+.category-tab:hover {
+  color: var(--color-text-main);
+  border-color: var(--color-border-glow);
+  background: rgba(139, 92, 246, 0.06);
+  transform: translateY(-2px);
+}
+
+.category-tab.active {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--color-primary), #a78bfa);
+  border-color: var(--color-primary);
+  box-shadow:
+    0 4px 20px rgba(139, 92, 246, 0.3),
+    0 0 0 1px rgba(139, 92, 246, 0.1);
+  transform: translateY(-2px);
+}
+
+.category-tab.active svg {
+  color: #ffffff;
+}
+
+.subproject-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  min-height: 60px;
+  align-items: center;
+}
+
+.subproject-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 22px;
+  background: var(--color-input-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.subproject-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(139, 92, 246, 0.08) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.subproject-btn:hover::before {
+  opacity: 1;
+}
+
+.subproject-btn:hover {
+  border-color: var(--color-border-glow);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.1);
+}
+
+.subproject-btn.active {
+  border-color: var(--color-primary);
+  background: rgba(139, 92, 246, 0.08);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.12);
+}
+
+.subproject-btn.hidden {
+  display: none;
+}
+
+.project-tabs.hidden {
+  display: none;
+}
+
+
+/* =========================================================================
+   CATEGORY & PROJECT TABS — Index Page Hierarchy
+   ========================================================================= */
+.category-tabs-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.category-tab-btn {
+  padding: 12px 28px;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-sub);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.category-tab-btn:hover {
+  color: var(--color-text-main);
+  border-color: var(--color-border-glow);
+}
+
+.category-tab-btn.active {
+  color: #ffffff;
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 20px var(--glow-primary);
+}
+
+.project-tabs-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 14px 0 20px;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.project-tabs-row.hidden {
+  display: none;
+}
+
+.project-tab-connector {
+  display: none;
+}
+
+.project-tab-btn {
+  padding: 8px 20px;
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--color-text-sub);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.project-tab-btn::before {
+  content: '';
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  width: 1px;
+  height: 14px;
+  background: var(--color-border);
+  transform: translateX(-50%);
+  opacity: 0.5;
+}
+
+.project-tab-btn:first-of-type::before {
+  display: block;
+}
+
+.project-tab-btn:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background: rgba(139, 92, 246, 0.04);
+}
+
+.project-tab-btn.active {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background: rgba(139, 92, 246, 0.08);
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.1);
+}
+
+.subproject-btn.appearing {
+  animation: subprojectFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes subprojectFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.subproject-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.subproject-btn:hover .subproject-icon {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 12px var(--glow-primary);
+}
+
+.subproject-btn.active .subproject-icon {
+  background: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+}
+
+.subproject-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.subproject-name {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  transition: color 0.3s ease;
+}
+
+.subproject-btn:hover .subproject-name {
+  color: var(--color-primary);
+}
+
+.subproject-btn.active .subproject-name {
+  color: var(--color-primary);
+}
+
+.subproject-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--color-text-sub);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+
+/* =========================================================================
    RESPONSIVE — TABLET (≤ 1024px)
    ========================================================================= */
 @media (max-width: 1024px) {
@@ -1396,6 +1718,40 @@ footer {
   header {
     top: 8px;
     width: calc(100% - 16px);
+  }
+
+  /* Category Navigation Mobile */
+  .category-nav {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .category-tabs {
+    gap: 6px;
+  }
+
+  .category-tab {
+    padding: 10px 16px;
+    font-size: 0.78rem;
+  }
+
+  .subproject-buttons {
+    gap: 10px;
+  }
+
+  .subproject-btn {
+    padding: 12px 16px;
+    gap: 10px;
+  }
+
+  .subproject-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 0.72rem;
+  }
+
+  .subproject-name {
+    font-size: 0.82rem;
   }
 }
 
