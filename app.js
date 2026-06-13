@@ -18,5 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFAQAccordion();
   initContactForm();
   initChatbot();
-  initCategoryNav();
+  if (typeof initUsecaseExplorer === 'function') {
+    initUsecaseExplorer();
+  }
 });

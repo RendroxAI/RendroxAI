@@ -1756,6 +1756,612 @@ footer {
 }
 
 /* =========================================================================
+   USECASE EXPLORER — Interactive Project Browser
+   ========================================================================= */
+.usecase-explorer {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* ─── Category Tabs ─── */
+.category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 36px;
+  justify-content: center;
+}
+
+.category-btn {
+  padding: 10px 24px;
+  border-radius: 9999px;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-sub);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.category-btn:hover {
+  color: var(--color-text-main);
+  border-color: var(--color-border-glow);
+}
+
+.category-btn.active {
+  color: #fff;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  border-color: transparent;
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+}
+
+/* ─── Explorer Grid ─── */
+.explorer-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+/* ─── Sidebar ─── */
+.explorer-sidebar {
+  padding: 20px;
+  border-radius: 20px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+}
+
+.project-list { display: none; flex-direction: column; gap: 8px; }
+.project-list.active { display: flex; }
+
+.project-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-sub);
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: left;
+}
+
+.project-btn:hover {
+  background: var(--color-input-bg);
+  border-color: var(--color-border);
+  color: var(--color-text-main);
+}
+
+.project-btn.active {
+  background: rgba(139, 92, 246, 0.08);
+  border-color: rgba(139, 92, 246, 0.2);
+  color: var(--color-primary);
+}
+
+.project-num {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  background: var(--color-input-bg);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+}
+
+.project-btn.active .project-num {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.project-name { line-height: 1.3; }
+
+.sidebar-placeholder {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--color-text-sub);
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  opacity: 0.5;
+}
+
+/* ─── Content Area ─── */
+.explorer-content { min-height: 400px; }
+
+.project-detail { display: none; }
+.project-detail.active { display: block; animation: fadeInTab 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+/* ─── Case Study Wrapper ─── */
+.case-study-wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* ─── Hero Banner ─── */
+.cs-hero {
+  position: relative;
+  padding: 48px 48px;
+  border-radius: 24px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+}
+
+.cs-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+}
+.cs-hero-ar::before { background: linear-gradient(90deg, #8b5cf6, #06b6d4); }
+.cs-hero-sales::before { background: linear-gradient(90deg, #f59e0b, #06b6d4); }
+.cs-hero-logistics::before { background: linear-gradient(90deg, #10b981, #8b5cf6); }
+
+.cs-hero-badge {
+  display: inline-flex;
+  padding: 7px 16px;
+  border-radius: 9999px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--color-secondary);
+  background: rgba(6, 182, 212, 0.08);
+  border: 1px solid rgba(6, 182, 212, 0.15);
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.cs-hero-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+
+.cs-hero-desc {
+  color: var(--color-text-sub);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 900px;
+  margin-bottom: 26px;
+}
+
+.cs-hero-stats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cs-hero-stat {
+  text-align: center;
+  padding: 14px 24px;
+  background: var(--color-input-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  min-width: 130px;
+}
+
+.cs-stat-val {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.cs-stat-lbl {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--color-text-sub);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 5px;
+}
+
+/* ─── Challenge / Solution Double Cards ─── */
+.cs-double {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.cs-card {
+  padding: 32px 28px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+}
+
+.cs-card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  border-radius: 0 2px 2px 0;
+}
+.cs-card-challenge .cs-card-accent { background: var(--color-accent); }
+.cs-card-solution .cs-card-accent { background: var(--color-success); }
+
+.cs-card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.cs-card-icon { font-size: 1.4rem; }
+
+.cs-card-head h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.cs-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.cs-card-list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-sub);
+}
+
+.cs-card-list li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* ─── Workflow + Flow Chart (Stacked Full-Width) ─── */
+.cs-workflow-row {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.cs-workflow-steps,
+.cs-flow-chart {
+  padding: 28px 32px;
+  border-radius: 20px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+}
+
+.cs-section-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Steps: Horizontal Cards */
+.cs-step-list {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.cs-step {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  flex: 1;
+  min-width: 170px;
+  padding: 16px 14px;
+  background: var(--color-input-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.cs-step:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.cs-step-num {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+}
+
+.cs-step-info h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.cs-step-info p {
+  font-size: 0.8rem;
+  color: var(--color-text-sub);
+  line-height: 1.5;
+}
+
+/* ─── Flow Chart SVG ─── */
+.cs-flow-svg {
+  width: 100%;
+  height: auto;
+  max-width: 1100px;
+  display: block;
+  margin: 0 auto;
+}
+.cs-flow-svg text { user-select: none; -webkit-user-select: none; }
+.cs-flow-svg rect { transition: stroke-opacity 0.3s, filter 0.3s; }
+.cs-flow-chart:hover .cs-flow-svg rect { stroke-opacity: 0.9; filter: brightness(1.15); }
+
+/* ─── Metrics Grid ─── */
+.cs-metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+.cs-metric-card {
+  padding: 26px;
+  border-radius: 20px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+}
+
+.cs-metric-bar {
+  height: 8px;
+  border-radius: 99px;
+  margin-bottom: 18px;
+  width: var(--cs-bar-w, 0%);
+  transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.cs-bar-manual { background: linear-gradient(90deg, var(--color-accent), #f59e0b); }
+
+.cs-metric-body h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.cs-metric-compare {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cs-metric-compare > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cs-metric-label { font-size: 0.82rem; color: var(--color-text-sub); }
+.cs-metric-value { font-size: 0.95rem; font-weight: 600; color: var(--color-text-main); }
+.cs-val-accent { color: var(--color-primary); font-weight: 700; }
+
+/* ─── Donut ─── */
+.cs-metric-donut {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.cs-metric-donut svg { width: 130px; height: 130px; }
+
+.cs-donut-center {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cs-donut-val {
+  font-family: var(--font-heading);
+  font-size: 1.7rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.cs-donut-lbl {
+  font-size: 0.65rem;
+  color: var(--color-text-sub);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 4px;
+}
+
+/* ─── KPI Grid ─── */
+.cs-kpi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.cs-kpi {
+  text-align: center;
+  padding: 10px 6px;
+  background: var(--color-input-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+.cs-kpi-val {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.cs-kpi-lbl {
+  display: block;
+  font-size: 0.6rem;
+  color: var(--color-text-sub);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 2px;
+}
+
+/* ─── Placeholder Card ─── */
+.placeholder-card {
+  text-align: center;
+  padding: 60px 40px;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.placeholder-glow-nebula {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(var(--color-primary) 0%, transparent 65%);
+  opacity: 0.08;
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+.placeholder-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  background: rgba(139, 92, 246, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: var(--color-primary);
+}
+
+.placeholder-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.placeholder-card p {
+  color: var(--color-text-sub);
+  max-width: 600px;
+  margin: 0 auto 28px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.placeholder-grid {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.placeholder-item {
+  padding: 16px 20px;
+  background: var(--color-input-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  min-width: 160px;
+}
+
+.placeholder-item span {
+  display: block;
+  font-size: 0.65rem;
+  color: var(--color-text-sub);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+
+.placeholder-item h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ─── Donut Animation ─── */
+.donut-animated {
+  stroke-dasharray: 377;
+  animation: donut-fill 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes donut-fill {
+  from { stroke-dashoffset: 377; }
+  to { stroke-dashoffset: 0; }
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1024px) {
+  .explorer-grid { grid-template-columns: 1fr; }
+  .explorer-sidebar { display: flex; flex-wrap: wrap; gap: 8px; padding: 16px; }
+  .project-list { flex-direction: row; flex-wrap: wrap; }
+  .project-btn { flex: 1; min-width: 140px; }
+  .cs-step-list { flex-direction: column; }
+  .cs-step { min-width: unset; }
+}
+@media (max-width: 768px) {
+  .cs-double, .cs-metrics-grid { grid-template-columns: 1fr; }
+  .cs-hero { padding: 32px 20px; }
+  .cs-hero-title { font-size: 1.5rem; }
+  .cs-hero-stats { gap: 10px; flex-direction: column; }
+  .cs-hero-stat { min-width: unset; padding: 12px 16px; }
+  .cs-stat-val { font-size: 1.3rem; }
+  .cs-workflow-steps, .cs-flow-chart { padding: 20px 18px; }
+  .cs-step { padding: 12px; }
+  .placeholder-card { padding: 40px 20px; }
+}
+
+
+/* =========================================================================
    AI CHATBOT WIDGET — Floating Assistant
    ========================================================================= */
 #chatbot-container {
