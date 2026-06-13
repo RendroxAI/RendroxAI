@@ -17,4 +17,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initROICalculator();
   initFAQAccordion();
   initContactForm();
+  initChatbot();
 });
