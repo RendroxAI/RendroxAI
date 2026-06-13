@@ -855,6 +855,31 @@
     </div>
   </section>
 
+  <!-- Chatbot Widget HTML -->
+  <div id="chatbot-container">
+    <button id="chatbot-toggle" aria-label="Open AI chat">
+      <span class="pulse-ring"></span>
+      💬
+    </button>
+    <div id="chatbot-panel">
+      <div class="chatbot-header">
+        <div class="chatbot-header-left">
+          <div class="chatbot-header-avatar">🤖</div>
+          <div class="chatbot-header-info">
+            <h4>AI Helper</h4>
+            <p>Online &bull; Ask me anything</p>
+          </div>
+        </div>
+        <button id="chatbot-close" class="chatbot-close" aria-label="Close chat">✕</button>
+      </div>
+      <div class="chatbot-messages" id="chatbot-messages"></div>
+      <div class="chatbot-input-area">
+        <input type="text" id="chatbot-input" placeholder="Type your message..." autocomplete="off">
+        <button id="chatbot-send" aria-label="Send message">➤</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer>
     <div class="container footer-grid">
@@ -934,6 +959,7 @@
   <script src="js/roi.js"></script>
   <script src="js/terminal.js"></script>
   <script src="js/ui.js"></script>
+  <script src="js/chatbot.js"></script>
   <script src="app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
   <script src="js/email.js" defer></script>
