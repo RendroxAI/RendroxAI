@@ -144,13 +144,17 @@ header.scrolled .nav-container {
 }
 
 .logo-core {
-  width: 10px;
-  height: 10px;
-  background: var(--color-primary);
-  border-radius: 50%;
-  box-shadow:
-    0 0 12px var(--glow-primary),
-    0 0 24px var(--glow-primary);
+  width: 66%;
+  height: 66%;
+  background: url(../assets/logo-mark.png) center / contain no-repeat;
+  border-radius: 0;
+  filter: drop-shadow(0 0 6px var(--glow-primary));
+  animation: logo-pulse 3s ease-in-out infinite;
+}
+
+@keyframes logo-pulse {
+  0%, 100% { filter: drop-shadow(0 0 4px var(--glow-primary)); }
+  50% { filter: drop-shadow(0 0 10px var(--glow-primary)); }
 }
 
 /* Nav Links */
@@ -234,6 +238,125 @@ header.scrolled .nav-container {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+/* In-menu CTA is hidden on desktop; shown inside the mobile overlay */
+.nav-cta-mobile {
+  display: none;
+}
+
+/* =========================================================================
+   MOBILE NAVIGATION (≤ 900px)
+   The desktop header is centered with transform: translateX(-50%), which
+   makes it the containing block for position:fixed children. We drop the
+   transform here so the overlay menu can fill the viewport, not the pill.
+   ========================================================================= */
+@media (max-width: 900px) {
+  header {
+    left: 12px;
+    right: 12px;
+    width: auto;
+    max-width: none;
+    transform: none;
+  }
+
+  /* backdrop-filter ALSO traps position:fixed children — disable it here so
+     the overlay menu can escape the pill and fill the viewport. */
+  .nav-container,
+  header.scrolled .nav-container {
+    padding: 9px 12px 9px 18px;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(8, 9, 20, 0.9);
+  }
+  body.light-theme .nav-container,
+  body.light-theme header.scrolled .nav-container {
+    background: rgba(255, 255, 255, 0.92);
+  }
+
+  /* keep logo + toggle floating above the overlay */
+  .logo { z-index: 1002; }
+  .logo span { white-space: nowrap; font-size: 1.05rem; }
+
+  .menu-toggle { display: flex; }
+
+  /* hide the top-bar CTA on mobile; it moves into the overlay */
+  .nav-cta { display: none !important; }
+  .nav-actions { gap: 10px; }
+
+  /* Full-screen overlay menu */
+  .nav-links {
+    position: fixed;
+    inset: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 96px 24px 48px;
+    background:
+      radial-gradient(120% 80% at 50% 0%, rgba(139, 92, 246, 0.12), transparent 60%),
+      var(--color-bg);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.35s ease,
+                transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                visibility 0.35s;
+    z-index: 999;
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .nav-links li {
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    padding: 15px 24px;
+    border-radius: 14px;
+    transition: background 0.25s ease, color 0.25s ease;
+  }
+
+  /* remove the desktop underline animation inside the overlay */
+  .nav-links a::after { display: none; }
+
+  .nav-links li:not(.nav-cta-mobile) a:hover,
+  .nav-links li:not(.nav-cta-mobile) a:active {
+    background: var(--color-bg-card);
+    color: var(--color-primary);
+  }
+
+  /* in-menu CTA */
+  .nav-cta-mobile {
+    display: block;
+    margin-top: 16px;
+  }
+
+  .nav-cta-mobile a {
+    width: 100%;
+    padding: 15px 24px;
+    font-size: 1rem;
+  }
+
+  /* lock background scroll while the menu is open */
+  body.nav-open {
+    overflow: hidden;
+  }
+
+  /* keep the floating chat bubble from covering the open menu */
+  body.nav-open #chatbot-container {
+    display: none;
+  }
 }
 
 

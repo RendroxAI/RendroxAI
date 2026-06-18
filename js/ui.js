@@ -66,11 +66,21 @@ function initThemeToggle() {
 
 // ─── 3D Tilt Effect ─────────────────────────────────────────
 function initTiltEffect() {
-  const selectors = '.service-card, .visualizer-card, .roi-calculator-card, .contact-form-card';
+  // NOTE: the contact form is intentionally excluded — tilting a card you're
+  // typing into is poor UX and caused a feedback shake (transition lag + the
+  // transformed bounding box being re-measured each mousemove).
+  const selectors = '.visualizer-card, .roi-calculator-card';
   const cards = document.querySelectorAll(selectors);
   const MAX_TILT = 8;
 
   cards.forEach((card) => {
+    // Kill the transition while actively tilting so the transform doesn't
+    // animate (and feed back into getBoundingClientRect) — this is what
+    // produced the "shaking". Restore a smooth transition for the reset.
+    card.addEventListener('mouseenter', () => {
+      card.style.transition = 'transform 0s';
+    });
+
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
@@ -86,6 +96,7 @@ function initTiltEffect() {
     });
 
     card.addEventListener('mouseleave', () => {
+      card.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
       card.style.transform = 'perspective(800px) rotateX(0) rotateY(0)';
     });
   });

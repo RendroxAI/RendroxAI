@@ -52,15 +52,16 @@
         <li><a href="index.html#services">Services</a></li>
         <li><a href="index.html#portfolio">Portfolio</a></li>
         <li><a href="index.html#contact">Contact</a></li>
+        <li class="nav-cta-mobile"><a href="index.html#contact" class="btn btn-primary">Get a Quote</a></li>
       </ul>
 
-      <div style="display: flex; align-items: center; gap: 0.75rem;">
+      <div class="nav-actions">
         <button class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode">
           <div class="theme-toggle-circle"></div>
           <svg class="theme-icon icon-sun" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
           <svg class="theme-icon icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
         </button>
-        <a href="index.html#contact" class="btn btn-primary" style="padding:0.5rem 1.2rem;font-size:0.85rem;">Get a Quote</a>
+        <a href="index.html#contact" class="btn btn-primary nav-cta" style="padding:0.5rem 1.2rem;font-size:0.85rem;">Get a Quote</a>
         <div class="menu-toggle" id="menu-toggle">
           <span></span><span></span><span></span>
         </div>
@@ -69,11 +70,30 @@
   </header>
 
   <!-- Page Hero Banner -->
-  <section class="section-padding container" style="padding-top: 10rem;">
-    <div class="section-header reveal">
+  <section class="section-padding container uc-hero-section">
+    <div class="section-header reveal uc-hero">
       <span class="section-subtitle">Delivered Portfolio</span>
-      <h1 class="section-title" style="font-size: 3.25rem;">Automation Case Studies</h1>
+      <h1 class="section-title uc-hero-heading">Automation <span class="uc-grad">Case Studies</span></h1>
       <p class="section-desc">Deep-dive into the engineering, architecture, and measurable impact of enterprise automation projects delivered by Rendrox AI.</p>
+
+      <div class="uc-impact-ribbon reveal">
+        <div class="uc-impact">
+          <span class="uc-impact-val">700+</span>
+          <span class="uc-impact-lbl">Hours Saved / Month</span>
+        </div>
+        <div class="uc-impact">
+          <span class="uc-impact-val">152k+</span>
+          <span class="uc-impact-lbl">Orders / Run</span>
+        </div>
+        <div class="uc-impact">
+          <span class="uc-impact-val">99.9%</span>
+          <span class="uc-impact-lbl">Bot Uptime</span>
+        </div>
+        <div class="uc-impact">
+          <span class="uc-impact-val">100%</span>
+          <span class="uc-impact-lbl">Audit Trail</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -94,7 +114,12 @@
         
         <!-- Left Section: Project Sidebar List -->
         <div class="explorer-sidebar glass-panel">
-          
+
+          <div class="sidebar-head">
+            <span class="sidebar-head-dot"></span>
+            <span class="sidebar-head-label">Project Index</span>
+          </div>
+
           <!-- Enterprise Automation Projects -->
           <div class="project-list active" data-category="enterprise">
             <button class="project-btn active" data-project="ar">
