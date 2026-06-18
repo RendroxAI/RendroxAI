@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMetricsCounter();
   initTerminalSandbox();
   initPortfolioTabs();
+  initCategoryNav();
   initROICalculator();
   initFAQAccordion();
   initContactForm();
