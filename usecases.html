@@ -135,6 +135,10 @@
               <span class="project-num">03</span>
               <span class="project-name">Sales Order Bot</span>
             </button>
+            <button class="project-btn" data-project="mt">
+              <span class="project-num">04</span>
+              <span class="project-name">MT Receipt (Payment Advice)</span>
+            </button>
           </div>
 
           <!-- Automation Testing Projects -->
@@ -519,7 +523,117 @@
             </div>
           </div>
 
-          <!-- CASE STUDY: WebUI Automation (Cloud Firewall) -->
+          <!-- PROJECT 4: MT Receipt — Payment Advice Processing Bot -->
+          <div class="project-detail" data-project="mt" data-category="enterprise">
+            <div class="case-study-wrapper" style="padding: 0; border: none; background: transparent; box-shadow: none;">
+              <div class="cs-hero cs-hero-mt" style="margin-top: 0; border-radius: 20px;">
+                <div class="cs-hero-badge">04 &mdash; SAP BPA Payment Advice Automation</div>
+                <h2 class="cs-hero-title">MT Receipt — Payment Advice Processing Bot</h2>
+                <p class="cs-hero-desc">An autonomous Payment Advice (PA) processing bot for Parle Products Pvt. Ltd., built on SAP Build Process Automation (BPA) within SAP BTP. Every hour it detects PA emails, downloads PDF/Excel attachments, extracts the data, and posts it straight into SAP — fully unattended.</p>
+                <div class="cs-hero-stats">
+                  <div class="cs-hero-stat"><span class="cs-stat-val">1 hr</span><span class="cs-stat-lbl">Auto-Cycle</span></div>
+                  <div class="cs-hero-stat"><span class="cs-stat-val">100%</span><span class="cs-stat-lbl">Unattended</span></div>
+                  <div class="cs-hero-stat"><span class="cs-stat-val">PDF</span><span class="cs-stat-lbl">Excel</span></div>
+                </div>
+              </div>
+
+              <div class="cs-double">
+                <div class="cs-card cs-card-challenge glass-panel">
+                  <div class="cs-card-accent"></div>
+                  <div class="cs-card-head"><span class="cs-card-icon">⚠️</span><h3>The Challenge</h3></div>
+                  <ul class="cs-card-list">
+                    <li>Payment Advice emails arrived constantly in the "To Be Processed" folder and demanded manual download, review, and re-keying of data into SAP.</li>
+                    <li>Attachments arrived in inconsistent PDF and Excel (.xlsx / .xls) formats, each needing bespoke handling.</li>
+                    <li>Manual data entry introduced typos and mismatches, while there was no reliable audit trail for what had been posted.</li>
+                    <li>Users had to manually track which emails were still pending, making delays and errors easy to miss.</li>
+                  </ul>
+                </div>
+                <div class="cs-card cs-card-solution glass-panel">
+                  <div class="cs-card-accent"></div>
+                  <div class="cs-card-head"><span class="cs-card-icon">✅</span><h3>Our Solution</h3></div>
+                  <ul class="cs-card-list">
+                    <li>Deployed a scheduled MT Process Payment Advice Bot on SAP Build Process Automation (BPA), hosted on SAP BTP.</li>
+                    <li>Configured a time-based trigger that runs automatically every 1 hour with zero manual intervention.</li>
+                    <li>Automated mailbox scanning, attachment download (PDF/Excel), data extraction, and posting directly into SAP.</li>
+                    <li>Processed emails are moved to the "Processed" folder, giving a clear, visual audit trail of completed items.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cs-workflow-row">
+                <div class="cs-workflow-steps glass-panel">
+                  <h3 class="cs-section-label">📋 End-to-End Workflow</h3>
+                  <div class="cs-step-list">
+                    <div class="cs-step"><div class="cs-step-num">01</div><div class="cs-step-info"><h4>Scheduled Trigger</h4><p>Time-based trigger fires in SAP BTP automatically once every hour, with no manual action required.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">02</div><div class="cs-step-info"><h4>Access Mailbox</h4><p>Bot logs into the designated mailbox and navigates to the "To Be Processed" folder.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">03</div><div class="cs-step-info"><h4>Scan &amp; Identify</h4><p>Scans all emails to identify those carrying a Payment Advice attachment in PDF or Excel format.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">04</div><div class="cs-step-info"><h4>Download Attachment</h4><p>Downloads each matching PA file (PDF/Excel) to a temporary working location for processing.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">05</div><div class="cs-step-info"><h4>Post to SAP</h4><p>Reads the file, extracts the Payment Advice data, and posts it directly into SAP — no manual data entry.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">06</div><div class="cs-step-info"><h4>Move to Processed</h4><p>Moves the email to the "Processed" folder, confirming the advice has been fully handled.</p></div></div>
+                  </div>
+                </div>
+                <div class="cs-flow-chart glass-panel">
+                  <h3 class="cs-section-label">🔧 System Architecture Flow</h3>
+                  <svg class="cs-flow-svg" viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs><filter id="fgmt"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+                    <line x1="170" y1="100" x2="230" y2="100" stroke="#f59e0b" stroke-width="2"/>
+                    <line x1="390" y1="100" x2="450" y2="100" stroke="#f59e0b" stroke-width="2"/>
+                    <line x1="610" y1="100" x2="670" y2="100" stroke="#f59e0b" stroke-width="2"/>
+                    <polygon points="225,95 235,100 225,105" fill="#f59e0b"/>
+                    <polygon points="445,95 455,100 445,105" fill="#f59e0b"/>
+                    <polygon points="665,95 675,100 665,105" fill="#f59e0b"/>
+                    <rect x="30" y="65" width="140" height="70" rx="12" fill="var(--color-bg-card)" stroke="#f59e0b" stroke-width="1.5" filter="url(#fgmt)"/>
+                    <text x="100" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">📅 Schedule</text>
+                    <text x="100" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Hourly BPA Trigger</text>
+                    <rect x="230" y="65" width="160" height="70" rx="12" fill="var(--color-bg-card)" stroke="#06b6d4" stroke-width="1.5" filter="url(#fgmt)"/>
+                    <text x="310" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">📨 Mailbox</text>
+                    <text x="310" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">"To Be Processed" Folder</text>
+                    <rect x="450" y="65" width="160" height="70" rx="12" fill="var(--color-bg-card)" stroke="#8b5cf6" stroke-width="1.5" filter="url(#fgmt)"/>
+                    <text x="530" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">📄 PA Parser</text>
+                    <text x="530" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">PDF / Excel Extraction</text>
+                    <rect x="670" y="65" width="130" height="70" rx="12" fill="var(--color-bg-card)" stroke="#10b981" stroke-width="1.5" filter="url(#fgmt)"/>
+                    <text x="735" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">🏢 SAP BTP</text>
+                    <text x="735" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Direct Posting</text>
+<text x="100" y="155" text-anchor="middle" fill="#f59e0b" font-size="9" font-family="var(--font-mono)">● Runs Every 1hr</text>
+                    <text x="310" y="155" text-anchor="middle" fill="#06b6d4" font-size="9" font-family="var(--font-mono)">Auto Folder Scan</text>
+                    <text x="530" y="155" text-anchor="middle" fill="#8b5cf6" font-size="9" font-family="var(--font-mono)">PDF + Excel</text>
+                    <text x="735" y="155" text-anchor="middle" fill="#10b981" font-size="9" font-family="var(--font-mono)">100% Accurate</text>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="cs-metrics-grid">
+                <div class="cs-metric-card glass-panel">
+                  <div class="cs-metric-bar cs-bar-manual" style="--cs-bar-w: 90%"></div>
+                  <div class="cs-metric-body">
+                    <h4>Processing Turnaround</h4>
+                    <div class="cs-metric-compare">
+                      <div><span class="cs-metric-label">Manual</span><span class="cs-metric-value">Hours / Day</span></div>
+                      <div><span class="cs-metric-label">Automated</span><span class="cs-metric-value cs-val-accent">Every 1 hr</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cs-metric-card glass-panel">
+                  <div class="cs-metric-donut">
+                    <svg viewBox="0 0 160 160">
+                      <circle cx="80" cy="80" r="60" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="16"/>
+                      <circle class="donut-animated" cx="80" cy="80" r="60" fill="none" stroke="var(--color-success)" stroke-width="16" stroke-linecap="round" transform="rotate(-90 80 80)"/>
+                    </svg>
+                    <div class="cs-donut-center"><span class="cs-donut-val">100%</span><span class="cs-donut-lbl">Unattended</span></div>
+                  </div>
+                </div>
+                <div class="cs-metric-card glass-panel">
+                  <h4>Key Metrics</h4>
+                  <div class="cs-kpi-grid">
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-primary)">1 hr</span><span class="cs-kpi-lbl">Auto-Cycle</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-secondary)">2</span><span class="cs-kpi-lbl">Formats (PDF/Excel)</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-success)">100%</span><span class="cs-kpi-lbl">Data Accuracy</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-accent)">24/7</span><span class="cs-kpi-lbl">Schedule Coverage</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="project-detail" data-project="webui" data-category="testing">
             <div class="case-study-wrapper" style="padding: 0; border: none; background: transparent; box-shadow: none;">
               <div class="cs-hero cs-hero-testing" style="margin-top: 0; border-radius: 20px;">
