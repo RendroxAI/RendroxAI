@@ -1,0 +1,895 @@
+/* =========================================================================
+   USECASE EXPLORER — "CONTROL DECK" REDESIGN
+   Loaded last, so selectors here override css/sections.css where they overlap.
+   JS hooks preserved: .category-btn[data-category], .project-list,
+   .project-btn[data-project], .project-detail, .active, .cs-metric-donut.
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   PAGE HERO
+   ------------------------------------------------------------------------- */
+.uc-hero-section {
+  padding-top: 10rem;
+}
+
+.uc-hero-heading {
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.uc-grad {
+  background: linear-gradient(120deg, var(--color-primary) 0%, var(--color-secondary) 60%, var(--color-primary) 100%);
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: uc-grad-pan 6s linear infinite;
+}
+
+@keyframes uc-grad-pan {
+  to { background-position: 220% center; }
+}
+
+/* Impact ribbon under the hero */
+.uc-impact-ribbon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin: 40px auto 0;
+  max-width: 880px;
+}
+
+.uc-impact {
+  flex: 1 1 170px;
+  min-width: 150px;
+  padding: 20px 18px;
+  border-radius: 18px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.45s;
+}
+
+.uc-impact::after {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  opacity: 0.7;
+}
+
+.uc-impact:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-border-glow);
+}
+
+.uc-impact-val {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.uc-impact-lbl {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text-sub);
+}
+
+/* -------------------------------------------------------------------------
+   EXPLORER SHELL
+   ------------------------------------------------------------------------- */
+.usecase-explorer {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+/* ---- Category Selector → segmented control on a glass track ---- */
+.category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 52px;
+  padding: 6px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.category-btn {
+  padding: 11px 24px;
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-text-sub);
+  background: transparent;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  transition: color 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
+}
+
+.category-btn:hover {
+  color: var(--color-text-main);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.category-btn.active {
+  color: #fff;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.35);
+}
+
+/* ---- Layout Grid ---- */
+.explorer-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+/* ---- Sidebar (neutralize the wrapping glass panel; cards lead the design) ---- */
+.explorer-sidebar.glass-panel {
+  background: transparent;
+  border: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  animation: none;
+  padding: 0;
+  border-radius: 0;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: sticky;
+  top: 100px;
+  z-index: 10;
+}
+.explorer-sidebar.glass-panel::before { display: none; }
+.explorer-sidebar.glass-panel:hover { transform: none; box-shadow: none; }
+
+.sidebar-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 6px 10px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-text-sub);
+}
+
+.sidebar-head-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-success);
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5);
+  animation: uc-live-pulse 2.2s ease-out infinite;
+}
+
+@keyframes uc-live-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5); }
+  70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.project-list {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.project-list.active {
+  display: flex;
+  animation: fadeInSidebar 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ---- Project cards ---- */
+.project-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 16px 18px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  text-align: left;
+  cursor: pointer;
+  color: var(--color-text-sub);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s, color 0.4s, box-shadow 0.4s;
+}
+
+/* sweeping glow on the active card */
+.project-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(6, 182, 212, 0.08));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* left accent rail */
+.project-btn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 0;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: linear-gradient(var(--color-primary), var(--color-secondary));
+  transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-btn:hover {
+  color: var(--color-text-main);
+  border-color: var(--color-border-glow);
+  transform: translateX(4px);
+}
+
+.project-btn.active {
+  color: #fff;
+  border-color: rgba(139, 92, 246, 0.45);
+  box-shadow: 0 10px 32px rgba(139, 92, 246, 0.12);
+}
+.project-btn.active::before { opacity: 1; }
+.project-btn.active::after { height: 60%; }
+
+.project-num {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: rgba(139, 92, 246, 0.1);
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: background 0.4s, color 0.4s;
+}
+
+.project-btn.active .project-num {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: #fff;
+}
+
+.project-name {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* sidebar placeholder when no projects exist */
+.sidebar-placeholder {
+  padding: 28px;
+  text-align: center;
+  border: 1px dashed var(--color-border);
+  border-radius: 16px;
+  color: var(--color-text-sub);
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+  background: rgba(255, 255, 255, 0.01);
+}
+
+/* -------------------------------------------------------------------------
+   CONTENT AREA
+   ------------------------------------------------------------------------- */
+.explorer-content {
+  width: 100%;
+  min-height: 400px;
+}
+
+.project-detail {
+  display: none;
+  width: 100%;
+}
+
+.project-detail.active {
+  display: block;
+  animation: fadeInDetail 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInSidebar {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDetail {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* -------------------------------------------------------------------------
+   CASE STUDY HERO (override sections.css)
+   ------------------------------------------------------------------------- */
+.cs-hero {
+  position: relative;
+  padding: 44px 44px;
+  border-radius: 24px;
+  margin-bottom: 28px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background:
+    radial-gradient(120% 140% at 100% 0%, rgba(139, 92, 246, 0.12), transparent 55%),
+    var(--color-bg-card);
+}
+
+/* faint grid texture inside hero */
+.cs-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 38px 38px;
+  -webkit-mask-image: radial-gradient(120% 100% at 100% 0%, #000, transparent 60%);
+  mask-image: radial-gradient(120% 100% at 100% 0%, #000, transparent 60%);
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.cs-hero > * { position: relative; z-index: 1; }
+
+.cs-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  z-index: 2;
+}
+
+.cs-hero-badge {
+  display: inline-flex;
+  padding: 7px 16px;
+  border-radius: 9999px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--color-secondary);
+  background: rgba(6, 182, 212, 0.08);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.cs-hero-title {
+  font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+  font-weight: 700;
+  margin-bottom: 14px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.cs-hero-desc {
+  color: var(--color-text-sub);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 760px;
+  margin-bottom: 28px;
+}
+
+/* Stats → inline row with dividers */
+.cs-hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--color-input-bg);
+  width: fit-content;
+  max-width: 100%;
+}
+
+.cs-hero-stat {
+  text-align: left;
+  padding: 16px 30px;
+  background: transparent;
+  border: none;
+  border-right: 1px solid var(--color-border);
+  min-width: auto;
+}
+.cs-hero-stat:last-child { border-right: none; }
+
+.cs-stat-val {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.7rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.15;
+}
+
+.cs-stat-lbl {
+  display: block;
+  font-size: 0.68rem;
+  color: var(--color-text-sub);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 6px;
+}
+
+/* Additional case-study hero top gradients (mirrors .cs-hero-* in sections.css) */
+.cs-hero-testing::before { background: linear-gradient(90deg, #f43f5e, #f59e0b); }
+.cs-hero-aiml::before { background: linear-gradient(90deg, #06b6d4, #8b5cf6); }
+.cs-hero-fullstack::before { background: linear-gradient(90deg, #f59e0b, #f43f5e); }
+.cs-hero-cloud::before { background: linear-gradient(90deg, #0ea5e9, #10b981); }
+.cs-hero-cfw::before { background: linear-gradient(90deg, #f43f5e, #06b6d4); }
+.cs-hero-mt::before { background: linear-gradient(90deg, #f59e0b, #10b981); }
+
+/* -------------------------------------------------------------------------
+   CHALLENGE / SOLUTION CARDS (override)
+   ------------------------------------------------------------------------- */
+.cs-double {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.cs-card {
+  padding: 30px 28px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s;
+}
+.cs-card:hover { transform: translateY(-3px); }
+.cs-card-challenge:hover { border-color: rgba(244, 63, 94, 0.35); }
+.cs-card-solution:hover { border-color: rgba(16, 185, 129, 0.35); }
+
+.cs-card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 0;
+}
+.cs-card-challenge .cs-card-accent { background: linear-gradient(90deg, var(--color-accent), transparent); }
+.cs-card-solution .cs-card-accent { background: linear-gradient(90deg, var(--color-success), transparent); }
+
+.cs-card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* turn the emoji into a framed icon chip */
+.cs-card-icon {
+  font-size: 1.1rem;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  line-height: 1;
+}
+.cs-card-challenge .cs-card-icon { background: rgba(244, 63, 94, 0.1); border: 1px solid rgba(244, 63, 94, 0.2); }
+.cs-card-solution .cs-card-icon { background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); }
+
+.cs-card-head h3 { font-size: 1.15rem; font-weight: 700; }
+
+.cs-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.cs-card-list li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-sub);
+}
+
+.cs-card-list li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.cs-card-challenge .cs-card-list li::before { background: var(--color-accent); box-shadow: 0 0 8px rgba(244, 63, 94, 0.5); }
+.cs-card-solution .cs-card-list li::before { background: var(--color-success); box-shadow: 0 0 8px rgba(16, 185, 129, 0.5); }
+
+/* -------------------------------------------------------------------------
+   WORKFLOW (override) → connected vertical timeline
+   ------------------------------------------------------------------------- */
+.cs-workflow-row {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.cs-workflow-steps,
+.cs-flow-chart {
+  padding: 30px 32px;
+  border-radius: 20px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+}
+
+.cs-section-label {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 26px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cs-step-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+.cs-step {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  flex: none;
+  min-width: 0;
+  padding: 0 0 26px 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  position: relative;
+  transition: none;
+}
+.cs-step:last-child { padding-bottom: 0; }
+.cs-step:hover { transform: none; border: none; }
+
+/* the connecting line between number nodes */
+.cs-step:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 18px;
+  top: 40px;
+  bottom: -2px;
+  width: 2px;
+  background: linear-gradient(var(--color-primary), rgba(139, 92, 246, 0.1));
+}
+
+.cs-step-num {
+  position: relative;
+  z-index: 1;
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 50%;
+  background: var(--color-bg);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  transition: background 0.4s, color 0.4s, box-shadow 0.4s, transform 0.4s;
+}
+
+.cs-step:hover .cs-step-num {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 0 18px var(--glow-primary);
+  transform: scale(1.06);
+}
+
+.cs-step-info { padding-top: 6px; }
+.cs-step-info h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; }
+.cs-step-info p { font-size: 0.85rem; color: var(--color-text-sub); line-height: 1.55; }
+
+/* -------------------------------------------------------------------------
+   METRICS (override + polish)
+   ------------------------------------------------------------------------- */
+.cs-metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.cs-metric-card {
+  padding: 26px;
+  border-radius: 20px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s;
+}
+.cs-metric-card:hover { transform: translateY(-3px); border-color: var(--color-border-glow); }
+
+.cs-metric-bar {
+  height: 8px;
+  border-radius: 99px;
+  margin-bottom: 18px;
+  width: var(--cs-bar-w, 0%);
+  transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.cs-bar-manual { background: linear-gradient(90deg, var(--color-accent), #f59e0b); }
+
+.cs-metric-body h4,
+.cs-metric-card > h4 { font-size: 1rem; font-weight: 700; margin-bottom: 14px; }
+
+.cs-metric-compare { display: flex; flex-direction: column; gap: 10px; }
+.cs-metric-compare > div { display: flex; justify-content: space-between; align-items: center; }
+.cs-metric-label { font-size: 0.82rem; color: var(--color-text-sub); }
+.cs-metric-value { font-size: 0.95rem; font-weight: 600; color: var(--color-text-main); }
+.cs-val-accent { color: var(--color-primary); font-weight: 700; }
+
+.cs-metric-donut { position: relative; display: flex; align-items: center; justify-content: center; }
+.cs-metric-donut svg { width: 150px; height: 150px; }
+
+.cs-donut-center { position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.cs-donut-val {
+  font-family: var(--font-heading);
+  font-size: 1.7rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+.cs-donut-lbl { font-size: 0.62rem; color: var(--color-text-sub); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 5px; }
+
+.cs-kpi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
+.cs-kpi {
+  text-align: center;
+  padding: 12px 6px;
+  background: var(--color-input-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.cs-kpi:hover { border-color: var(--color-border-glow); transform: translateY(-2px); }
+.cs-kpi-val { display: block; font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700; line-height: 1.2; }
+.cs-kpi-lbl { display: block; font-size: 0.58rem; color: var(--color-text-sub); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 3px; }
+
+/* -------------------------------------------------------------------------
+   PREMIUM PLACEHOLDERS
+   ------------------------------------------------------------------------- */
+.placeholder-card {
+  padding: 80px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.placeholder-glow-nebula {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(var(--color-primary) 0%, transparent 65%);
+  opacity: 0.08;
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.placeholder-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 28px auto;
+  background: rgba(139, 92, 246, 0.04);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.placeholder-icon svg { color: var(--color-primary); width: 36px; height: 36px; }
+
+.placeholder-icon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-secondary);
+  box-shadow: 0 0 10px var(--color-secondary);
+  opacity: 0.6;
+  animation: scanIcon 3s infinite ease-in-out;
+}
+
+@keyframes scanIcon {
+  0% { top: 10%; }
+  50% { top: 90%; }
+  100% { top: 10%; }
+}
+
+.placeholder-card h2 {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, var(--color-text-main) 30%, var(--color-text-sub));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.placeholder-card p {
+  color: var(--color-text-sub);
+  max-width: 550px;
+  margin: 0 auto 36px auto;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.placeholder-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.placeholder-item {
+  padding: 24px 16px;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.placeholder-item:hover {
+  border-color: rgba(139, 92, 246, 0.2);
+  background: rgba(139, 92, 246, 0.02);
+  transform: translateY(-2px);
+}
+
+.placeholder-item span {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.placeholder-item h4 { font-size: 1rem; font-weight: 600; color: var(--color-text-main); }
+
+/* -------------------------------------------------------------------------
+   DONUT PROGRESS
+   ------------------------------------------------------------------------- */
+.cs-metric-donut svg circle.donut-animated {
+  stroke-dasharray: 377;
+  stroke-dashoffset: 377;
+  transition: stroke-dashoffset 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+}
+
+.project-detail.active .cs-metric-donut svg circle.donut-animated {
+  stroke-dashoffset: var(--dashoffset, 0);
+}
+
+/* =========================================================================
+   RESPONSIVE
+   ========================================================================= */
+@media (max-width: 992px) {
+  .explorer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .explorer-sidebar.glass-panel {
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+
+  .sidebar-head { padding-bottom: 4px; }
+
+  .project-list {
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+  }
+  .project-list::-webkit-scrollbar { display: none; }
+
+  .project-btn {
+    width: auto;
+    flex: 0 0 auto;
+    padding: 12px 18px;
+    border-radius: 14px;
+  }
+  .project-btn:hover { transform: none; }
+  .project-btn::after {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+    transform: none;
+    height: 3px;
+    width: 0;
+  }
+  .project-btn.active::after { height: 3px; width: 100%; }
+
+  .cs-double { grid-template-columns: 1fr; }
+  .cs-metrics-grid { grid-template-columns: 1fr; }
+  .placeholder-grid { grid-template-columns: 1fr; gap: 16px; }
+}
+
+@media (max-width: 768px) {
+  .uc-hero-section { padding-top: 8rem; }
+  .cs-hero { padding: 30px 22px; }
+  .cs-hero-stats { width: 100%; flex-direction: column; }
+  .cs-hero-stat { border-right: none; border-bottom: 1px solid var(--color-border); }
+  .cs-hero-stat:last-child { border-bottom: none; }
+  .cs-workflow-steps, .cs-flow-chart { padding: 24px 20px; }
+  .uc-impact-val { font-size: 1.6rem; }
+}

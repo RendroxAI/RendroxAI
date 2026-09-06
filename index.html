@@ -60,9 +60,10 @@
         <li><a href="#console">Terminal</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li class="nav-cta-mobile"><a href="#contact" class="btn btn-primary">Request Quote</a></li>
       </ul>
 
-      <div style="display: flex; align-items: center; gap: 1rem;">
+      <div class="nav-actions">
         <button class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode">
           <div class="theme-toggle-circle"></div>
           <svg class="theme-icon icon-sun" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -82,7 +83,7 @@
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
-        <a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">Request Quote</a>
+        <a href="#contact" class="btn btn-primary nav-cta" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">Request Quote</a>
         <div class="menu-toggle" id="menu-toggle">
           <span></span>
           <span></span>
@@ -228,58 +229,64 @@
       </p>
     </div>
 
-    <div class="services-grid">
+    <div class="services-ledger reveal">
 
-      
-      <!-- Enterprise Automation -->
-      <div class="service-card glass-panel reveal" style="transition-delay: 0.4s;">
-        <div class="service-glow-overlay"></div>
-        <div class="card-inner">
-          <div class="service-icon">
-            🚀
-          </div>
+      <!-- shared gradient for the service icons -->
+      <svg class="sr-defs" aria-hidden="true" focusable="false"><defs>
+        <linearGradient id="srGrad" gradientUnits="userSpaceOnUse" x1="3" y1="3" x2="21" y2="21">
+          <stop offset="0" stop-color="#8b5cf6"/>
+          <stop offset="1" stop-color="#06b6d4"/>
+        </linearGradient>
+      </defs></svg>
 
-          <h3>Enterprise Process Automation</h3>
-
-          <p>
+      <!-- Enterprise Process Automation -->
+      <div class="service-row reveal">
+        <span class="sr-index">01</span>
+        <div class="sr-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="url(#srGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="2.5"/><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg>
+        </div>
+        <div class="sr-main">
+          <span class="sr-tag">RPA · Workflows</span>
+          <h3 class="sr-title">Enterprise Process Automation</h3>
+          <p class="sr-desc">
             Automate repetitive business workflows across Finance,
             Supply Chain, Operations, HR, and Customer Service.
             Our automation solutions reduce manual effort,
             eliminate human errors, and improve operational efficiency.
           </p>
         </div>
+        <span class="sr-arrow" aria-hidden="true"></span>
       </div>
 
-      <!-- Business Process Automation -->
-      <div class="service-card glass-panel reveal" style="transition-delay: 0.1s;">
-        <div class="service-glow-overlay"></div>
-        <div class="card-inner">
-          <div class="service-icon">
-            🤖
-          </div>
-
-          <h3>Process Automation using UiPath & Automation Anywhere</h3>
-
-          <p>
+      <!-- Process Automation using UiPath & Automation Anywhere -->
+      <div class="service-row reveal" style="transition-delay: 0.05s;">
+        <span class="sr-index">02</span>
+        <div class="sr-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="url(#srGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="8" width="14" height="11" rx="3"/><path d="M12 5v3"/><line x1="12" y1="3.5" x2="12" y2="3.5" stroke-width="3"/><path d="M3 13h2M19 13h2"/><line x1="9.5" y1="13" x2="9.5" y2="13" stroke-width="3"/><line x1="14.5" y1="13" x2="14.5" y2="13" stroke-width="3"/><path d="M9.5 16.3h5"/></svg>
+        </div>
+        <div class="sr-main">
+          <span class="sr-tag">UiPath · Automation Anywhere</span>
+          <h3 class="sr-title">Process Automation using UiPath &amp; Automation Anywhere</h3>
+          <p class="sr-desc">
             Automate repetitive business operations using UiPath and Automation Anywhere.
             We develop unattended and attended bots for Finance, Accounts Receivable,
             Order Management, Supply Chain, Invoice Processing, Data Entry,
             ERP Integrations, Report Generation, and Enterprise Workflow Automation.
           </p>
         </div>
+        <span class="sr-arrow" aria-hidden="true"></span>
       </div>
 
       <!-- Automation Testing -->
-      <div class="service-card glass-panel reveal">
-        <div class="service-glow-overlay"></div>
-        <div class="card-inner">
-          <div class="service-icon">
-            🧪
-          </div>
-
-          <h3>Automation Testing</h3>
-
-          <p>
+      <div class="service-row reveal" style="transition-delay: 0.1s;">
+        <span class="sr-index">03</span>
+        <div class="sr-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="url(#srGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"/><path d="M10 3v6l-5.2 8.3A1.8 1.8 0 0 0 6.3 20h11.4a1.8 1.8 0 0 0 1.5-2.7L14 9V3"/><path d="M7 15h10"/></svg>
+        </div>
+        <div class="sr-main">
+          <span class="sr-tag">QA · Testing</span>
+          <h3 class="sr-title">Automation Testing</h3>
+          <p class="sr-desc">
             Comprehensive QA Automation services covering Web UI Testing,
             API Testing, Cloud Firewall Testing, Functional Testing,
             Regression Testing, Smoke Testing, Integration Testing,
@@ -288,40 +295,38 @@
             REST APIs, and modern testing practices.
           </p>
         </div>
+        <span class="sr-arrow" aria-hidden="true"></span>
       </div>
 
-      
-
-      <!-- Full Stack Development -->
-      <div class="service-card glass-panel reveal" style="transition-delay: 0.2s;">
-        <div class="service-glow-overlay"></div>
-        <div class="card-inner">
-          <div class="service-icon">
-            💻
-          </div>
-
-          <h3>Full Stack Web Development</h3>
-
-          <p>
+      <!-- Full Stack Web Development -->
+      <div class="service-row reveal" style="transition-delay: 0.15s;">
+        <span class="sr-index">04</span>
+        <div class="sr-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="url(#srGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="13.5" y1="4" x2="10.5" y2="20"/></svg>
+        </div>
+        <div class="sr-main">
+          <span class="sr-tag">MERN · Web</span>
+          <h3 class="sr-title">Full Stack Web Development</h3>
+          <p class="sr-desc">
             Design and develop scalable web applications using the
             MERN Stack (MongoDB, Express.js, React.js, Node.js).
             We build modern, secure, responsive, and high-performance
             platforms for startups, enterprises, and SaaS products.
           </p>
         </div>
+        <span class="sr-arrow" aria-hidden="true"></span>
       </div>
 
-      <!-- AI Chatbots -->
-      <div class="service-card glass-panel reveal" style="transition-delay: 0.3s;">
-        <div class="service-glow-overlay"></div>
-        <div class="card-inner">
-          <div class="service-icon">
-            🤖
-          </div>
-
-          <h3>AI Chatbots & AI Agents</h3>
-
-          <p>
+      <!-- AI Chatbots & AI Agents -->
+      <div class="service-row reveal" style="transition-delay: 0.2s;">
+        <span class="sr-index">05</span>
+        <div class="sr-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="url(#srGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"/><line x1="8.5" y1="12" x2="8.5" y2="12" stroke-width="2.6"/><line x1="12" y1="12" x2="12" y2="12" stroke-width="2.6"/><line x1="15.5" y1="12" x2="15.5" y2="12" stroke-width="2.6"/></svg>
+        </div>
+        <div class="sr-main">
+          <span class="sr-tag">LLM · Agents</span>
+          <h3 class="sr-title">AI Chatbots &amp; AI Agents</h3>
+          <p class="sr-desc">
             Build intelligent AI assistants and autonomous agents
             using OpenAI, LangChain, LangGraph, Retrieval-Augmented
             Generation (RAG), Vector Databases, and Workflow Automation.
@@ -329,19 +334,19 @@
             and AI-powered business operations.
           </p>
         </div>
+        <span class="sr-arrow" aria-hidden="true"></span>
       </div>
 
-      <!-- Security & Cloud Testing -->
-      <div class="service-card glass-panel reveal" style="transition-delay: 0.5s;">
-        <div class="service-glow-overlay"></div>
-        <div class="card-inner">
-          <div class="service-icon">
-            🔒
-          </div>
-
-          <h3>Security & Cloud Validation</h3>
-
-          <p>
+      <!-- Security & Cloud Validation -->
+      <div class="service-row reveal" style="transition-delay: 0.25s;">
+        <span class="sr-index">06</span>
+        <div class="sr-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="url(#srGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7.5-3.8 7.5-9.5V5.5L12 2.5 4.5 5.5v7C4.5 18.2 12 22 12 22z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <div class="sr-main">
+          <span class="sr-tag">Security · Cloud</span>
+          <h3 class="sr-title">Security &amp; Cloud Validation</h3>
+          <p class="sr-desc">
             Specialized testing services for security and cloud
             products including Cloud Firewall Testing, API Security
             Validation, Authentication Testing, Performance Testing,
@@ -349,6 +354,7 @@
             reliability, compliance, and scalability.
           </p>
         </div>
+        <span class="sr-arrow" aria-hidden="true"></span>
       </div>
 
     </div>
@@ -364,11 +370,51 @@
     </div>
 
     <div class="portfolio-tabs-container reveal">
-      <!-- Tab Triggers -->
-      <div class="tab-headers">
-        <button class="tab-trigger active" data-tab="ar-case">Accounts Receivable Clearing</button>
-        <button class="tab-trigger" data-tab="sales-case">E-Commerce ERP Integration</button>
-        <button class="tab-trigger" data-tab="logistics-case">Logistics & License Dispatch</button>
+
+      <!-- Category Tabs -->
+      <div class="category-tabs-row" id="category-tabs">
+        <button class="category-tab-btn active" data-category="enterprise">Enterprise Automation</button>
+        <button class="category-tab-btn" data-category="testing">Automation Testing</button>
+        <button class="category-tab-btn" data-category="aiml">AI/ML & LLM</button>
+        <button class="category-tab-btn" data-category="fullstack">Fullstack Development</button>
+        <button class="category-tab-btn" data-category="cloud">Cloud & DevOps</button>
+      </div>
+
+      <!-- Enterprise Automation Projects -->
+      <div class="project-tabs-row" data-category="enterprise">
+        <div class="project-tab-connector"></div>
+        <button class="project-tab-btn active" data-tab="ar-case">Accounts Receivable Clearing</button>
+        <button class="project-tab-btn" data-tab="sales-case">E-Commerce ERP Integration</button>
+        <button class="project-tab-btn" data-tab="logistics-case">Logistics & License Dispatch</button>
+      </div>
+
+      <!-- Automation Testing Projects (Cloud Firewall) -->
+      <div class="project-tabs-row hidden" data-category="testing">
+        <div class="project-tab-connector"></div>
+        <button class="project-tab-btn active" data-tab="webui-testing">WebUI Automation</button>
+        <button class="project-tab-btn" data-tab="api-testing">API Automation</button>
+        <button class="project-tab-btn" data-tab="e2e-testing">End to End Automation</button>
+      </div>
+
+      <!-- AI/ML & LLM Projects -->
+      <div class="project-tabs-row hidden" data-category="aiml">
+        <div class="project-tab-connector"></div>
+        <button class="project-tab-btn active" data-tab="chatbot-project">Chatbot</button>
+        <button class="project-tab-btn" data-tab="ml-models">ML Models</button>
+      </div>
+
+      <!-- Fullstack Development Projects -->
+      <div class="project-tabs-row hidden" data-category="fullstack">
+        <div class="project-tab-connector"></div>
+        <button class="project-tab-btn active" data-tab="ecommerce-website">Ecommerce Website</button>
+        <button class="project-tab-btn" data-tab="clone-website">Clone Website</button>
+      </div>
+
+      <!-- Cloud & DevOps Projects -->
+      <div class="project-tabs-row hidden" data-category="cloud">
+        <div class="project-tab-connector"></div>
+        <button class="project-tab-btn active" data-tab="cloud-infra">Cloud & DevOps Engineering</button>
+        <button class="project-tab-btn" data-tab="cloud-firewall">Cloud Firewall Testing</button>
       </div>
 
       <!-- Tab Panels -->
@@ -501,6 +547,366 @@
               <div class="metric-pill">
                 <div class="metric-pill-val">1.2s</div>
                 <div class="metric-pill-label">BAPI response speed</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 4: WebUI Automation -->
+        <div class="portfolio-content-panel" id="webui-testing">
+          <div class="case-image-mockup">
+            <div class="code-dec">
+              <span style="color: var(--color-success);">[TEST]</span> WebUI Automation Framework...<br>
+              >> Selenium WebDriver + Playwright initialized.<br>
+              >> Page Object Model (POM) loaded for Cloud Firewall UI.<br>
+              >> Running DLP policy validation tests...<br>
+              >> SSL Inspection UI checks passed.<br>
+              >> Bandwidth Control (BWC) form validation complete.<br>
+              <span style="color: var(--color-success);">>> All WebUI test cases passed.</span>
+            </div>
+          </div>
+          <div class="case-info-block">
+            <span class="case-tag">Cloud Firewall Testing</span>
+            <h3>WebUI Automation — Cloud Firewall</h3>
+            <p><strong>The Challenge:</strong> Cloud Firewall modules like DLP, BWC, Firewall Policy, and Geo-Restriction required manual UI validation across multiple security features, leading to slow regression cycles and inconsistent test coverage.</p>
+            <p><strong>The Solution:</strong> Built scalable UI automation frameworks using Python, Selenium WebDriver, Playwright, and Pytest with Page Object Model (POM) and BDD best practices. Automated testing of SSL Inspection, IPS, Application Control, DLP, BWC, and Geo-Restriction across the Cloud Firewall UI.</p>
+
+            <div class="case-metrics-grid">
+              <div class="metric-pill">
+                <div class="metric-pill-val">Selenium</div>
+                <div class="metric-pill-label">WebDriver Framework</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">Playwright</div>
+                <div class="metric-pill-label">Modern Browser Automation</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">POM</div>
+                <div class="metric-pill-label">Page Object Model</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">Pytest</div>
+                <div class="metric-pill-label">Test Framework</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 5: API Automation -->
+        <div class="portfolio-content-panel" id="api-testing">
+          <div class="case-image-mockup">
+            <div class="code-dec">
+              <span style="color: var(--color-secondary);">[API]</span> REST API Testing Suite...<br>
+              >> Requests library initialized.<br>
+              >> CRUD operations validated for Cloud Firewall endpoints.<br>
+              >> Negative testing: Invalid payloads, auth failures.<br>
+              >> Integration testing: End-to-end API flow verification.<br>
+              >> Response validation: Status codes, schemas, data integrity.<br>
+              <span style="color: var(--color-success);">>> All API test suites passed.</span>
+            </div>
+          </div>
+          <div class="case-info-block">
+            <span class="case-tag">API Testing</span>
+            <h3>API Automation — Cloud Firewall</h3>
+            <p><strong>The Challenge:</strong> Cloud Firewall services required comprehensive API testing covering CRUD operations, input validation, response verification, negative testing, and end-to-end integration testing for security features like SSL Inspection, IPS, and DLP.</p>
+            <p><strong>The Solution:</strong> Developed reusable API clients, fixtures, and validation libraries using Python, Requests, and REST Assured concepts. Performed comprehensive API testing covering CRUD operations, input validation, response verification, negative testing, and end-to-end integration testing for cloud security services.</p>
+
+            <div class="case-metrics-grid">
+              <div class="metric-pill">
+                <div class="metric-pill-val">REST</div>
+                <div class="metric-pill-label">API Testing</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">CRUD</div>
+                <div class="metric-pill-label">Operations Testing</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">Negative</div>
+                <div class="metric-pill-label">Edge Case Testing</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">E2E</div>
+                <div class="metric-pill-label">Integration Testing</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 6: End to End Automation -->
+        <div class="portfolio-content-panel" id="e2e-testing">
+          <div class="case-image-mockup">
+            <div class="code-dec">
+              <span style="color: var(--color-primary);">[E2E]</span> End-to-End Test Pipeline...<br>
+              >> CI/CD integration: Jenkins + GitHub Actions.<br>
+              >> Kubernetes-based test environments configured.<br>
+              >> Full regression suite: UI + API + Security modules.<br>
+              >> DLP, BWC, Firewall Policy, BTF validation complete.<br>
+              >> Test reporting and defect lifecycle management.<br>
+              <span style="color: var(--color-success);">>> E2E pipeline executed successfully.</span>
+            </div>
+          </div>
+          <div class="case-info-block">
+            <span class="case-tag">End-to-End Testing</span>
+            <h3>End to End Automation — Cloud Firewall</h3>
+            <p><strong>The Challenge:</strong> Cloud Firewall modules required end-to-end testing across UI and API layers, with CI/CD integration for continuous testing and faster, more reliable releases across security features like DLP, BWC, Firewall Policy, and Breaks Traffic Flow (BTF).</p>
+            <p><strong>The Solution:</strong> Integrated automated test suites into CI/CD pipelines using Jenkins, GitHub Actions, Git, and Kubernetes-based environments. Built and executed test scenarios for core security features including SSL Inspection, IPS, Application Control, Geo-Restriction, DLP, and BWC, ensuring accurate policy enforcement and traffic integrity.</p>
+
+            <div class="case-metrics-grid">
+              <div class="metric-pill">
+                <div class="metric-pill-val">Jenkins</div>
+                <div class="metric-pill-label">CI/CD Pipeline</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">K8s</div>
+                <div class="metric-pill-label">Kubernetes Environments</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">Agile</div>
+                <div class="metric-pill-label">Scrum Methodology</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">AI</div>
+                <div class="metric-pill-label">Claude AI + Copilot</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 7: AI Chatbot -->
+        <div class="portfolio-content-panel" id="chatbot-project">
+          <div class="case-image-mockup">
+            <div class="code-dec">
+              <span style="color: var(--color-secondary);">[AI]</span> RAG Pipeline initialized...<br>
+              >> Vector DB indexing: ChromaDB connected.<br>
+              >> LangChain + LangGraph orchestration loaded.<br>
+              >> Embedding model: OpenAI text-embedding-3-small.<br>
+              >> Retrieval-Augmented Generation active.<br>
+              >> ChatGPT-style conversational interface ready.<br>
+              <span style="color: var(--color-success);">>> AI Chatbot deployed successfully.</span>
+            </div>
+          </div>
+          <div class="case-info-block">
+            <span class="case-tag">AI Chatbot & LLM</span>
+            <h3>AI Chatbot — ChatGPT-like Assistant</h3>
+            <p><strong>The Challenge:</strong> Businesses need intelligent, context-aware conversational agents that can answer questions, retrieve domain-specific knowledge, and provide 24/7 customer support — similar to ChatGPT but tailored to enterprise needs.</p>
+            <p><strong>The Solution:</strong> Built a custom AI chatbot using RAG (Retrieval-Augmented Generation), LangChain, LangGraph, and Vector Databases (ChromaDB/Pinecone). The system indexes documents into vector embeddings, retrieves relevant context, and generates accurate responses using OpenAI GPT models with enterprise-grade accuracy.</p>
+
+            <div class="case-metrics-grid">
+              <div class="metric-pill">
+                <div class="metric-pill-val">RAG</div>
+                <div class="metric-pill-label">Retrieval-Augmented Generation</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">LangChain</div>
+                <div class="metric-pill-label">LLM Orchestration</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">LangGraph</div>
+                <div class="metric-pill-label">Agentic Workflows</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">Vector DB</div>
+                <div class="metric-pill-label">Semantic Search & Memory</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 8: ML Models -->
+        <div class="portfolio-content-panel" id="ml-models">
+          <div class="case-image-mockup">
+            <div class="code-dec">
+              <span style="color: var(--color-primary);">[ML]</span> Deep Learning models loaded...<br>
+              >> Face Detection: OpenCV + Haar Cascades ready.<br>
+              >> Voice Recognition: Whisper API connected.<br>
+              >> Jarvis Assistant: NLP pipeline initialized.<br>
+              >> TensorFlow/PyTorch models optimized.<br>
+              >> Real-time inference: < 50ms latency.<br>
+              <span style="color: var(--color-success);">>> All ML models deployed successfully.</span>
+            </div>
+          </div>
+          <div class="case-info-block">
+            <span class="case-tag">Machine Learning & Deep Learning</span>
+            <h3>ML Models — Computer Vision & Voice AI</h3>
+            <p><strong>The Challenge:</strong> Enterprises need custom AI models for face detection, voice recognition, and intelligent voice assistants like Jarvis — requiring expertise in Deep Learning, Computer Vision, NLP, and real-time inference pipelines.</p>
+            <p><strong>The Solution:</strong> Developed multiple ML and DL models using TensorFlow, PyTorch, OpenCV, and OpenAI APIs. Built face detection systems with Haar Cascades and CNNs, voice recognition pipelines with Whisper API, and a Jarvis-style voice assistant with NLP, speech-to-text, and text-to-speech capabilities.</p>
+
+            <div class="case-metrics-grid">
+              <div class="metric-pill">
+                <div class="metric-pill-val">OpenCV</div>
+                <div class="metric-pill-label">Face Detection & CV</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">Whisper</div>
+                <div class="metric-pill-label">Voice Recognition API</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">TensorFlow</div>
+                <div class="metric-pill-label">Deep Learning Models</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">Jarvis</div>
+                <div class="metric-pill-label">Voice Assistant NLP</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 9: Ecommerce Website -->
+        <div class="portfolio-content-panel" id="ecommerce-website">
+          <div class="case-image-mockup">
+            <div class="code-dec">
+              <span style="color: var(--color-success);">[MERN]</span> Full Stack Web Application...<br>
+              >> MongoDB: Database schema initialized.<br>
+              >> Express.js: REST API routes configured.<br>
+              >> React.js: Frontend components rendered.<br>
+              >> Node.js: Server-side logic deployed.<br>
+              >> Responsive design: Mobile-first approach.<br>
+              <span style="color: var(--color-success);">>> Ecommerce website deployed successfully.</span>
+            </div>
+          </div>
+          <div class="case-info-block">
+            <span class="case-tag">Full Stack Development</span>
+            <h3>Ecommerce Website — MERN Stack</h3>
+            <p><strong>The Challenge:</strong> Businesses need modern, responsive web applications for food delivery, news portals, and ecommerce platforms — built with scalable architecture, real-time features, and mobile-first design using the MERN stack.</p>
+            <p><strong>The Solution:</strong> Built multiple full-stack web applications using the MERN Stack (MongoDB, Express.js, React.js, Node.js). Developed a Food Delivery App with real-time order tracking, a News Portal with dynamic content management, and responsive ecommerce platforms with secure payment integration.</p>
+
+            <div class="case-metrics-grid">
+              <div class="metric-pill">
+                <div class="metric-pill-val">MERN</div>
+                <div class="metric-pill-label">MongoDB + Express + React + Node</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">MEAN</div>
+                <div class="metric-pill-label">MongoDB + Express + Angular + Node</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">Responsive</div>
+                <div class="metric-pill-label">Mobile-First Design</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">REST API</div>
+                <div class="metric-pill-label">Backend Architecture</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 10: Clone Website -->
+        <div class="portfolio-content-panel" id="clone-website">
+          <div class="case-image-mockup">
+            <div class="code-dec">
+              <span style="color: var(--color-secondary);">[CLONE]</span> Website Cloning Project...<br>
+              >> MI Store clone: React.js frontend built.<br>
+              >> Responsive layout: CSS Grid + Flexbox.<br>
+              >> Product catalog: Dynamic data rendering.<br>
+              >> Navigation: React Router integration.<br>
+              >> Performance: Optimized bundle size.<br>
+              <span style="color: var(--color-success);">>> MI Store clone deployed successfully.</span>
+            </div>
+          </div>
+          <div class="case-info-block">
+            <span class="case-tag">Full Stack Development</span>
+            <h3>Clone Website — MI Store</h3>
+            <p><strong>The Challenge:</strong> Building pixel-perfect clones of popular websites like MI Store requires deep understanding of modern web technologies, responsive design patterns, and component-based architecture using MERN and MEAN stacks.</p>
+            <p><strong>The Solution:</strong> Cloned the MI Store website using React.js with responsive design, dynamic product catalog, and modern UI/UX patterns. Built using MERN stack (MongoDB, Express.js, React.js, Node.js) and MEAN stack (MongoDB, Express.js, Angular, Node.js) technologies with proper state management, API integration, and mobile-first responsive design.</p>
+
+            <div class="case-metrics-grid">
+              <div class="metric-pill">
+                <div class="metric-pill-val">React</div>
+                <div class="metric-pill-label">Component-Based UI</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">MERN</div>
+                <div class="metric-pill-label">Full Stack Architecture</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">MEAN</div>
+                <div class="metric-pill-label">Angular Integration</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">Responsive</div>
+                <div class="metric-pill-label">Mobile-First Design</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 11: Cloud & DevOps Engineering -->
+        <div class="portfolio-content-panel" id="cloud-infra">
+          <div class="case-image-mockup">
+            <div class="code-dec">
+              <span style="color: var(--color-primary);">[CLOUD]</span> Cloud-Native Platform setup...<br>
+              >> Docker images built & pushed to registry.<br>
+              >> Kubernetes cluster: AWS EKS + Azure AKS ready.<br>
+              >> Terraform IaC: multi-cloud infra provisioned.<br>
+              >> OpenTelemetry tracing + metrics exported.<br>
+              >> Grafana dashboards: SLOs & alerts live.<br>
+              <span style="color: var(--color-success);">>> GitOps (ArgoCD) pipeline deployed successfully.</span>
+            </div>
+          </div>
+          <div class="case-info-block">
+            <span class="case-tag">Cloud & DevOps</span>
+            <h3>Cloud & DevOps Engineering — Docker, K8s, AWS, Azure</h3>
+            <p><strong>The Challenge:</strong> Legacy, manually-provisioned infrastructure slowed releases and couldn't scale reliably across AWS and Azure, with no unified observability across logs, metrics, and traces.</p>
+            <p><strong>The Solution:</strong> Containerized services with Docker and orchestrated them on Kubernetes across AWS (EKS) and Azure (AKS). Automated CI/CD with GitOps (ArgoCD), Terraform, GitHub Actions, Jenkins, and Ansible, and instrumented the stack with OpenTelemetry into Grafana + Prometheus.</p>
+
+            <div class="case-metrics-grid">
+              <div class="metric-pill">
+                <div class="metric-pill-val">Docker</div>
+                <div class="metric-pill-label">Containerization</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">K8s</div>
+                <div class="metric-pill-label">EKS / AKS Orchestration</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">OTel</div>
+                <div class="metric-pill-label">OpenTelemetry</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">Grafana</div>
+                <div class="metric-pill-label">Observability / SLOs</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 12: Cloud Firewall Testing -->
+        <div class="portfolio-content-panel" id="cloud-firewall">
+          <div class="case-image-mockup">
+            <div class="code-dec">
+              <span style="color: var(--color-accent);">[SECURITY-QA]</span> Cloud Firewall Testing Suite...<br>
+              >> UI Automation: Selenium + Playwright (POM).<br>
+              >> API Automation: CRUD + schema + negative tests.<br>
+              >> E2E pipeline: Jenkins + GitHub Actions on K8s.<br>
+              >> Validated DLP, BWC, SSL Inspection, IPS, Geo-Restriction.<br>
+              >> Policy enforcement & traffic integrity verified.<br>
+              <span style="color: var(--color-success);">>> Security release certified with 100% coverage.</span>
+            </div>
+          </div>
+          <div class="case-info-block">
+            <span class="case-tag">Security QA</span>
+            <h3>Cloud Firewall Testing — UI, API & E2E</h3>
+            <p><strong>The Challenge:</strong> A security-based company needed guaranteed correctness of its Cloud Firewall across the management UI, REST APIs, and full user flows for modules like DLP, BWC, SSL Inspection, and IPS.</p>
+            <p><strong>The Solution:</strong> Delivered layered automation — WebUI (Selenium + Playwright with POM/BDD), API (Python/Requests, REST Assured concepts), and unified E2E pipelines on Kubernetes (Jenkins + GitHub Actions) — ensuring policy enforcement and traffic integrity with full audit traceability.</p>
+
+            <div class="case-metrics-grid">
+              <div class="metric-pill">
+                <div class="metric-pill-val">UI</div>
+                <div class="metric-pill-label">WebUI Automation</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">API</div>
+                <div class="metric-pill-label">REST Testing</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">E2E</div>
+                <div class="metric-pill-label">K8s Pipelines</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">100%</div>
+                <div class="metric-pill-label">Security Coverage</div>
               </div>
             </div>
           </div>
@@ -891,26 +1297,29 @@
           </div>
           <span>RENDROX AI</span>
         </a>
-        <p>Custom cognitive automation orchestrators designing the decentralized future of autonomous enterprise process
-          grids.</p>
+        <p>Custom cognitive automation orchestrators designing the decentralized future of autonomous enterprise process grids — delivering enterprise automation, software engineering, AI, and quality assurance.</p>
       </div>
 
       <div class="footer-col">
-        <h5>Automation Services</h5>
+        <h5>Services</h5>
         <ul>
-          <li><a href="#services">AR Reconcilers</a></li>
-          <li><a href="#services">ERP Storefront Integrations</a></li>
-          <li><a href="#services">Logistics Dispatch</a></li>
-          <li><a href="#services">Document Extractors</a></li>
+          <li><a href="#services">Enterprise Process Automation</a></li>
+          <li><a href="#services">UiPath &amp; Automation Anywhere</a></li>
+          <li><a href="#services">Automation Testing</a></li>
+          <li><a href="#services">Full Stack Web Development</a></li>
+          <li><a href="#services">AI Chatbots &amp; AI Agents</a></li>
+          <li><a href="#services">Security &amp; Cloud Validation</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h5>Case Studies</h5>
         <ul>
-          <li><a href="#portfolio">AR Clearing</a></li>
-          <li><a href="#portfolio">Sales Sync</a></li>
-          <li><a href="#portfolio">Supply Dispatch</a></li>
+          <li><a href="usecases.html">Enterprise Automation</a></li>
+          <li><a href="usecases.html">Automation Testing</a></li>
+          <li><a href="usecases.html">AI/ML &amp; LLM</a></li>
+          <li><a href="usecases.html">Full Stack Development</a></li>
+          <li><a href="usecases.html">Cloud &amp; DevOps</a></li>
         </ul>
       </div>
 
@@ -918,8 +1327,10 @@
         <h5>Resources</h5>
         <ul>
           <li><a href="#roi">ROI Savings Calculator</a></li>
+          <li><a href="#visualizer">Swarm Visualizer</a></li>
           <li><a href="#console">Terminal Sandbox</a></li>
           <li><a href="#faq">Frequently Asked Questions</a></li>
+          <li><a href="#contact">Request a Consultation</a></li>
         </ul>
       </div>
     </div>

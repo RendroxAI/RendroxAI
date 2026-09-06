@@ -66,11 +66,21 @@ function initThemeToggle() {
 
 // ─── 3D Tilt Effect ─────────────────────────────────────────
 function initTiltEffect() {
-  const selectors = '.service-card, .visualizer-card, .roi-calculator-card, .contact-form-card';
+  // NOTE: the contact form is intentionally excluded — tilting a card you're
+  // typing into is poor UX and caused a feedback shake (transition lag + the
+  // transformed bounding box being re-measured each mousemove).
+  const selectors = '.visualizer-card, .roi-calculator-card';
   const cards = document.querySelectorAll(selectors);
   const MAX_TILT = 8;
 
   cards.forEach((card) => {
+    // Kill the transition while actively tilting so the transform doesn't
+    // animate (and feed back into getBoundingClientRect) — this is what
+    // produced the "shaking". Restore a smooth transition for the reset.
+    card.addEventListener('mouseenter', () => {
+      card.style.transition = 'transform 0s';
+    });
+
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
@@ -86,6 +96,7 @@ function initTiltEffect() {
     });
 
     card.addEventListener('mouseleave', () => {
+      card.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
       card.style.transform = 'perspective(800px) rotateX(0) rotateY(0)';
     });
   });
@@ -115,20 +126,27 @@ function initScrollReveal() {
 
 // ─── Portfolio Tabs ──────────────────────────────────────────
 function initPortfolioTabs() {
-  const triggers = document.querySelectorAll('.tab-trigger');
+  // Only handle triggers with data-tab attribute (project tabs, not category tabs)
+  const triggers = document.querySelectorAll('.tab-trigger[data-tab]');
   const panels   = document.querySelectorAll('.portfolio-content-panel');
   if (!triggers.length) return;
 
   triggers.forEach((trigger) => {
     trigger.addEventListener('click', () => {
       const tab = trigger.dataset.tab;
+      if (!tab) return;
 
-      // Toggle active triggers
-      triggers.forEach((t) => t.classList.toggle('active', t === trigger));
+      // Find the parent container to scope active state
+      const container = trigger.closest('.tab-headers');
+      if (container) {
+        const siblings = container.querySelectorAll('.tab-trigger');
+        siblings.forEach((t) => t.classList.remove('active'));
+        trigger.classList.add('active');
+      }
 
       // Toggle panels
       panels.forEach((p) => {
-        p.classList.toggle('active', p.id === tab || p.dataset.tab === tab);
+        p.classList.toggle('active', p.id === tab);
       });
     });
   });
@@ -232,5 +250,82 @@ function initPreloader() {
         preloader.style.display = 'none';
       }, { once: true });
     }, 2500);
+  });
+}
+
+
+// ─── Category Navigation (Index Page) ──────────────────────
+function initCategoryNav() {
+  const categoryTabsContainer = document.getElementById('category-tabs');
+  if (!categoryTabsContainer) return;
+
+  const categoryTabs = categoryTabsContainer.querySelectorAll('.category-tab-btn');
+  const projectTabsRows = document.querySelectorAll('.project-tabs-row');
+  const portfolioPanels = document.querySelectorAll('.portfolio-content-panel');
+
+  // Handle category tab clicks
+  categoryTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const category = tab.dataset.category;
+
+      // Update active category tab
+      categoryTabs.forEach((t) => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      // Show/hide project tabs based on category
+      projectTabsRows.forEach((row) => {
+        if (row.dataset.category === category) {
+          row.classList.remove('hidden');
+          row.style.display = '';
+        } else {
+          row.classList.add('hidden');
+          row.style.display = 'none';
+        }
+      });
+
+      // Show/hide portfolio panels based on category
+      portfolioPanels.forEach((panel) => {
+        panel.style.display = '';
+      });
+
+      // Activate the first project tab in the selected category
+      const activeRow = document.querySelector(`.project-tabs-row[data-category="${category}"]`);
+      if (activeRow) {
+        const firstTab = activeRow.querySelector('.project-tab-btn');
+        if (firstTab) {
+          // Deactivate all tabs in this row
+          activeRow.querySelectorAll('.project-tab-btn').forEach((t) => t.classList.remove('active'));
+          firstTab.classList.add('active');
+
+          // Show the corresponding panel
+          const tabId = firstTab.dataset.tab;
+          if (tabId) {
+            portfolioPanels.forEach((panel) => {
+              panel.classList.toggle('active', panel.id === tabId);
+            });
+          }
+        }
+      }
+    });
+  });
+
+  // Handle project tab clicks within each project-tabs-row
+  projectTabsRows.forEach((row) => {
+    const triggers = row.querySelectorAll('.project-tab-btn');
+    triggers.forEach((trigger) => {
+      trigger.addEventListener('click', () => {
+        // Update active state within this row
+        triggers.forEach((t) => t.classList.remove('active'));
+        trigger.classList.add('active');
+
+        // Switch the portfolio panel
+        const tab = trigger.dataset.tab;
+        if (tab) {
+          portfolioPanels.forEach((panel) => {
+            panel.classList.toggle('active', panel.id === tab);
+          });
+        }
+      });
+    });
   });
 }
