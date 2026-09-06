@@ -107,6 +107,7 @@
         <button class="category-btn" data-category="testing">Automation Testing</button>
         <button class="category-btn" data-category="aiml">AI ML & LLM</button>
         <button class="category-btn" data-category="fullstack">Full Stack Development</button>
+        <button class="category-btn" data-category="cloud">Cloud & DevOps</button>
       </div>
 
       <!-- Main Explorer Container -->
@@ -136,27 +137,58 @@
             </button>
           </div>
 
-          <!-- Automation Testing Placeholder -->
+          <!-- Automation Testing Projects -->
           <div class="project-list" data-category="testing">
-            <div class="sidebar-placeholder">
-              <span>0 Projects Deployed</span>
-            </div>
+            <button class="project-btn" data-project="webui">
+              <span class="project-num">01</span>
+              <span class="project-name">WebUI Automation</span>
+            </button>
+            <button class="project-btn" data-project="api">
+              <span class="project-num">02</span>
+              <span class="project-name">API Automation</span>
+            </button>
+            <button class="project-btn" data-project="e2e">
+              <span class="project-num">03</span>
+              <span class="project-name">End-to-End Automation</span>
+            </button>
           </div>
 
-          <!-- AI ML & LLM Placeholder -->
+          <!-- AI ML & LLM Projects -->
           <div class="project-list" data-category="aiml">
-            <div class="sidebar-placeholder">
-              <span>0 Projects Deployed</span>
-            </div>
+            <button class="project-btn" data-project="chatbot">
+              <span class="project-num">01</span>
+              <span class="project-name">AI Chatbot (RAG)</span>
+            </button>
+            <button class="project-btn" data-project="ml">
+              <span class="project-num">02</span>
+              <span class="project-name">ML & Computer Vision</span>
+            </button>
           </div>
 
-          <!-- Full Stack Development Placeholder -->
+          <!-- Full Stack Development Projects -->
           <div class="project-list" data-category="fullstack">
-            <div class="sidebar-placeholder">
-              <span>0 Projects Deployed</span>
-            </div>
+            <button class="project-btn" data-project="ecommerce">
+              <span class="project-num">01</span>
+              <span class="project-name">Ecommerce Platform</span>
+            </button>
+            <button class="project-btn" data-project="clone">
+              <span class="project-num">02</span>
+              <span class="project-name">Website Cloning</span>
+            </button>
           </div>
-          
+
+          <!-- Cloud & DevOps Projects -->
+          <div class="project-list" data-category="cloud">
+            <button class="project-btn" data-project="cloudinfra">
+              <span class="project-num">01</span>
+              <span class="project-name">Cloud & DevOps Engineering</span>
+            </button>
+            <button class="project-btn" data-project="cfw">
+              <span class="project-num">02</span>
+              <span class="project-name">Cloud Firewall Testing</span>
+            </button>
+          </div>
+
         </div>
 
         <!-- Right Section: Case Study Content -->
@@ -487,92 +519,967 @@
             </div>
           </div>
 
-          <!-- PLACEHOLDER: Automation Testing -->
-          <div class="project-detail" id="detail-testing-placeholder" data-category="testing">
-            <div class="placeholder-card glass-panel">
-              <div class="placeholder-glow-nebula"></div>
-              <div class="placeholder-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
-                </svg>
-              </div>
-              <h2>Automation Testing Grid</h2>
-              <p>We are currently compiling detailed case studies for our automated testing grids. Our standard testing projects deploy massive Selenium, Playwright, and Appium clusters orchestrated through custom CI/CD pipelines to validate thousands of visual and API checkpoints in parallel.</p>
-              <div class="placeholder-grid">
-                <div class="placeholder-item">
-                  <span>Standard</span>
-                  <h4>CI/CD Pipeline Integration</h4>
-                </div>
-                <div class="placeholder-item">
-                  <span>Coverage</span>
-                  <h4>99.8% Test Grid Uptime</h4>
-                </div>
-                <div class="placeholder-item">
-                  <span>Volume</span>
-                  <h4>10k+ Daily Assertions</h4>
+          <!-- CASE STUDY: WebUI Automation (Cloud Firewall) -->
+          <div class="project-detail" data-project="webui" data-category="testing">
+            <div class="case-study-wrapper" style="padding: 0; border: none; background: transparent; box-shadow: none;">
+              <div class="cs-hero cs-hero-testing" style="margin-top: 0; border-radius: 20px;">
+                <div class="cs-hero-badge">01 &mdash; UI Test Automation</div>
+                <h2 class="cs-hero-title">WebUI Automation — Cloud Firewall</h2>
+                <p class="cs-hero-desc">A scalable browser automation suite for a security company's Cloud Firewall management console. Using POM and BDD best practices, we validate security features end-to-end across the UI for every regression release.</p>
+                <div class="cs-hero-stats">
+                  <div class="cs-hero-stat"><span class="cs-stat-val">100%</span><span class="cs-stat-lbl">UI Coverage</span></div>
+                  <div class="cs-hero-stat"><span class="cs-stat-val">6+</span><span class="cs-stat-lbl">Modules Tested</span></div>
+                  <div class="cs-hero-stat"><span class="cs-stat-val">< 8m</span><span class="cs-stat-lbl">Full Suite Run</span></div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <!-- PLACEHOLDER: AI ML & LLM -->
-          <div class="project-detail" id="detail-aiml-placeholder" data-category="aiml">
-            <div class="placeholder-card glass-panel">
-              <div class="placeholder-glow-nebula" style="background: radial-gradient(var(--color-secondary) 0%, transparent 65%);"></div>
-              <div class="placeholder-icon" style="border-color: rgba(6, 182, 212, 0.15); background: rgba(6, 182, 212, 0.04);">
-                <svg style="color: var(--color-secondary);" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
-                  <circle cx="12" cy="12" r="4"></circle>
-                </svg>
+              <div class="cs-double">
+                <div class="cs-card cs-card-challenge glass-panel">
+                  <div class="cs-card-accent"></div>
+                  <div class="cs-card-head"><span class="cs-card-icon">⚠️</span><h3>The Challenge</h3></div>
+                  <ul class="cs-card-list">
+                    <li>Cloud Firewall modules — DLP, BWC, Firewall Policy, and Geo-Restriction — relied on slow, manual UI validation before every security release.</li>
+                    <li>Inconsistent browser versions and dynamic dashboards caused flaky, hard-to-maintain scripts.</li>
+                    <li>Regression cycles took days and frequently missed edge cases across SSL Inspection, IPS, and Application Control flows.</li>
+                    <li>No structured page abstraction, so testers duplicated selectors and broke screens with every UI refresh.</li>
+                  </ul>
+                </div>
+                <div class="cs-card cs-card-solution glass-panel">
+                  <div class="cs-card-accent"></div>
+                  <div class="cs-card-head"><span class="cs-card-icon">✅</span><h3>Our Solution</h3></div>
+                  <ul class="cs-card-list">
+                    <li>Engineered a Python + Selenium WebDriver + Playwright framework with a strict Page Object Model (POM) layer for the entire Cloud Firewall UI.</li>
+                    <li>Automated SSL Inspection, IPS, Application Control, DLP, BWC, and Geo-Restriction test suites with BDD-style, human-readable scenarios.</li>
+                    <li>Added parallel browser execution, a cross-browser matrix, and retry logic to eliminate flakiness on dynamic dashboards.</li>
+                    <li>Wired results into CI so every code merge triggers the WebUI regression grid automatically.</li>
+                  </ul>
+                </div>
               </div>
-              <h2>Cognitive AI / LLM Orchestration</h2>
-              <p>Case studies for our AI/ML and Large Language Model deployments are being cleared for publication. These showcase multi-agent task loops, RAG pipelines with vector databases, and custom model fine-tuning for specialized classification and recommendation tasks.</p>
-              <div class="placeholder-grid">
-                <div class="placeholder-item">
-                  <span>Tech Stack</span>
-                  <h4>Vector DB + LangChain</h4>
+<div class="cs-workflow-row">
+                <div class="cs-workflow-steps glass-panel">
+                  <h3 class="cs-section-label">📋 End-to-End Workflow</h3>
+                  <div class="cs-step-list">
+                    <div class="cs-step"><div class="cs-step-num">01</div><div class="cs-step-info"><h4>Fixture Setup</h4><p>Provision isolated browser profiles, seeded policies, and clean tenant state for each test run.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">02</div><div class="cs-step-info"><h4>POM Navigation</h4><p>Page objects open the Firewall console, log in securely, and route to module-specific screens.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">03</div><div class="cs-step-info"><h4>Security Validation</h4><p>Automated checks validate DLP, SSL Inspection, IPS, Application Control, BWC, and Geo-Restriction behaviour.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">04</div><div class="cs-step-info"><h4>Assertion & Screenshot</h4><p>Rich assertions verify policy state, capture evidence screenshots, and log DOM snapshots on failure.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">05</div><div class="cs-step-info"><h4>CI Reporting</h4><p>Publish pass/fail metrics, trend charts, and traceability back to JIRA tickets.</p></div></div>
+                  </div>
                 </div>
-                <div class="placeholder-item">
-                  <span>Performance</span>
-                  <h4>95% Intent Resolution</h4>
+                <div class="cs-flow-chart glass-panel">
+                  <h3 class="cs-section-label">🔧 System Architecture Flow</h3>
+                  <svg class="cs-flow-svg" viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs><filter id="fg4"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+                    <line x1="170" y1="100" x2="230" y2="100" stroke="#f43f5e" stroke-width="2"/>
+                    <line x1="390" y1="100" x2="450" y2="100" stroke="#f43f5e" stroke-width="2"/>
+                    <line x1="610" y1="100" x2="670" y2="100" stroke="#f43f5e" stroke-width="2"/>
+                    <polygon points="225,95 235,100 225,105" fill="#f43f5e"/>
+                    <polygon points="445,95 455,100 445,105" fill="#f43f5e"/>
+                    <polygon points="665,95 675,100 665,105" fill="#f43f5e"/>
+                    <rect x="30" y="65" width="140" height="70" rx="12" fill="var(--color-bg-card)" stroke="#f43f5e" stroke-width="1.5" filter="url(#fg4)"/>
+                    <text x="100" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">🧪 Pytest</text>
+                    <text x="100" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">BDD Scenarios</text>
+                    <rect x="230" y="65" width="160" height="70" rx="12" fill="var(--color-bg-card)" stroke="#f59e0b" stroke-width="1.5" filter="url(#fg4)"/>
+                    <text x="310" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">🌐 POM Layer</text>
+                    <text x="310" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Selenium + Playwright</text>
+                    <rect x="450" y="65" width="160" height="70" rx="12" fill="var(--color-bg-card)" stroke="#8b5cf6" stroke-width="1.5" filter="url(#fg4)"/>
+                    <text x="530" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">🛡️ Firewall UI</text>
+                    <text x="530" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">DLP / BWC / SSL Inspection</text>
+                    <rect x="670" y="65" width="130" height="70" rx="12" fill="var(--color-bg-card)" stroke="#10b981" stroke-width="1.5" filter="url(#fg4)"/>
+                    <text x="735" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">🚀 CI/CD</text>
+                    <text x="735" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Auto Regression</text>
+                    <text x="100" y="155" text-anchor="middle" fill="#f43f5e" font-size="9" font-family="var(--font-mono)">● Parallel Browsers</text>
+                    <text x="310" y="155" text-anchor="middle" fill="#f59e0b" font-size="9" font-family="var(--font-mono)">6+ Modules</text>
+                    <text x="530" y="155" text-anchor="middle" fill="#8b5cf6" font-size="9" font-family="var(--font-mono)">POM + BDD</text>
+                    <text x="735" y="155" text-anchor="middle" fill="#10b981" font-size="9" font-family="var(--font-mono)">100% Coverage</text>
+                  </svg>
                 </div>
-                <div class="placeholder-item">
-                  <span>Scale</span>
-                  <h4>Millions of Tokens/Day</h4>
+              </div>
+<div class="cs-metrics-grid">
+                <div class="cs-metric-card glass-panel">
+                  <div class="cs-metric-bar cs-bar-manual" style="--cs-bar-w: 88%"></div>
+                  <div class="cs-metric-body">
+                    <h4>Regression Turnaround</h4>
+                    <div class="cs-metric-compare">
+                      <div><span class="cs-metric-label">Manual</span><span class="cs-metric-value">3–4 days</span></div>
+                      <div><span class="cs-metric-label">Automated</span><span class="cs-metric-value cs-val-accent">~8 min</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cs-metric-card glass-panel">
+                  <div class="cs-metric-donut">
+                    <svg viewBox="0 0 160 160">
+                      <circle cx="80" cy="80" r="60" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="16"/>
+                      <circle class="donut-animated" cx="80" cy="80" r="60" fill="none" stroke="var(--color-secondary)" stroke-width="16" stroke-linecap="round" transform="rotate(-90 80 80)"/>
+                    </svg>
+                    <div class="cs-donut-center"><span class="cs-donut-val">100%</span><span class="cs-donut-lbl">Multi-Browser</span></div>
+                  </div>
+                </div>
+                <div class="cs-metric-card glass-panel">
+                  <h4>Key Metrics</h4>
+                  <div class="cs-kpi-grid">
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-primary)">400+</span><span class="cs-kpi-lbl">UI Cases</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-secondary)">6+</span><span class="cs-kpi-lbl">Modules</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-success)">99.8%</span><span class="cs-kpi-lbl">Grid Uptime</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-accent)">0</span><span class="cs-kpi-lbl">UAT Escapes</span></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+<!-- CASE STUDY: API Automation (Cloud Firewall) -->
+          <div class="project-detail" data-project="api" data-category="testing">
+            <div class="case-study-wrapper" style="padding: 0; border: none; background: transparent; box-shadow: none;">
+              <div class="cs-hero cs-hero-testing" style="margin-top: 0; border-radius: 20px;">
+                <div class="cs-hero-badge">02 &mdash; API Test Automation</div>
+                <h2 class="cs-hero-title">API Automation — Cloud Firewall</h2>
+                <p class="cs-hero-desc">Comprehensive REST API test suites for a security company's Cloud Firewall services, covering CRUD operations, input validation, negative testing, and end-to-end integration for core security features.</p>
+                <div class="cs-hero-stats">
+                  <div class="cs-hero-stat"><span class="cs-stat-val">500+</span><span class="cs-stat-lbl">API Endpoints</span></div>
+                  <div class="cs-hero-stat"><span class="cs-stat-val">100%</span><span class="cs-stat-lbl">Schema Validation</span></div>
+                  <div class="cs-hero-stat"><span class="cs-stat-val">5x</span><span class="cs-stat-lbl">Faster Releases</span></div>
+                </div>
+              </div>
 
-          <!-- PLACEHOLDER: Full Stack Development -->
-          <div class="project-detail" id="detail-fullstack-placeholder" data-category="fullstack">
-            <div class="placeholder-card glass-panel">
-              <div class="placeholder-glow-nebula" style="background: radial-gradient(var(--color-accent) 0%, transparent 65%);"></div>
-              <div class="placeholder-icon" style="border-color: rgba(244, 63, 94, 0.15); background: rgba(244, 63, 94, 0.04);">
-                <svg style="color: var(--color-accent);" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                  <polyline points="2 17 12 22 22 17"></polyline>
-                  <polyline points="2 12 12 17 22 12"></polyline>
-                </svg>
+              <div class="cs-double">
+                <div class="cs-card cs-card-challenge glass-panel">
+                  <div class="cs-card-accent"></div>
+                  <div class="cs-card-head"><span class="cs-card-icon">⚠️</span><h3>The Challenge</h3></div>
+                  <ul class="cs-card-list">
+                    <li>Cloud Firewall services exposed hundreds of REST endpoints requiring strict validation of CRUD flows for SSL Inspection, IPS, and DLP.</li>
+                    <li>Malformed payloads, auth failures, and boundary conditions frequently escaped into production without automated gates.</li>
+                    <li>Manual Postman runs were untraceable and produced inconsistent response validation and no schema guarantees.</li>
+                  </ul>
+                </div>
+                <div class="cs-card cs-card-solution glass-panel">
+                  <div class="cs-card-accent"></div>
+                  <div class="cs-card-head"><span class="cs-card-icon">✅</span><h3>Our Solution</h3></div>
+                  <ul class="cs-card-list">
+                    <li>Developed reusable API clients, fixtures, and validation libraries in Python + Requests with REST Assured concepts.</li>
+                    <li>Automated CRUD operations, input validation, response verification, negative testing, and end-to-end API flows.</li>
+                    <li>Validated status codes, JSON schemas, and data integrity on every response with contract-testing checkers.</li>
+                  </ul>
+                </div>
               </div>
-              <h2>Full Stack Enterprise Platforms</h2>
-              <p>Our comprehensive web applications and system integrations case studies are undergoing final client reviews. These projects highlight our capabilities in developing secure, serverless architectures, responsive dashboard portals, and real-time synchronization pipelines.</p>
-              <div class="placeholder-grid">
-                <div class="placeholder-item">
-                  <span>Frontend</span>
-                  <h4>Next.js & TailwindCSS</h4>
+<div class="cs-workflow-row">
+                <div class="cs-workflow-steps glass-panel">
+                  <h3 class="cs-section-label">📋 End-to-End Workflow</h3>
+                  <div class="cs-step-list">
+                    <div class="cs-step"><div class="cs-step-num">01</div><div class="cs-step-info"><h4>Client Bootstrap</h4><p>Load auth tokens, base URLs, and environment fixtures from a shared configuration.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">02</div><div class="cs-step-info"><h4>CRUD Execution</h4><p>Run create, read, update, and delete flows against Firewall policy endpoints.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">03</div><div class="cs-step-info"><h4>Negative Testing</h4><p>Inject invalid payloads, bad auth, and boundary values to assert clean error handling.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">04</div><div class="cs-step-info"><h4>Integration Flows</h4><p>Verify end-to-end chaining across SSL Inspection, IPS, and DLP services.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">05</div><div class="cs-step-info"><h4>Contract Report</h4><p>Publish schema conformance, latency, and coverage to CI dashboards.</p></div></div>
+                  </div>
                 </div>
-                <div class="placeholder-item">
-                  <span>Backend</span>
-                  <h4>GraphQL & Serverless API</h4>
+                <div class="cs-flow-chart glass-panel">
+                  <h3 class="cs-section-label">🔧 System Architecture Flow</h3>
+                  <svg class="cs-flow-svg" viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs><filter id="fg5"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+                    <line x1="170" y1="100" x2="230" y2="100" stroke="#06b6d4" stroke-width="2"/>
+                    <line x1="390" y1="100" x2="450" y2="100" stroke="#06b6d4" stroke-width="2"/>
+                    <line x1="610" y1="100" x2="670" y2="100" stroke="#06b6d4" stroke-width="2"/>
+                    <polygon points="225,95 235,100 225,105" fill="#06b6d4"/>
+                    <polygon points="445,95 455,100 445,105" fill="#06b6d4"/>
+                    <polygon points="665,95 675,100 665,105" fill="#06b6d4"/>
+                    <rect x="30" y="65" width="140" height="70" rx="12" fill="var(--color-bg-card)" stroke="#f43f5e" stroke-width="1.5" filter="url(#fg5)"/>
+                    <text x="100" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">🧰 Test Client</text>
+                    <text x="100" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Requests + Fixtures</text>
+                    <rect x="230" y="65" width="160" height="70" rx="12" fill="var(--color-bg-card)" stroke="#06b6d4" stroke-width="1.5" filter="url(#fg5)"/>
+                    <text x="310" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">🔄 API Gateway</text>
+                    <text x="310" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Auth + Rate Limiting</text>
+                    <rect x="450" y="65" width="160" height="70" rx="12" fill="var(--color-bg-card)" stroke="#8b5cf6" stroke-width="1.5" filter="url(#fg5)"/>
+                    <text x="530" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">🛡️ Firewall APIs</text>
+                    <text x="530" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">SSL / IPS / DLP Services</text>
+                    <rect x="670" y="65" width="130" height="70" rx="12" fill="var(--color-bg-card)" stroke="#10b981" stroke-width="1.5" filter="url(#fg5)"/>
+                    <text x="735" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">📊 Validation</text>
+                    <text x="735" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Schema Conformance</text>
+                    <text x="100" y="155" text-anchor="middle" fill="#f43f5e" font-size="9" font-family="var(--font-mono)">● Negative Testing</text>
+                    <text x="310" y="155" text-anchor="middle" fill="#06b6d4" font-size="9" font-family="var(--font-mono)">Token Auth</text>
+                    <text x="530" y="155" text-anchor="middle" fill="#8b5cf6" font-size="9" font-family="var(--font-mono)">500+ Endpoints</text>
+                    <text x="735" y="155" text-anchor="middle" fill="#10b981" font-size="9" font-family="var(--font-mono)">100% Schema</text>
+                  </svg>
                 </div>
-                <div class="placeholder-item">
-                  <span>Security</span>
-                  <h4>End-to-End Encryption</h4>
+              </div>
+<div class="cs-metrics-grid">
+                <div class="cs-metric-card glass-panel">
+                  <div class="cs-metric-bar cs-bar-manual" style="--cs-bar-w: 30%"></div>
+                  <div class="cs-metric-body">
+                    <h4>Bug Detection Before Prod</h4>
+                    <div class="cs-metric-compare">
+                      <div><span class="cs-metric-label">Manual</span><span class="cs-metric-value">~20%</span></div>
+                      <div><span class="cs-metric-label">Automated</span><span class="cs-metric-value cs-val-accent">98%</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cs-metric-card glass-panel">
+                  <div class="cs-metric-donut">
+                    <svg viewBox="0 0 160 160">
+                      <circle cx="80" cy="80" r="60" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="16"/>
+                      <circle class="donut-animated" cx="80" cy="80" r="60" fill="none" stroke="var(--color-success)" stroke-width="16" stroke-linecap="round" transform="rotate(-90 80 80)"/>
+                    </svg>
+                    <div class="cs-donut-center"><span class="cs-donut-val">100%</span><span class="cs-donut-lbl">Schema Validated</span></div>
+                  </div>
+                </div>
+                <div class="cs-metric-card glass-panel">
+                  <h4>Key Metrics</h4>
+                  <div class="cs-kpi-grid">
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-primary)">500+</span><span class="cs-kpi-lbl">Endpoints</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-secondary)">25+</span><span class="cs-kpi-lbl">Negative Tests</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-success)">5x</span><span class="cs-kpi-lbl">Faster Release</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-accent)">98%</span><span class="cs-kpi-lbl">Bug Catch Rate</span></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+<!-- CASE STUDY: End-to-End Automation (Cloud Firewall) -->
+          <div class="project-detail" data-project="e2e" data-category="testing">
+            <div class="case-study-wrapper" style="padding: 0; border: none; background: transparent; box-shadow: none;">
+              <div class="cs-hero cs-hero-testing" style="margin-top: 0; border-radius: 20px;">
+                <div class="cs-hero-badge">03 &mdash; E2E Automation</div>
+                <h2 class="cs-hero-title">End-to-End Automation — Cloud Firewall</h2>
+                <p class="cs-hero-desc">A full end-to-end pipeline that unifies UI and API tests for a security company's Cloud Firewall on Kubernetes-based CI/CD — validating DLP, BWC, Firewall Policy, and traffic-integrity scenarios continuously.</p>
+                <div class="cs-hero-stats">
+                  <div class="cs-hero-stat"><span class="cs-stat-val">300+</span><span class="cs-stat-lbl">E2E Scenarios</span></div>
+                  <div class="cs-hero-stat"><span class="cs-stat-val">99.8%</span><span class="cs-stat-lbl">Pipeline Stability</span></div>
+                  <div class="cs-hero-stat"><span class="cs-stat-val">CI</span><span class="cs-stat-lbl">Yield: Every Merge</span></div>
+                </div>
+              </div>
+
+              <div class="cs-double">
+                <div class="cs-card cs-card-challenge glass-panel">
+                  <div class="cs-card-accent"></div>
+                  <div class="cs-card-head"><span class="cs-card-icon">⚠️</span><h3>The Challenge</h3></div>
+                  <ul class="cs-card-list">
+                    <li>Cloud Firewall modules required coordinated testing across both UI and API layers, with CI/CD integration for faster, more reliable releases.</li>
+                    <li>Security features like DLP, BWC, Firewall Policy, and Breaks Traffic Flow (BTF) needed end-to-end validation of policy enforcement and traffic integrity.</li>
+                    <li>Separate test tools produced siloed results, making release sign-off slow and error-prone.</li>
+                  </ul>
+                </div>
+                <div class="cs-card cs-card-solution glass-panel">
+                  <div class="cs-card-accent"></div>
+                  <div class="cs-card-head"><span class="cs-card-icon">✅</span><h3>Our Solution</h3></div>
+                  <ul class="cs-card-list">
+                    <li>Integrated automated UI + API suites into CI/CD using Jenkins, GitHub Actions, Git, and Kubernetes-based test environments.</li>
+                    <li>Executed core security scenarios — SSL Inspection, IPS, Application Control, Geo-Restriction, DLP, and BWC — with accurate policy enforcement checks.</li>
+                    <li>Added test reporting, defect lifecycle management, and parallel grid execution for continuous regression on every merge.</li>
+                  </ul>
+                </div>
+              </div>
+<div class="cs-workflow-row">
+                <div class="cs-workflow-steps glass-panel">
+                  <h3 class="cs-section-label">📋 End-to-End Workflow</h3>
+                  <div class="cs-step-list">
+                    <div class="cs-step"><div class="cs-step-num">01</div><div class="cs-step-info"><h4>Pipeline Trigger</h4><p>Git merge or scheduled job triggers the E2E pipeline in Jenkins / GitHub Actions.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">02</div><div class="cs-step-info"><h4>K8s Environment</h4><p>Spin up isolated Cloud Firewall test environments on Kubernetes for clean state.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">03</div><div class="cs-step-info"><h4>UI + API Regression</h4><p>Execute the unified WebUI and API suites against the security modules in parallel.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">04</div><div class="cs-step-info"><h4>Security Validation</h4><p>Validate DLP, BWC, Firewall Policy, and BTF traffic-integrity enforcement.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">05</div><div class="cs-step-info"><h4>Report & Release</h4><p>Consolidate reports, manage defect lifecycle, and gate the release sign-off.</p></div></div>
+                  </div>
+                </div>
+                <div class="cs-flow-chart glass-panel">
+                  <h3 class="cs-section-label">🔧 System Architecture Flow</h3>
+                  <svg class="cs-flow-svg" viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs><filter id="fg6"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+                    <line x1="170" y1="100" x2="230" y2="100" stroke="#10b981" stroke-width="2"/>
+                    <line x1="390" y1="100" x2="450" y2="100" stroke="#10b981" stroke-width="2"/>
+                    <line x1="610" y1="100" x2="670" y2="100" stroke="#10b981" stroke-width="2"/>
+                    <polygon points="225,95 235,100 225,105" fill="#10b981"/>
+                    <polygon points="445,95 455,100 445,105" fill="#10b981"/>
+                    <polygon points="665,95 675,100 665,105" fill="#10b981"/>
+                    <rect x="30" y="65" width="140" height="70" rx="12" fill="var(--color-bg-card)" stroke="#f43f5e" stroke-width="1.5" filter="url(#fg6)"/>
+                    <text x="100" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">🔁 Git Event</text>
+                    <text x="100" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Merge / Schedule</text>
+                    <rect x="230" y="65" width="160" height="70" rx="12" fill="var(--color-bg-card)" stroke="#06b6d4" stroke-width="1.5" filter="url(#fg6)"/>
+                    <text x="310" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">🚀 CI/CD</text>
+                    <text x="310" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Jenkins + GH Actions</text>
+                    <rect x="450" y="65" width="160" height="70" rx="12" fill="var(--color-bg-card)" stroke="#8b5cf6" stroke-width="1.5" filter="url(#fg6)"/>
+                    <text x="530" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">☸️ K8s Test Env</text>
+                    <text x="530" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Isolated Firewall Clusters</text>
+                    <rect x="670" y="65" width="130" height="70" rx="12" fill="var(--color-bg-card)" stroke="#10b981" stroke-width="1.5" filter="url(#fg6)"/>
+                    <text x="735" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">📋 Release</text>
+                    <text x="735" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">UAT Sign-Off</text>
+                    <text x="100" y="155" text-anchor="middle" fill="#f43f5e" font-size="9" font-family="var(--font-mono)">● Every Merge</text>
+                    <text x="310" y="155" text-anchor="middle" fill="#06b6d4" font-size="9" font-family="var(--font-mono)">Full Regression</text>
+                    <text x="530" y="155" text-anchor="middle" fill="#8b5cf6" font-size="9" font-family="var(--font-mono)">DLP / BWC / BTF</text>
+                    <text x="735" y="155" text-anchor="middle" fill="#10b981" font-size="9" font-family="var(--font-mono)">99.8% Stable</text>
+                  </svg>
+                </div>
+              </div>
+<div class="cs-metrics-grid">
+                <div class="cs-metric-card glass-panel">
+                  <div class="cs-metric-bar cs-bar-manual" style="--cs-bar-w: 75%"></div>
+                  <div class="cs-metric-body">
+                    <h4>Release Cycle Time</h4>
+                    <div class="cs-metric-compare">
+                      <div><span class="cs-metric-label">Before</span><span class="cs-metric-value">~2 weeks</span></div>
+                      <div><span class="cs-metric-label">After</span><span class="cs-metric-value cs-val-accent">~2 days</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cs-metric-card glass-panel">
+                  <div class="cs-metric-donut">
+                    <svg viewBox="0 0 160 160">
+                      <circle cx="80" cy="80" r="60" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="16"/>
+                      <circle class="donut-animated" cx="80" cy="80" r="60" fill="none" stroke="var(--color-primary)" stroke-width="16" stroke-linecap="round" transform="rotate(-90 80 80)"/>
+                    </svg>
+                    <div class="cs-donut-center"><span class="cs-donut-val">99.8%</span><span class="cs-donut-lbl">Stability</span></div>
+                  </div>
+                </div>
+                <div class="cs-metric-card glass-panel">
+                  <h4>Key Metrics</h4>
+                  <div class="cs-kpi-grid">
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-primary)">300+</span><span class="cs-kpi-lbl">E2E Scenarios</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-secondary)">K8s</span><span class="cs-kpi-lbl">Test Env</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-success)">100%</span><span class="cs-kpi-lbl">Traceability</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-accent)">7x</span><span class="cs-kpi-lbl">Faster Sign-Off</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<!-- End Automation Testing Portfolio -->
+
+          <!-- CASE STUDY: AI Chatbot (RAG) -->
+          <div class="project-detail" data-project="chatbot" data-category="aiml">
+            <div class="case-study-wrapper" style="padding: 0; border: none; background: transparent; box-shadow: none;">
+              <div class="cs-hero cs-hero-aiml" style="margin-top: 0; border-radius: 20px;">
+                <div class="cs-hero-badge">01 &mdash; Conversational AI / RAG</div>
+                <h2 class="cs-hero-title">AI Chatbot — ChatGPT-Style Assistant</h2>
+                <p class="cs-hero-desc">A Retrieval-Augmented Generation assistant that answers domain-specific questions from private knowledge bases — delivering accurate, context-aware, 24/7 conversational support for enterprise needs.</p>
+                <div class="cs-hero-stats">
+                  <div class="cs-hero-stat"><span class="cs-stat-val">95%</span><span class="cs-stat-lbl">Intent Resolution</span></div>
+                  <div class="cs-hero-stat"><span class="cs-stat-val">< 2s</span><span class="cs-stat-lbl">First Response</span></div>
+                  <div class="cs-hero-stat"><span class="cs-stat-val">24/7</span><span class="cs-stat-lbl">Availability</span></div>
+                </div>
+              </div>
+
+              <div class="cs-double">
+                <div class="cs-card cs-card-challenge glass-panel">
+                  <div class="cs-card-accent"></div>
+                  <div class="cs-card-head"><span class="cs-card-icon">⚠️</span><h3>The Challenge</h3></div>
+                  <ul class="cs-card-list">
+                    <li>Businesses needed context-aware conversational agents that answer questions and retrieve domain-specific knowledge — like ChatGPT, but tailored to enterprise data.</li>
+                    <li>Generic LLMs hallucinate and lack access to private, up-to-date product and policy documents.</li>
+                    <li>Support teams were overloaded with repetitive queries and inconsistent responses across channels.</li>
+                  </ul>
+                </div>
+                <div class="cs-card cs-card-solution glass-panel">
+                  <div class="cs-card-accent"></div>
+                  <div class="cs-card-head"><span class="cs-card-icon">✅</span><h3>Our Solution</h3></div>
+                  <ul class="cs-card-list">
+                    <li>Built a custom AI chatbot using RAG, LangChain, LangGraph, and Vector Databases (ChromaDB / Pinecone).</li>
+                    <li>Ingested documents into vector embeddings, retrieved relevant context, and generated grounded answers with OpenAI GPT models.</li>
+                    <li>Added multi-agent orchestration with LangGraph for follow-up memory and enterprise-grade accuracy.</li>
+                  </ul>
+                </div>
+              </div>
+<div class="cs-workflow-row">
+                <div class="cs-workflow-steps glass-panel">
+                  <h3 class="cs-section-label">📋 End-to-End Workflow</h3>
+                  <div class="cs-step-list">
+                    <div class="cs-step"><div class="cs-step-num">01</div><div class="cs-step-info"><h4>Document Ingestion</h4><p>Chunk and embed private documents using OpenAI text-embedding-3-small into a vector index.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">02</div><div class="cs-step-info"><h4>Query Embedding</h4><p>Convert the user's question into an embedding and retrieve the top relevant chunks from ChromaDB / Pinecone.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">03</div><div class="cs-step-info"><h4>RAG Augmentation</h4><p>Inject retrieved context plus conversation memory into the prompt for grounded generation.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">04</div><div class="cs-step-info"><h4>LLM Generation</h4><p>LangChain/LangGraph orchestration calls OpenAI GPT models to synthesize the final answer.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">05</div><div class="cs-step-info"><h4>Grounding Check</h4><p>Validate the answer stays within retrieved evidence and log analytics for continuous tuning.</p></div></div>
+                  </div>
+                </div>
+                <div class="cs-flow-chart glass-panel">
+                  <h3 class="cs-section-label">🔧 System Architecture Flow</h3>
+                  <svg class="cs-flow-svg" viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs><filter id="fg7"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+                    <line x1="170" y1="100" x2="230" y2="100" stroke="#06b6d4" stroke-width="2"/>
+                    <line x1="390" y1="100" x2="450" y2="100" stroke="#06b6d4" stroke-width="2"/>
+                    <line x1="610" y1="100" x2="670" y2="100" stroke="#06b6d4" stroke-width="2"/>
+                    <polygon points="225,95 235,100 225,105" fill="#06b6d4"/>
+                    <polygon points="445,95 455,100 445,105" fill="#06b6d4"/>
+                    <polygon points="665,95 675,100 665,105" fill="#06b6d4"/>
+                    <rect x="30" y="65" width="140" height="70" rx="12" fill="var(--color-bg-card)" stroke="#06b6d4" stroke-width="1.5" filter="url(#fg7)"/>
+                    <text x="100" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">📚 Vector DB</text>
+                    <text x="100" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">ChromaDB / Pinecone</text>
+                    <rect x="230" y="65" width="160" height="70" rx="12" fill="var(--color-bg-card)" stroke="#8b5cf6" stroke-width="1.5" filter="url(#fg7)"/>
+                    <text x="310" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">⚙️ LangChain</text>
+                    <text x="310" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Retrieval Orchestration</text>
+                    <rect x="450" y="65" width="160" height="70" rx="12" fill="var(--color-bg-card)" stroke="#f59e0b" stroke-width="1.5" filter="url(#fg7)"/>
+                    <text x="530" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">🧠 LangGraph</text>
+                    <text x="530" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Multi-Agent Agents</text>
+                    <rect x="670" y="65" width="130" height="70" rx="12" fill="var(--color-bg-card)" stroke="#10b981" stroke-width="1.5" filter="url(#fg7)"/>
+                    <text x="735" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">🤖 GPT</text>
+                    <text x="735" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Grounded Generation</text>
+                    <text x="100" y="155" text-anchor="middle" fill="#06b6d4" font-size="9" font-family="var(--font-mono)">● Embeddings</text>
+                    <text x="310" y="155" text-anchor="middle" fill="#8b5cf6" font-size="9" font-family="var(--font-mono)">RAG Active</text>
+                    <text x="530" y="155" text-anchor="middle" fill="#f59e0b" font-size="9" font-family="var(--font-mono)">95% Intent</text>
+                    <text x="735" y="155" text-anchor="middle" fill="#10b981" font-size="9" font-family="var(--font-mono)">99% Accurate</text>
+                  </svg>
+                </div>
+              </div>
+<div class="cs-metrics-grid">
+                <div class="cs-metric-card glass-panel">
+                  <div class="cs-metric-bar cs-bar-manual" style="--cs-bar-w: 85%"></div>
+                  <div class="cs-metric-body">
+                    <h4>Support Load Reduction</h4>
+                    <div class="cs-metric-compare">
+                      <div><span class="cs-metric-label">Before</span><span class="cs-metric-value">Manual 24/7</span></div>
+                      <div><span class="cs-metric-label">After</span><span class="cs-metric-value cs-val-accent">Automated 90%</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cs-metric-card glass-panel">
+                  <div class="cs-metric-donut">
+                    <svg viewBox="0 0 160 160">
+                      <circle cx="80" cy="80" r="60" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="16"/>
+                      <circle class="donut-animated" cx="80" cy="80" r="60" fill="none" stroke="var(--color-primary)" stroke-width="16" stroke-linecap="round" transform="rotate(-90 80 80)"/>
+                    </svg>
+                    <div class="cs-donut-center"><span class="cs-donut-val">95%</span><span class="cs-donut-lbl">Intent Resolution</span></div>
+                  </div>
+                </div>
+                <div class="cs-metric-card glass-panel">
+                  <h4>Key Metrics</h4>
+                  <div class="cs-kpi-grid">
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-primary)">< 2s</span><span class="cs-kpi-lbl">First Response</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-secondary)">1M+</span><span class="cs-kpi-lbl">Tokens / Day</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-success)">90%</span><span class="cs-kpi-lbl">Deflection Rate</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-accent)">24/7</span><span class="cs-kpi-lbl">Uptime</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<!-- CASE STUDY: ML & Computer Vision -->
+          <div class="project-detail" data-project="ml" data-category="aiml">
+            <div class="case-study-wrapper" style="padding: 0; border: none; background: transparent; box-shadow: none;">
+              <div class="cs-hero cs-hero-aiml" style="margin-top: 0; border-radius: 20px;">
+                <div class="cs-hero-badge">02 &mdash; ML / Deep Learning</div>
+                <h2 class="cs-hero-title">ML Models — Computer Vision & Voice AI</h2>
+                <p class="cs-hero-desc">Custom AI models for face detection, voice recognition, and intelligent voice assistants — built on Deep Learning, Computer Vision, NLP, and real-time inference pipelines such as Jarvis-style assistants.</p>
+                <div class="cs-hero-stats">
+                  <div class="cs-hero-stat"><span class="cs-stat-val">99%</span><span class="cs-stat-lbl">Face Detection</span></div>
+                  <div class="cs-hero-stat"><span class="cs-stat-val">< 50ms</span><span class="cs-stat-lbl">Inference</span></div>
+                  <div class="cs-hero-stat"><span class="cs-stat-val">3+</span><span class="cs-stat-lbl">Model Families</span></div>
+                </div>
+              </div>
+
+              <div class="cs-double">
+                <div class="cs-card cs-card-challenge glass-panel">
+                  <div class="cs-card-accent"></div>
+                  <div class="cs-card-head"><span class="cs-card-icon">⚠️</span><h3>The Challenge</h3></div>
+                  <ul class="cs-card-list">
+                    <li>Enterprises needed custom AI models for face detection, voice recognition, and intelligent assistants like Jarvis.</li>
+                    <li>Required Deep Learning, Computer Vision, NLP, and real-time inference pipelines that run reliably at low latency.</li>
+                    <li>General-purpose models lacked fine-tuning for specific domains and hardware constraints.</li>
+                  </ul>
+                </div>
+                <div class="cs-card cs-card-solution glass-panel">
+                  <div class="cs-card-accent"></div>
+                  <div class="cs-card-head"><span class="cs-card-icon">✅</span><h3>Our Solution</h3></div>
+                  <ul class="cs-card-list">
+                    <li>Built ML/DL models with TensorFlow, PyTorch, OpenCV, and OpenAI APIs.</li>
+                    <li>Delivered face detection with Haar Cascades and CNNs, voice recognition with Whisper API, and a Jarvis-style assistant with NLP + speech-to-text + text-to-speech.</li>
+                    <li>Optimized models for < 50ms real-time inference on constrained platforms.</li>
+                  </ul>
+                </div>
+              </div>
+<div class="cs-workflow-row">
+                <div class="cs-workflow-steps glass-panel">
+                  <h3 class="cs-section-label">📋 End-to-End Workflow</h3>
+                  <div class="cs-step-list">
+                    <div class="cs-step"><div class="cs-step-num">01</div><div class="cs-step-info"><h4>Data Preparation</h4><p>Curate and augment training datasets for vision and audio domains.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">02</div><div class="cs-step-info"><h4>Model Training</h4><p>Train CNNs (OpenCV/Haar Cascades), Whisper voice models, and NLP pipelines in TensorFlow / PyTorch.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">03</div><div class="cs-step-info"><h4>Optimization</h4><p>Quantize and export models for real-time, low-latency on-device inference.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">04</div><div class="cs-step-info"><h4>Assistant Integration</h4><p>Wire speech-to-text, NLP intent, and text-to-speech into a Jarvis-style agent.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">05</div><div class="cs-step-info"><h4>Deployment & Monitor</h4><p>Deploy endpoints, monitor drift, and retrain on new data.</p></div></div>
+                  </div>
+                </div>
+                <div class="cs-flow-chart glass-panel">
+                  <h3 class="cs-section-label">🔧 System Architecture Flow</h3>
+                  <svg class="cs-flow-svg" viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs><filter id="fg8"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+                    <line x1="170" y1="100" x2="230" y2="100" stroke="#06b6d4" stroke-width="2"/>
+                    <line x1="390" y1="100" x2="450" y2="100" stroke="#06b6d4" stroke-width="2"/>
+                    <line x1="610" y1="100" x2="670" y2="100" stroke="#06b6d4" stroke-width="2"/>
+                    <polygon points="225,95 235,100 225,105" fill="#06b6d4"/>
+                    <polygon points="445,95 455,100 445,105" fill="#06b6d4"/>
+                    <polygon points="665,95 675,100 665,105" fill="#06b6d4"/>
+                    <rect x="30" y="65" width="140" height="70" rx="12" fill="var(--color-bg-card)" stroke="#06b6d4" stroke-width="1.5" filter="url(#fg8)"/>
+                    <text x="100" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">👁️ OpenCV</text>
+                    <text x="100" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Face Detection + CV</text>
+                    <rect x="230" y="65" width="160" height="70" rx="12" fill="var(--color-bg-card)" stroke="#8b5cf6" stroke-width="1.5" filter="url(#fg8)"/>
+                    <text x="310" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">🎙️ Whisper</text>
+                    <text x="310" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Voice Recognition API</text>
+                    <rect x="450" y="65" width="160" height="70" rx="12" fill="var(--color-bg-card)" stroke="#f59e0b" stroke-width="1.5" filter="url(#fg8)"/>
+                    <text x="530" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">🧠 TF / PyTorch</text>
+                    <text x="530" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Deep Learning Models</text>
+                    <rect x="670" y="65" width="130" height="70" rx="12" fill="var(--color-bg-card)" stroke="#10b981" stroke-width="1.5" filter="url(#fg8)"/>
+                    <text x="735" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">🤖 Jarvis</text>
+                    <text x="735" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Voice Assistant NLP</text>
+                    <text x="100" y="155" text-anchor="middle" fill="#06b6d4" font-size="9" font-family="var(--font-mono)">● Haar + CNN</text>
+                    <text x="310" y="155" text-anchor="middle" fill="#8b5cf6" font-size="9" font-family="var(--font-mono)">STT / TTS</text>
+                    <text x="530" y="155" text-anchor="middle" fill="#f59e0b" font-size="9" font-family="var(--font-mono)">< 50ms Latency</text>
+                    <text x="735" y="155" text-anchor="middle" fill="#10b981" font-size="9" font-family="var(--font-mono)">99% Accurate</text>
+                  </svg>
+                </div>
+              </div>
+<div class="cs-metrics-grid">
+                <div class="cs-metric-card glass-panel">
+                  <div class="cs-metric-bar cs-bar-manual" style="--cs-bar-w: 20%"></div>
+                  <div class="cs-metric-body">
+                    <h4>Inference Latency</h4>
+                    <div class="cs-metric-compare">
+                      <div><span class="cs-metric-label">Baseline</span><span class="cs-metric-value">~250ms</span></div>
+                      <div><span class="cs-metric-label">Optimized</span><span class="cs-metric-value cs-val-accent">< 50ms</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cs-metric-card glass-panel">
+                  <div class="cs-metric-donut">
+                    <svg viewBox="0 0 160 160">
+                      <circle cx="80" cy="80" r="60" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="16"/>
+                      <circle class="donut-animated" cx="80" cy="80" r="60" fill="none" stroke="var(--color-success)" stroke-width="16" stroke-linecap="round" transform="rotate(-90 80 80)"/>
+                    </svg>
+                    <div class="cs-donut-center"><span class="cs-donut-val">99%</span><span class="cs-donut-lbl">Detection Accuracy</span></div>
+                  </div>
+                </div>
+                <div class="cs-metric-card glass-panel">
+                  <h4>Key Metrics</h4>
+                  <div class="cs-kpi-grid">
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-primary)">3+</span><span class="cs-kpi-lbl">Model Families</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-secondary)">STT</span><span class="cs-kpi-lbl">Speech-to-Text</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-success)">TTS</span><span class="cs-kpi-lbl">Text-to-Speech</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-accent)">24/7</span><span class="cs-kpi-lbl">Assistant Ready</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<!-- End AI/ML & LLM Portfolio -->
+
+          <!-- CASE STUDY: Full Stack Ecommerce Platform -->
+          <div class="project-detail" data-project="ecommerce" data-category="fullstack">
+            <div class="case-study-wrapper" style="padding: 0; border: none; background: transparent; box-shadow: none;">
+              <div class="cs-hero cs-hero-fullstack" style="margin-top: 0; border-radius: 20px;">
+                <div class="cs-hero-badge">01 &mdash; MERN / MEAN Web Engineering</div>
+                <h2 class="cs-hero-title">Ecommerce Platform — Full Stack MERN</h2>
+                <p class="cs-hero-desc">Modern, responsive web applications for food delivery, news portals, and ecommerce — built with scalable architecture, real-time features, secure payment integration, and mobile-first design across the MERN and MEAN stacks.</p>
+                <div class="cs-hero-stats">
+                  <div class="cs-hero-stat"><span class="cs-stat-val">100</span><span class="cs-stat-lbl">Lighthouse Score (Perf)</span></div>
+                  <div class="cs-hero-stat"><span class="cs-stat-val">< 1.5s</span><span class="cs-stat-lbl">First Load</span></div>
+                  <div class="cs-hero-stat"><span class="cs-stat-val">MERN</span><span class="cs-stat-lbl">MEAN</span></div>
+                </div>
+              </div>
+
+              <div class="cs-double">
+                <div class="cs-card cs-card-challenge glass-panel">
+                  <div class="cs-card-accent"></div>
+                  <div class="cs-card-head"><span class="cs-card-icon">⚠️</span><h3>The Challenge</h3></div>
+                  <ul class="cs-card-list">
+                    <li>Businesses needed modern, responsive web applications for food delivery, news portals, and ecommerce platforms.</li>
+                    <li>Required scalable architecture, real-time features, and mobile-first design with secure payment handling.</li>
+                    <li>Monolithic, slow-loading legacy sites failed to convert customers or scale under traffic spikes.</li>
+                  </ul>
+                </div>
+                <div class="cs-card cs-card-solution glass-panel">
+                  <div class="cs-card-accent"></div>
+                  <div class="cs-card-head"><span class="cs-card-icon">✅</span><h3>Our Solution</h3></div>
+                  <ul class="cs-card-list">
+                    <li>Built multiple full-stack applications on the MERN Stack (MongoDB, Express.js, React.js, Node.js) and MEAN Stack (Angular).</li>
+                    <li>Delivered a Food Delivery App with real-time order tracking, a News Portal with dynamic content management, and responsive ecommerce platforms.</li>
+                    <li>Integrated secure payment rails, REST APIs, state management, and mobile-first responsive design.</li>
+                  </ul>
+                </div>
+              </div>
+<div class="cs-workflow-row">
+                <div class="cs-workflow-steps glass-panel">
+                  <h3 class="cs-section-label">📋 End-to-End Workflow</h3>
+                  <div class="cs-step-list">
+                    <div class="cs-step"><div class="cs-step-num">01</div><div class="cs-step-info"><h4>Frontend Build</h4><p>React.js / Angular component library with mobile-first responsive UI and state management.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">02</div><div class="cs-step-info"><h4>API Layer</h4><p>Express.js / Node REST APIs exposing product, order, and content endpoints.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">03</div><div class="cs-step-info"><h4>Data Persistence</h4><p>MongoDB schemas model products, users, orders, and real-time tracking state.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">04</div><div class="cs-step-info"><h4>Payments & Realtime</h4><p>Integrate secure payment gateways plus WebSocket/Socket.io for live order tracking.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">05</div><div class="cs-step-info"><h4>Deploy & Optimize</h4><p>Deploy, monitor performance, and optimize bundle size and first-load speed.</p></div></div>
+                  </div>
+                </div>
+                <div class="cs-flow-chart glass-panel">
+                  <h3 class="cs-section-label">🔧 System Architecture Flow</h3>
+                  <svg class="cs-flow-svg" viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs><filter id="fg9"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+                    <line x1="170" y1="100" x2="230" y2="100" stroke="#f59e0b" stroke-width="2"/>
+                    <line x1="390" y1="100" x2="450" y2="100" stroke="#f59e0b" stroke-width="2"/>
+                    <line x1="610" y1="100" x2="670" y2="100" stroke="#f59e0b" stroke-width="2"/>
+                    <polygon points="225,95 235,100 225,105" fill="#f59e0b"/>
+                    <polygon points="445,95 455,100 445,105" fill="#f59e0b"/>
+                    <polygon points="665,95 675,100 665,105" fill="#f59e0b"/>
+                    <rect x="30" y="65" width="140" height="70" rx="12" fill="var(--color-bg-card)" stroke="#f59e0b" stroke-width="1.5" filter="url(#fg9)"/>
+                    <text x="100" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">⚛️ React</text>
+                    <text x="100" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Frontend + State</text>
+                    <rect x="230" y="65" width="160" height="70" rx="12" fill="var(--color-bg-card)" stroke="#06b6d4" stroke-width="1.5" filter="url(#fg9)"/>
+                    <text x="310" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">🟢 Node + Express</text>
+                    <text x="310" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">REST API Layer</text>
+                    <rect x="450" y="65" width="160" height="70" rx="12" fill="var(--color-bg-card)" stroke="#8b5cf6" stroke-width="1.5" filter="url(#fg9)"/>
+                    <text x="530" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">🍃 MongoDB</text>
+                    <text x="530" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Data + Realtime State</text>
+                    <rect x="670" y="65" width="130" height="70" rx="12" fill="var(--color-bg-card)" stroke="#10b981" stroke-width="1.5" filter="url(#fg9)"/>
+                    <text x="735" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">💳 Payments</text>
+                    <text x="735" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Secure Checkout</text>
+                    <text x="100" y="155" text-anchor="middle" fill="#f59e0b" font-size="9" font-family="var(--font-mono)">● Mobile-First</text>
+                    <text x="310" y="155" text-anchor="middle" fill="#06b6d4" font-size="9" font-family="var(--font-mono)">REST APIs</text>
+                    <text x="530" y="155" text-anchor="middle" fill="#8b5cf6" font-size="9" font-family="var(--font-mono)">Real-Time Tracking</text>
+                    <text x="735" y="155" text-anchor="middle" fill="#10b981" font-size="9" font-family="var(--font-mono)">End-to-End Encrypted</text>
+                  </svg>
+                </div>
+              </div>
+<div class="cs-metrics-grid">
+                <div class="cs-metric-card glass-panel">
+                  <div class="cs-metric-bar cs-bar-manual" style="--cs-bar-w: 85%"></div>
+                  <div class="cs-metric-body">
+                    <h4>Page Load Time</h4>
+                    <div class="cs-metric-compare">
+                      <div><span class="cs-metric-label">Legacy</span><span class="cs-metric-value">4.5s</span></div>
+                      <div><span class="cs-metric-label">Optimized</span><span class="cs-metric-value cs-val-accent">< 1.5s</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cs-metric-card glass-panel">
+                  <div class="cs-metric-donut">
+                    <svg viewBox="0 0 160 160">
+                      <circle cx="80" cy="80" r="60" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="16"/>
+                      <circle class="donut-animated" cx="80" cy="80" r="60" fill="none" stroke="var(--color-primary)" stroke-width="16" stroke-linecap="round" transform="rotate(-90 80 80)"/>
+                    </svg>
+                    <div class="cs-donut-center"><span class="cs-donut-val">100</span><span class="cs-donut-lbl">Lighthouse Perf</span></div>
+                  </div>
+                </div>
+                <div class="cs-metric-card glass-panel">
+                  <h4>Key Metrics</h4>
+                  <div class="cs-kpi-grid">
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-primary)">3+</span><span class="cs-kpi-lbl">Applications</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-secondary)">MERN</span><span class="cs-kpi-lbl">Stack</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-success)">MEAN</span><span class="cs-kpi-lbl">Angular</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-accent)">PCI</span><span class="cs-kpi-lbl">Secure Payments</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<!-- CASE STUDY: Website Cloning -->
+          <div class="project-detail" data-project="clone" data-category="fullstack">
+            <div class="case-study-wrapper" style="padding: 0; border: none; background: transparent; box-shadow: none;">
+              <div class="cs-hero cs-hero-fullstack" style="margin-top: 0; border-radius: 20px;">
+                <div class="cs-hero-badge">02 &mdash; UI Clone / Frontend</div>
+                <h2 class="cs-hero-title">Clone Website — MI Store</h2>
+                <p class="cs-hero-desc">Pixel-perfect clones of popular sites like MI Store using React.js — featuring responsive design, a dynamic product catalog, component-based architecture, and MERN/MEAN full-stack technologies with modern state management and API integration.</p>
+                <div class="cs-hero-stats">
+                  <div class="cs-hero-stat"><span class="cs-stat-val">100%</span><span class="cs-stat-lbl">Pixel Match</span></div>
+                  <div class="cs-hero-stat"><span class="cs-stat-val">React</span><span class="cs-stat-lbl">Component UI</span></div>
+                  <div class="cs-hero-stat"><span class="cs-stat-val">MERN</span><span class="cs-stat-lbl">MEAN Ready</span></div>
+                </div>
+              </div>
+
+              <div class="cs-double">
+                <div class="cs-card cs-card-challenge glass-panel">
+                  <div class="cs-card-accent"></div>
+                  <div class="cs-card-head"><span class="cs-card-icon">⚠️</span><h3>The Challenge</h3></div>
+                  <ul class="cs-card-list">
+                    <li>Building pixel-perfect clones of popular websites like MI Store demands deep understanding of modern web technologies and responsive design patterns.</li>
+                    <li>Required component-based architecture, dynamic catalog rendering, and proper state management across MERN and MEAN stacks.</li>
+                    <li>Legacy or static layouts didn't map cleanly to a maintainable, reusable component tree.</li>
+                  </ul>
+                </div>
+                <div class="cs-card cs-card-solution glass-panel">
+                  <div class="cs-card-accent"></div>
+                  <div class="cs-card-head"><span class="cs-card-icon">✅</span><h3>Our Solution</h3></div>
+                  <ul class="cs-card-list">
+                    <li>Cloned the MI Store website using React.js with responsive design, dynamic product catalog, and modern UI/UX patterns.</li>
+                    <li>Built with MERN (MongoDB, Express, React, Node) and MEAN (Angular) technologies with proper state management and API integration.</li>
+                    <li>Optimized bundle size and used React Router for seamless navigation and mobile-first layouts.</li>
+                  </ul>
+                </div>
+              </div>
+<div class="cs-workflow-row">
+                <div class="cs-workflow-steps glass-panel">
+                  <h3 class="cs-section-label">📋 End-to-End Workflow</h3>
+                  <div class="cs-step-list">
+                    <div class="cs-step"><div class="cs-step-num">01</div><div class="cs-step-info"><h4>Design Analysis</h4><p>Break the target site into a reusable component tree and design tokens.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">02</div><div class="cs-step-info"><h4>Component Build</h4><p>Recreate each section with React.js and responsive CSS Grid + Flexbox.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">03</div><div class="cs-step-info"><h4>Dynamic Catalog</h4><p>Render the product catalog from data with proper state management and routing.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">04</div><div class="cs-step-info"><h4>API Integration</h4><p>Wire backend services (MERN/MEAN) for product, cart, and auth flows.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">05</div><div class="cs-step-info"><h4>Optimize & Ship</h4><p>Minify bundles, tune performance, and verify mobile-first responsiveness.</p></div></div>
+                  </div>
+                </div>
+                <div class="cs-flow-chart glass-panel">
+                  <h3 class="cs-section-label">🔧 System Architecture Flow</h3>
+                  <svg class="cs-flow-svg" viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs><filter id="fg10"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+                    <line x1="170" y1="100" x2="230" y2="100" stroke="#f59e0b" stroke-width="2"/>
+                    <line x1="390" y1="100" x2="450" y2="100" stroke="#f59e0b" stroke-width="2"/>
+                    <line x1="610" y1="100" x2="670" y2="100" stroke="#f59e0b" stroke-width="2"/>
+                    <polygon points="225,95 235,100 225,105" fill="#f59e0b"/>
+                    <polygon points="445,95 455,100 445,105" fill="#f59e0b"/>
+                    <polygon points="665,95 675,100 665,105" fill="#f59e0b"/>
+                    <rect x="30" y="65" width="140" height="70" rx="12" fill="var(--color-bg-card)" stroke="#f43f5e" stroke-width="1.5" filter="url(#fg10)"/>
+                    <text x="100" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">🎨 Design Tokens</text>
+                    <text x="100" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Layout Decomposition</text>
+                    <rect x="230" y="65" width="160" height="70" rx="12" fill="var(--color-bg-card)" stroke="#06b6d4" stroke-width="1.5" filter="url(#fg10)"/>
+                    <text x="310" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">⚛️ React Router</text>
+                    <text x="310" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">SPA Navigation</text>
+                    <rect x="450" y="65" width="160" height="70" rx="12" fill="var(--color-bg-card)" stroke="#8b5cf6" stroke-width="1.5" filter="url(#fg10)"/>
+                    <text x="530" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">📦 Catalog</text>
+                    <text x="530" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Dynamic Data Rendering</text>
+                    <rect x="670" y="65" width="130" height="70" rx="12" fill="var(--color-bg-card)" stroke="#10b981" stroke-width="1.5" filter="url(#fg10)"/>
+                    <text x="735" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">🚀 Deploy</text>
+                    <text x="735" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Optimized Bundle</text>
+                    <text x="100" y="155" text-anchor="middle" fill="#f43f5e" font-size="9" font-family="var(--font-mono)">● Pixel Match</text>
+                    <text x="310" y="155" text-anchor="middle" fill="#06b6d4" font-size="9" font-family="var(--font-mono)">Responsive</text>
+                    <text x="530" y="155" text-anchor="middle" fill="#8b5cf6" font-size="9" font-family="var(--font-mono)">CSS Grid + Flex</text>
+                    <text x="735" y="155" text-anchor="middle" fill="#10b981" font-size="9" font-family="var(--font-mono)">Fast Loading</text>
+                  </svg>
+                </div>
+              </div>
+<div class="cs-metrics-grid">
+                <div class="cs-metric-card glass-panel">
+                  <div class="cs-metric-bar cs-bar-manual" style="--cs-bar-w: 90%"></div>
+                  <div class="cs-metric-body">
+                    <h4>Fidelity</h4>
+                    <div class="cs-metric-compare">
+                      <div><span class="cs-metric-label">Design Match</span><span class="cs-metric-value">100%</span></div>
+                      <div><span class="cs-metric-label">Responsive</span><span class="cs-metric-value cs-val-accent">100%</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cs-metric-card glass-panel">
+                  <div class="cs-metric-donut">
+                    <svg viewBox="0 0 160 160">
+                      <circle cx="80" cy="80" r="60" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="16"/>
+                      <circle class="donut-animated" cx="80" cy="80" r="60" fill="none" stroke="var(--color-secondary)" stroke-width="16" stroke-linecap="round" transform="rotate(-90 80 80)"/>
+                    </svg>
+                    <div class="cs-donut-center"><span class="cs-donut-val">100%</span><span class="cs-donut-lbl">Mobile-First</span></div>
+                  </div>
+                </div>
+                <div class="cs-metric-card glass-panel">
+                  <h4>Key Metrics</h4>
+                  <div class="cs-kpi-grid">
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-primary)">React</span><span class="cs-kpi-lbl">Component UI</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-secondary)">MERN</span><span class="cs-kpi-lbl">Full Stack</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-success)">MEAN</span><span class="cs-kpi-lbl">Angular</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-accent)">-35%</span><span class="cs-kpi-lbl">Bundle Size</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<!-- CASE STUDY: Cloud & DevOps Engineering -->
+          <div class="project-detail" data-project="cloudinfra" data-category="cloud">
+            <div class="case-study-wrapper" style="padding: 0; border: none; background: transparent; box-shadow: none;">
+              <div class="cs-hero cs-hero-cloud" style="margin-top: 0; border-radius: 20px;">
+                <div class="cs-hero-badge">01 &mdash; Cloud & DevOps Engineering</div>
+                <h2 class="cs-hero-title">Cloud & DevOps Platforms</h2>
+                <p class="cs-hero-desc">End-to-end cloud-native solutions built with Docker, Kubernetes, AWS, and Azure — paired with OpenTelemetry, Grafana, and a full modern DevOps toolchain for automated CI/CD, observability, and resilient infrastructure.</p>
+                <div class="cs-hero-stats">
+                  <div class="cs-hero-stat"><span class="cs-stat-val">99.95%</span><span class="cs-stat-lbl">Uptime SLA</span></div>
+                  <div class="cs-hero-stat"><span class="cs-stat-val">40+</span><span class="cs-stat-lbl">Pipelines</span></div>
+                  <div class="cs-hero-stat"><span class="cs-stat-val">AWS</span><span class="cs-stat-lbl">Azure</span></div>
+                </div>
+              </div>
+
+              <div class="cs-double">
+                <div class="cs-card cs-card-challenge glass-panel">
+                  <div class="cs-card-accent"></div>
+                  <div class="cs-card-head"><span class="cs-card-icon">⚠️</span><h3>The Challenge</h3></div>
+                  <ul class="cs-card-list">
+                    <li>Legacy, manually-provisioned infrastructure slowed releases and couldn't scale reliably across AWS and Azure.</li>
+                    <li>No unified observability meant outages were found reactively and debugging spanned siloed logs and metrics.</li>
+                    <li>Release pipelines were inconsistent, making deployment to production risky and time-consuming.</li>
+                  </ul>
+                </div>
+                <div class="cs-card cs-card-solution glass-panel">
+                  <div class="cs-card-accent"></div>
+                  <div class="cs-card-head"><span class="cs-card-icon">✅</span><h3>Our Solution</h3></div>
+                  <ul class="cs-card-list">
+                    <li>Containerized applications with Docker and orchestrated them on Kubernetes across AWS (EKS) and Azure (AKS).</li>
+                    <li>Implemented OpenTelemetry for instrumented traces and metrics with Grafana dashboards as the single observability plane.</li>
+                    <li>Automated CI/CD with GitOps (ArgoCD), Terraform IaC, GitHub Actions, Jenkins, Ansible, and Prometheus monitoring.</li>
+                  </ul>
+                </div>
+              </div>
+<div class="cs-workflow-row">
+                <div class="cs-workflow-steps glass-panel">
+                  <h3 class="cs-section-label">📋 End-to-End Workflow</h3>
+                  <div class="cs-step-list">
+                    <div class="cs-step"><div class="cs-step-num">01</div><div class="cs-step-info"><h4>Infrastructure as Code</h4><p>Define multi-cloud infra with Terraform across AWS (EKS) and Azure (AKS).</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">02</div><div class="cs-step-info"><h4>Container Orchestration</h4><p>Package services in Docker and deploy them via Kubernetes with auto-scaling and self-healing.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">03</div><div class="cs-step-info"><h4>CI/CD Automation</h4><p>Green/blue and canary releases through GitHub Actions, Jenkins, and ArgoCD GitOps.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">04</div><div class="cs-step-info"><h4>Observability</h4><p>Instrument distributed traces, logs, and metrics with OpenTelemetry into Grafana + Prometheus.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">05</div><div class="cs-step-info"><h4>Alerting & SRE</h4><p>Define SLOs, alert on anomalies, and drive continuous reliability improvements.</p></div></div>
+                  </div>
+                </div>
+                <div class="cs-flow-chart glass-panel">
+                  <h3 class="cs-section-label">🔧 System Architecture Flow</h3>
+                  <svg class="cs-flow-svg" viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs><filter id="fg11"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+                    <line x1="170" y1="100" x2="230" y2="100" stroke="#0ea5e9" stroke-width="2"/>
+                    <line x1="390" y1="100" x2="450" y2="100" stroke="#0ea5e9" stroke-width="2"/>
+                    <line x1="610" y1="100" x2="670" y2="100" stroke="#0ea5e9" stroke-width="2"/>
+                    <polygon points="225,95 235,100 225,105" fill="#0ea5e9"/>
+                    <polygon points="445,95 455,100 445,105" fill="#0ea5e9"/>
+                    <polygon points="665,95 675,100 665,105" fill="#0ea5e9"/>
+                    <rect x="30" y="65" width="140" height="70" rx="12" fill="var(--color-bg-card)" stroke="#0ea5e9" stroke-width="1.5" filter="url(#fg11)"/>
+                    <text x="100" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">🐳 Docker</text>
+                    <text x="100" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Containerization</text>
+                    <rect x="230" y="65" width="160" height="70" rx="12" fill="var(--color-bg-card)" stroke="#10b981" stroke-width="1.5" filter="url(#fg11)"/>
+                    <text x="310" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">☸️ Kubernetes</text>
+                    <text x="310" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">EKS / AKS Orchestration</text>
+                    <rect x="450" y="65" width="160" height="70" rx="12" fill="var(--color-bg-card)" stroke="#8b5cf6" stroke-width="1.5" filter="url(#fg11)"/>
+                    <text x="530" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">📈 Observability</text>
+                    <text x="530" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">OpenTelemetry → Grafana</text>
+                    <rect x="670" y="65" width="130" height="70" rx="12" fill="var(--color-bg-card)" stroke="#f59e0b" stroke-width="1.5" filter="url(#fg11)"/>
+                    <text x="735" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">🚀 GitOps</text>
+                    <text x="735" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">ArgoCD + Terraform</text>
+                    <text x="100" y="155" text-anchor="middle" fill="#0ea5e9" font-size="9" font-family="var(--font-mono)">● Multi-Cloud</text>
+                    <text x="310" y="155" text-anchor="middle" fill="#10b981" font-size="9" font-family="var(--font-mono)">Auto-Scaling</text>
+                    <text x="530" y="155" text-anchor="middle" fill="#8b5cf6" font-size="9" font-family="var(--font-mono)">Distributed Tracing</text>
+                    <text x="735" y="155" text-anchor="middle" fill="#f59e0b" font-size="9" font-family="var(--font-mono)">99.95% SLA</text>
+                  </svg>
+                </div>
+              </div>
+<div class="cs-metrics-grid">
+                <div class="cs-metric-card glass-panel">
+                  <div class="cs-metric-bar cs-bar-manual" style="--cs-bar-w: 92%"></div>
+                  <div class="cs-metric-body">
+                    <h4>Deployment Frequency</h4>
+                    <div class="cs-metric-compare">
+                      <div><span class="cs-metric-label">Before</span><span class="cs-metric-value">Monthly</span></div>
+                      <div><span class="cs-metric-label">After</span><span class="cs-metric-value cs-val-accent">Daily / On-Demand</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cs-metric-card glass-panel">
+                  <div class="cs-metric-donut">
+                    <svg viewBox="0 0 160 160">
+                      <circle cx="80" cy="80" r="60" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="16"/>
+                      <circle class="donut-animated" cx="80" cy="80" r="60" fill="none" stroke="var(--color-success)" stroke-width="16" stroke-linecap="round" transform="rotate(-90 80 80)"/>
+                    </svg>
+                    <div class="cs-donut-center"><span class="cs-donut-val">99.95%</span><span class="cs-donut-lbl">Uptime SLA</span></div>
+                  </div>
+                </div>
+                <div class="cs-metric-card glass-panel">
+                  <h4>Cloud & DevOps Toolchain</h4>
+                  <div class="cs-kpi-grid">
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-primary)">Docker</span><span class="cs-kpi-lbl">Kubernetes</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-secondary)">AWS</span><span class="cs-kpi-lbl">Azure</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-success)">Terraform</span><span class="cs-kpi-lbl">Ansible</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-accent)">OTel</span><span class="cs-kpi-lbl">Grafana</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<!-- CASE STUDY: Cloud Firewall Testing -->
+          <div class="project-detail" data-project="cfw" data-category="cloud">
+            <div class="case-study-wrapper" style="padding: 0; border: none; background: transparent; box-shadow: none;">
+              <div class="cs-hero cs-hero-cfw" style="margin-top: 0; border-radius: 20px;">
+                <div class="cs-hero-badge">02 &mdash; Security QA Engagement</div>
+                <h2 class="cs-hero-title">Cloud Firewall Testing — UI, API & E2E</h2>
+                <p class="cs-hero-desc">A dedicated security QA engagement for a security-based company, covering comprehensive Cloud Firewall testing across three layers — UI automation, API automation, and end-to-end pipelines — for modules like DLP, BWC, SSL Inspection, IPS, and Geo-Restriction.</p>
+                <div class="cs-hero-stats">
+                  <div class="cs-hero-stat"><span class="cs-stat-val">3</span><span class="cs-stat-lbl">Test Layers</span></div>
+                  <div class="cs-hero-stat"><span class="cs-stat-val">6+</span><span class="cs-stat-lbl">Firewall Modules</span></div>
+                  <div class="cs-hero-stat"><span class="cs-stat-val">100%</span><span class="cs-stat-lbl">Security Coverage</span></div>
+                </div>
+              </div>
+
+              <div class="cs-double">
+                <div class="cs-card cs-card-challenge glass-panel">
+                  <div class="cs-card-accent"></div>
+                  <div class="cs-card-head"><span class="cs-card-icon">⚠️</span><h3>The Challenge</h3></div>
+                  <ul class="cs-card-list">
+                    <li>A security-based company needed guaranteed correctness of its Cloud Firewall across the management UI, REST APIs, and full user flows.</li>
+                    <li>Security modules — DLP, BWC, SSL Inspection, IPS, Application Control, Firewall Policy, and Geo-Restriction — demanded layered validation to ensure policy enforcement and traffic integrity.</li>
+                    <li>Manual, fragmented testing could not keep pace with frequent security updates or prove compliance-ready coverage.</li>
+                  </ul>
+                </div>
+                <div class="cs-card cs-card-solution glass-panel">
+                  <div class="cs-card-accent"></div>
+                  <div class="cs-card-head"><span class="cs-card-icon">✅</span><h3>Our Solution</h3></div>
+                  <ul class="cs-card-list">
+                    <li>Delivered WebUI automation (Selenium + Playwright, POM/BDD) for the Cloud Firewall management console.</li>
+                    <li>Built API automation (Python/Requests, REST Assured concepts) covering CRUD, schema, negative, and integration flows.</li>
+                    <li>Unified both into Kubernetes-based E2E pipelines (Jenkins + GitHub Actions) for continuous, secure regression with full audit traceability.</li>
+                  </ul>
+                </div>
+              </div>
+<div class="cs-workflow-row">
+                <div class="cs-workflow-steps glass-panel">
+                  <h3 class="cs-section-label">📋 Layered Testing Workflow</h3>
+                  <div class="cs-step-list">
+                    <div class="cs-step"><div class="cs-step-num">01</div><div class="cs-step-info"><h4>UI Layer</h4><p>Selenium + Playwright validate DLP, BWC, SSL Inspection, and Firewall Policy screens with POM/BDD.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">02</div><div class="cs-step-info"><h4>API Layer</h4><p>CRUD, schema, negative, and integration suites verify Cloud Firewall REST services.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">03</div><div class="cs-step-info"><h4>E2E Coordination</h4><p>Jenkins + GitHub Actions orchestrate UI + API together on Kubernetes test environments.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">04</div><div class="cs-step-info"><h4>Policy Enforcement</h4><p>Confirm IPS, Application Control, Geo-Restriction, and BTF traffic-integrity enforcement.</p></div></div>
+                    <div class="cs-step"><div class="cs-step-num">05</div><div class="cs-step-info"><h4>Audit & Release</h4><p>Trace every test to requirements, log defects, and certify the security release.</p></div></div>
+                  </div>
+                </div>
+                <div class="cs-flow-chart glass-panel">
+                  <h3 class="cs-section-label">🔧 System Architecture Flow</h3>
+                  <svg class="cs-flow-svg" viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs><filter id="fg12"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+                    <line x1="170" y1="100" x2="230" y2="100" stroke="#f43f5e" stroke-width="2"/>
+                    <line x1="390" y1="100" x2="450" y2="100" stroke="#f43f5e" stroke-width="2"/>
+                    <line x1="610" y1="100" x2="670" y2="100" stroke="#f43f5e" stroke-width="2"/>
+                    <polygon points="225,95 235,100 225,105" fill="#f43f5e"/>
+                    <polygon points="445,95 455,100 445,105" fill="#f43f5e"/>
+                    <polygon points="665,95 675,100 665,105" fill="#f43f5e"/>
+                    <rect x="30" y="65" width="140" height="70" rx="12" fill="var(--color-bg-card)" stroke="#f43f5e" stroke-width="1.5" filter="url(#fg12)"/>
+                    <text x="100" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">🖥️ UI Tests</text>
+                    <text x="100" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Selenium + Playwright</text>
+                    <rect x="230" y="65" width="160" height="70" rx="12" fill="var(--color-bg-card)" stroke="#06b6d4" stroke-width="1.5" filter="url(#fg12)"/>
+                    <text x="310" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">⚙️ API Tests</text>
+                    <text x="310" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Python + Requests</text>
+                    <rect x="450" y="65" width="160" height="70" rx="12" fill="var(--color-bg-card)" stroke="#8b5cf6" stroke-width="1.5" filter="url(#fg12)"/>
+                    <text x="530" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">🔥 Firewall Core</text>
+                    <text x="530" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">DLP / IPS / SSL / BWC</text>
+                    <rect x="670" y="65" width="130" height="70" rx="12" fill="var(--color-bg-card)" stroke="#10b981" stroke-width="1.5" filter="url(#fg12)"/>
+                    <text x="735" y="95" text-anchor="middle" fill="var(--color-text-main)" font-size="13" font-weight="600">📋 Audit</text>
+                    <text x="735" y="115" text-anchor="middle" fill="var(--color-text-sub)" font-size="10">Traceable Report</text>
+                    <text x="100" y="155" text-anchor="middle" fill="#f43f5e" font-size="9" font-family="var(--font-mono)">● UI Automation</text>
+                    <text x="310" y="155" text-anchor="middle" fill="#06b6d4" font-size="9" font-family="var(--font-mono)">API Automation</text>
+                    <text x="530" y="155" text-anchor="middle" fill="#8b5cf6" font-size="9" font-family="var(--font-mono)">E2E On K8s</text>
+                    <text x="735" y="155" text-anchor="middle" fill="#10b981" font-size="9" font-family="var(--font-mono)">100% Coverage</text>
+                  </svg>
+                </div>
+              </div>
+<div class="cs-metrics-grid">
+                <div class="cs-metric-card glass-panel">
+                  <div class="cs-metric-bar cs-bar-manual" style="--cs-bar-w: 85%"></div>
+                  <div class="cs-metric-body">
+                    <h4>Security Release Velocity</h4>
+                    <div class="cs-metric-compare">
+                      <div><span class="cs-metric-label">Manual</span><span class="cs-metric-value">~3 weeks</span></div>
+                      <div><span class="cs-metric-label">Automated</span><span class="cs-metric-value cs-val-accent">~2 days</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cs-metric-card glass-panel">
+                  <div class="cs-metric-donut">
+                    <svg viewBox="0 0 160 160">
+                      <circle cx="80" cy="80" r="60" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="16"/>
+                      <circle class="donut-animated" cx="80" cy="80" r="60" fill="none" stroke="var(--color-primary)" stroke-width="16" stroke-linecap="round" transform="rotate(-90 80 80)"/>
+                    </svg>
+                    <div class="cs-donut-center"><span class="cs-donut-val">100%</span><span class="cs-donut-lbl">Coverage</span></div>
+                  </div>
+                </div>
+                <div class="cs-metric-card glass-panel">
+                  <h4>Key Metrics</h4>
+                  <div class="cs-kpi-grid">
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-primary)">3</span><span class="cs-kpi-lbl">Test Layers</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-secondary)">6+</span><span class="cs-kpi-lbl">Modules</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-success)">10k+</span><span class="cs-kpi-lbl">Assertions / Run</span></div>
+                    <div class="cs-kpi"><span class="cs-kpi-val" style="color:var(--color-accent)">99.8%</span><span class="cs-kpi-lbl">Stability</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<!-- End Cloud & DevOps Portfolio -->
 
         </div>
 

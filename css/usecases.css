@@ -456,6 +456,13 @@
   margin-top: 6px;
 }
 
+/* Additional case-study hero top gradients (mirrors .cs-hero-* in sections.css) */
+.cs-hero-testing::before { background: linear-gradient(90deg, #f43f5e, #f59e0b); }
+.cs-hero-aiml::before { background: linear-gradient(90deg, #06b6d4, #8b5cf6); }
+.cs-hero-fullstack::before { background: linear-gradient(90deg, #f59e0b, #f43f5e); }
+.cs-hero-cloud::before { background: linear-gradient(90deg, #0ea5e9, #10b981); }
+.cs-hero-cfw::before { background: linear-gradient(90deg, #f43f5e, #06b6d4); }
+
 /* -------------------------------------------------------------------------
    CHALLENGE / SOLUTION CARDS (override)
    ------------------------------------------------------------------------- */

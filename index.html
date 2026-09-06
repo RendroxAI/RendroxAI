@@ -377,6 +377,7 @@
         <button class="category-tab-btn" data-category="testing">Automation Testing</button>
         <button class="category-tab-btn" data-category="aiml">AI/ML & LLM</button>
         <button class="category-tab-btn" data-category="fullstack">Fullstack Development</button>
+        <button class="category-tab-btn" data-category="cloud">Cloud & DevOps</button>
       </div>
 
       <!-- Enterprise Automation Projects -->
@@ -407,6 +408,13 @@
         <div class="project-tab-connector"></div>
         <button class="project-tab-btn active" data-tab="ecommerce-website">Ecommerce Website</button>
         <button class="project-tab-btn" data-tab="clone-website">Clone Website</button>
+      </div>
+
+      <!-- Cloud & DevOps Projects -->
+      <div class="project-tabs-row hidden" data-category="cloud">
+        <div class="project-tab-connector"></div>
+        <button class="project-tab-btn active" data-tab="cloud-infra">Cloud & DevOps Engineering</button>
+        <button class="project-tab-btn" data-tab="cloud-firewall">Cloud Firewall Testing</button>
       </div>
 
       <!-- Tab Panels -->
@@ -819,6 +827,86 @@
               <div class="metric-pill">
                 <div class="metric-pill-val">Responsive</div>
                 <div class="metric-pill-label">Mobile-First Design</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 11: Cloud & DevOps Engineering -->
+        <div class="portfolio-content-panel" id="cloud-infra">
+          <div class="case-image-mockup">
+            <div class="code-dec">
+              <span style="color: var(--color-primary);">[CLOUD]</span> Cloud-Native Platform setup...<br>
+              >> Docker images built & pushed to registry.<br>
+              >> Kubernetes cluster: AWS EKS + Azure AKS ready.<br>
+              >> Terraform IaC: multi-cloud infra provisioned.<br>
+              >> OpenTelemetry tracing + metrics exported.<br>
+              >> Grafana dashboards: SLOs & alerts live.<br>
+              <span style="color: var(--color-success);">>> GitOps (ArgoCD) pipeline deployed successfully.</span>
+            </div>
+          </div>
+          <div class="case-info-block">
+            <span class="case-tag">Cloud & DevOps</span>
+            <h3>Cloud & DevOps Engineering — Docker, K8s, AWS, Azure</h3>
+            <p><strong>The Challenge:</strong> Legacy, manually-provisioned infrastructure slowed releases and couldn't scale reliably across AWS and Azure, with no unified observability across logs, metrics, and traces.</p>
+            <p><strong>The Solution:</strong> Containerized services with Docker and orchestrated them on Kubernetes across AWS (EKS) and Azure (AKS). Automated CI/CD with GitOps (ArgoCD), Terraform, GitHub Actions, Jenkins, and Ansible, and instrumented the stack with OpenTelemetry into Grafana + Prometheus.</p>
+
+            <div class="case-metrics-grid">
+              <div class="metric-pill">
+                <div class="metric-pill-val">Docker</div>
+                <div class="metric-pill-label">Containerization</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">K8s</div>
+                <div class="metric-pill-label">EKS / AKS Orchestration</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">OTel</div>
+                <div class="metric-pill-label">OpenTelemetry</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">Grafana</div>
+                <div class="metric-pill-label">Observability / SLOs</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 12: Cloud Firewall Testing -->
+        <div class="portfolio-content-panel" id="cloud-firewall">
+          <div class="case-image-mockup">
+            <div class="code-dec">
+              <span style="color: var(--color-accent);">[SECURITY-QA]</span> Cloud Firewall Testing Suite...<br>
+              >> UI Automation: Selenium + Playwright (POM).<br>
+              >> API Automation: CRUD + schema + negative tests.<br>
+              >> E2E pipeline: Jenkins + GitHub Actions on K8s.<br>
+              >> Validated DLP, BWC, SSL Inspection, IPS, Geo-Restriction.<br>
+              >> Policy enforcement & traffic integrity verified.<br>
+              <span style="color: var(--color-success);">>> Security release certified with 100% coverage.</span>
+            </div>
+          </div>
+          <div class="case-info-block">
+            <span class="case-tag">Security QA</span>
+            <h3>Cloud Firewall Testing — UI, API & E2E</h3>
+            <p><strong>The Challenge:</strong> A security-based company needed guaranteed correctness of its Cloud Firewall across the management UI, REST APIs, and full user flows for modules like DLP, BWC, SSL Inspection, and IPS.</p>
+            <p><strong>The Solution:</strong> Delivered layered automation — WebUI (Selenium + Playwright with POM/BDD), API (Python/Requests, REST Assured concepts), and unified E2E pipelines on Kubernetes (Jenkins + GitHub Actions) — ensuring policy enforcement and traffic integrity with full audit traceability.</p>
+
+            <div class="case-metrics-grid">
+              <div class="metric-pill">
+                <div class="metric-pill-val">UI</div>
+                <div class="metric-pill-label">WebUI Automation</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">API</div>
+                <div class="metric-pill-label">REST Testing</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">E2E</div>
+                <div class="metric-pill-label">K8s Pipelines</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-pill-val">100%</div>
+                <div class="metric-pill-label">Security Coverage</div>
               </div>
             </div>
           </div>
